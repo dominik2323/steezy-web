@@ -1,0 +1,63 @@
+.homepage {
+  &__hero {
+    &__content {
+      &__header {
+        // margin: 80px 0;
+      }
+      // &__tags {
+      //   display: flex;
+      //   li {
+      //     margin-right: 30px;
+      //     color: $light-gray;
+      //     font-weight: 600;
+      //     font-size: 24px;
+      //     letter-spacing: 0.02em;
+      //   }
+      // }
+    }
+  }
+  .grid {
+    margin-bottom: cols(0.5);
+    &__row {
+      max-height: 800px;
+      &__item {
+        &--image {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  &__intro {
+  }
+  &__services-overview {
+    // padding: 0 calc(100% / 15 * 2);
+    // margin-bottom: 250px;
+  }
+  &__about {
+    height: 100vh;
+    max-height: 1080px;
+    width: 100%;
+    background-image: url('/static/img/homepage/steezy.png');
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    padding: 0 calc(100% / 15 * 2);
+    margin-top: calc(100vw / 15);
+    h2 {
+      font-size: 30px;
+      color: $light-gray;
+    }
+    p {
+      font-size: 48px;
+      letter-spacing: 0.02em;
+      line-height: 65px;
+      color: $white;
+      font-weight: 600;
+      margin: 80px 0;
+    }
+    button {
+      align-self: flex-start;
+    }
+  }
+}

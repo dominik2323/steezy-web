@@ -1,0 +1,17 @@
+.about {
+  &__hero-content {
+    h1 {
+      margin-bottom: 15px;
+    }
+    h2 {
+      margin-bottom: 100px;
+      color: $light-gray;
+    }
+  }
+  .grid__row__item--image img {
+    height: 670px;
+  }
+  .footer {
+    margin-top: cols(2);
+  }
+}

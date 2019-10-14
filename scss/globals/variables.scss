@@ -1,0 +1,13 @@
+$light-gray: #90929b;
+$dark-gray: #111114;
+$med-gray: #555563;
+$primary: #ff1c2b;
+$white: white;
+
+@function cols($cols) {
+  @return 100vw / 15 * $cols;
+}
+
+@function dark-gray-opacity($opacity) {
+  @return rgba(17, 17, 20, $opacity);
+}

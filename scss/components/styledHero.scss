@@ -1,0 +1,55 @@
+.hero {
+  // background-color: $dark-gray;
+  height: 100vh;
+  // max-height: 1080px;
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  &__content {
+    &.video-is-playing {
+      transform: translateX(-150%);
+    }
+    width: cols(11);
+    transition: transform 0.5s ease-in-out;
+    h1 {
+      width: cols(6);
+    }
+    h2 {
+      color: $med-gray;
+      width: cols(6);
+      margin: 10px 0 100px;
+    }
+  }
+  @media screen and (max-width: 1366px) {
+    &__content {
+      h1,
+      h2 {
+        width: 70%;
+      }
+      h2 {
+        margin-bottom: 50px;
+      }
+    }
+  }
+  @media screen and (max-width: 992px) {
+    h1,
+    h2 {
+      width: 100%;
+      // margin-bottom: 15px;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    h1,
+    h2 {
+      text-align: center;
+    }
+    h1 {
+      margin-bottom: cols(1);
+    }
+    .btn-ghost {
+      margin: auto;
+    }
+  }
+}

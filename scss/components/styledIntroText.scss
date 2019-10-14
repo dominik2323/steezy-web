@@ -1,0 +1,28 @@
+.intro-text {
+  margin: cols(1) auto;
+  width: cols(11);
+  display: flex;
+  justify-content: space-between;
+  p {
+    width: cols(6);
+    font-size: 30px;
+    line-height: 50px;
+    letter-spacing: 0.02em;
+    font-weight: 500;
+  }
+  ul {
+    margin-left: cols(1);
+    width: cols(2);
+    min-width: 275px;
+    li {
+      margin-bottom: 75px;
+      h5 {
+        color: $white;
+        margin-bottom: 17px;
+      }
+      small {
+        color: $med-gray;
+      }
+    }
+  }
+}

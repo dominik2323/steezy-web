@@ -1,0 +1,25 @@
+@import './globals/variables';
+@import './globals/globals';
+@import './globals/typo';
+@import './globals/grid';
+
+@import './components/styledHero';
+@import './components/styledNavbar';
+@import './components/styledSidebar';
+@import './components/styledFooter';
+@import './components/styledServicesOverview';
+@import './components/styledProjectSwitch';
+@import './components/styledHeroFooter';
+@import './components/styledHeroBg';
+@import './components/styledFilterProjects';
+@import './components/styledButton';
+@import './components/styledIntroText';
+@import './components/styledServicesItem';
+@import './components/styledErrorMsg';
+@import './components/styledHeroFooterLogotypes';
+
+@import './pages/styledHomepage';
+@import './pages/styledAbout';
+@import './pages/styledProjectDetail';
+@import './pages/styledProjects';
+@import './pages/styledServices';

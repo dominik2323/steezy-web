@@ -1,0 +1,65 @@
+.grid__row__item--image img {
+  min-height: initial;
+}
+.project {
+  &__hero {
+    &__footer {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      height: cols(1);
+      left: cols(1);
+      right: cols(1);
+      padding-left: cols(1);
+      h4 {
+        color: $white;
+        margin-bottom: 10px;
+      }
+    }
+  }
+  &__arrows {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: cols(1);
+    display: flex;
+    justify-content: space-between;
+    &__arrow {
+      background-color: dark-gray-opacity(0.5);
+      height: cols(1);
+      width: cols(1);
+      display: flex;
+      justify-content: center;
+      cursor: pointer;
+      align-items: center;
+      &:before {
+        content: '';
+        display: block;
+        width: 39px;
+        height: 15px;
+        background-image: url('/static/img/globals/arrow_projects.svg');
+        background-repeat: no-repeat;
+        // background-position: center;
+      }
+      &--left {
+        &:hover {
+          opacity: 0.8;
+        }
+        &:before {
+          transform: rotateZ(0deg);
+        }
+      }
+      &--right {
+        &:hover {
+          opacity: 0.8;
+        }
+        &:before {
+          transform: rotateZ(-180deg);
+        }
+      }
+    }
+  }
+}

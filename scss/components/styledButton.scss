@@ -1,0 +1,44 @@
+.btn-ghost {
+  background-color: transparent;
+  border: 2px solid;
+  padding: 25px 40px 25px 40px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  &.play-icon {
+    &:before {
+      // padding: 25px 40px 25px 90px;
+      margin-right: 20px;
+      background: url('/static/img/globals/playBtn.svg');
+      mask-repeat: no-repeat;
+      mask-position: center;
+      content: '';
+      // background-color: $primary;
+      display: block;
+      width: 31px;
+      height: 31px;
+      flex-shrink: 0;
+    }
+  }
+  // transition: background-color 0.2 ease-in-out;
+  &--red {
+    border-color: $primary;
+    color: $primary;
+    &:hover {
+      background-color: $primary;
+      color: $white;
+      &.play-icon {
+        &:before {
+          background: url('/static/img/globals/playBtn_hover.svg');
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 1366px) {
+    &.play-icon {
+      padding: 20px 35px;
+    }
+  }
+}

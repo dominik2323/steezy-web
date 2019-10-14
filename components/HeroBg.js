@@ -1,0 +1,23 @@
+import React from 'react';
+
+const HeroBg = ({ playerRef, isVideoPlaying, videoSrc, posterSrc }) => {
+  const isVideoAvaible = videoSrc.split('.').length === 2;
+  return (
+    <div
+      className={`
+            hero__bg 
+            ${isVideoPlaying ? `video-is-playing` : ``} 
+            ${isVideoAvaible ? `solid-overlay` : `gradient-overlay`}
+          `}
+      onClick={() => null}
+    >
+      {isVideoAvaible ? (
+        <video src={videoSrc} ref={playerRef} poster={posterSrc} />
+      ) : (
+        <img src={posterSrc} alt="smth" />
+      )}
+    </div>
+  );
+};
+
+export default HeroBg;

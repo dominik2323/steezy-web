@@ -1,0 +1,64 @@
+.project-switch {
+  display: flex;
+  &__side {
+    width: 50%;
+    height: 500px;
+    position: relative;
+    cursor: pointer;
+    &__nav {
+      height: 120px;
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      background: dark-gray-opacity(0.6);
+      display: flex;
+      align-items: center;
+      h3 {
+        color: $white;
+      }
+      &:before {
+        content: '';
+        display: block;
+        height: 120px;
+        width: 80px;
+        background: dark-gray-opacity(0.6)
+          url('/static/img/globals/arrow_projects.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        position: absolute;
+      }
+    }
+    &--left {
+      .project-switch__side {
+        &__nav {
+          h3 {
+            margin-left: 160px;
+          }
+          &:before {
+            transform: rotateZ(0);
+            left: 0;
+          }
+        }
+      }
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+    &--right {
+      .project-switch__side {
+        &__nav {
+          h3 {
+            margin-left: 80px;
+          }
+          &:before {
+            transform: rotateZ(-180deg);
+            right: 0;
+          }
+        }
+      }
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+  }
+}

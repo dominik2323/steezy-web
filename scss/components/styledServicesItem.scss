@@ -1,0 +1,62 @@
+.services-item {
+  .grid {
+    margin-bottom: cols(1);
+  }
+  .btn-ghost {
+    margin: 0 auto cols(1);
+  }
+  &__about {
+    width: cols(11);
+    margin: auto;
+    &:first-child {
+      margin-top: cols(1);
+    }
+    &__intro {
+      margin-bottom: cols(1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      &__perex {
+        width: cols(6);
+        h1 {
+          margin-bottom: 40px;
+        }
+      }
+      &__icon {
+        margin-left: cols(1);
+        img {
+          width: 240px;
+          height: auto;
+        }
+      }
+    }
+    &__bullets {
+      display: flex;
+      justify-content: space-between;
+      li {
+        width: 300px;
+        h2 {
+          color: $white;
+          margin-bottom: 40px;
+          span {
+            color: $primary;
+            font-weight: 400;
+            margin-bottom: 40px;
+            display: block;
+          }
+        }
+        p {
+          font-size: 18px;
+          font-weight: 600;
+          letter-spacing: 0.02em;
+          line-height: 30px;
+          color: $med-gray;
+        }
+      }
+    }
+  }
+  .grid {
+    // margin-top: cols(1);
+    // margin-bottom: cols(2);
+  }
+}
