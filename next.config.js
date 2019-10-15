@@ -1,3 +1,13 @@
 const withSass = require('@zeit/next-sass');
 const withCSS = require('@zeit/next-css');
-module.exports = withCSS(withSass());
+const prefix =
+  process.env.NODE_ENV === 'production'
+    ? 'http://steezycdn.tomczik.cz'
+    : 'http://localhost:3000';
+module.exports = withCSS(
+  withSass({
+    env: {
+      PREFIX: prefix
+    }
+  })
+);

@@ -4,10 +4,8 @@ export default {
     header: 'Ukažte světu, jak jste skvělí.',
     subHeader:
       'Nestačí být dobrý v tom, co děláte. Měli by o tom vědět i ostatní.',
-    bg: {
-      posterSrc: 'hero_homepage.png',
-      videoSrc: 'steezy_showreel.mp4'
-    }
+    posterSrc: 'hero_homepage.png',
+    videoSrc: 'steezy_showreel.mp4'
   },
   intro: {
     perex:
@@ -18,8 +16,8 @@ export default {
       { header: 'SEXY GUY:', bullet: 'Benny L.' }
     ]
   },
-  grid: [
-    [
+  grid: {
+    0: [
       {
         id: 'dropDnd',
         type: 'project',
@@ -31,28 +29,28 @@ export default {
         width: 'md'
       }
     ],
-    [
+    1: [
       {
         id: 'surgeryClinic',
         type: 'project',
         width: 'lg'
       }
     ],
-    [
+    2: [
       {
         id: 'backstage',
         type: 'reference',
         width: 'lg'
       }
     ],
-    [
+    3: [
       {
         id: 'backstage',
         type: 'project',
         width: 'lg'
       }
     ]
-  ],
+  },
   about: {
     header: 'Kdo stojí za studiem?',
     paragraph:

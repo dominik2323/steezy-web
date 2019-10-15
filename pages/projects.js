@@ -27,7 +27,7 @@ const Projects = () => {
         {
           id: curr.id,
           name: curr.name,
-          img: `${curr.id}/${curr.hero.bg.posterSrc}`,
+          img: `${curr.id}/${curr.hero.posterSrc}`,
           alt: curr.name,
           client: curr.client,
           tags: curr.tags

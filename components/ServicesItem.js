@@ -4,9 +4,13 @@ import { transformGridReferencesIntoGrid } from '../pages';
 import Button from './Button';
 import { DataContext } from '../pages/_app';
 import Router from 'next/router';
+import Img from './Img';
 
 const ServicesItem = ({ name, perex, bullets, img, grid, projects, id }) => {
-  const transformGrid = transformGridReferencesIntoGrid(grid, projects);
+  const transformGrid = transformGridReferencesIntoGrid(
+    Object.values(grid),
+    projects
+  );
   const { components } = React.useContext(DataContext);
   return (
     <div id={id} className={`services-item`}>
@@ -17,7 +21,7 @@ const ServicesItem = ({ name, perex, bullets, img, grid, projects, id }) => {
             <p className={`big`}>{perex}</p>
           </div>
           <div className={`services-item__about__intro__icon`}>
-            <img src={`/static/img/services/${img}`} alt="" />
+            <Img src={`/static/img/services/${img}`} alt="" />
           </div>
         </div>
         <ul className={`services-item__about__bullets`}>

@@ -3,9 +3,7 @@ export default {
   hero: {
     header:
       'Postavíme vaši značku na nohy, odprezentujeme ji v digitálním světě a uvedeme ji do pohybu.',
-    bg: {
-      posterSrc: 'hero_homepage.png'
-    }
+    posterSrc: 'hero_homepage.png'
   },
   intro: {
     perex:
@@ -41,13 +39,13 @@ export default {
             'Máte stabilní marketingové zázemí a dobře postavenou značku, ale potřebujete neotřelou, inovativní komunikaci, abyste neztratili krok s konkurencí? Zajistíme, abyste nejen neztráceli tempo, ale byli vždy o krok napřed.'
         }
       ],
-      grid: [
-        [{ type: 'video', id: 'surgeryClinic' }],
-        [
+      grid: {
+        0: [{ type: 'video', id: 'surgeryClinic' }],
+        1: [
           { type: 'project', id: 'backstage' },
           { type: 'project', id: 'dropDnd' }
         ]
-      ]
+      }
     },
     {
       name: 'Web & aplikace',
@@ -73,13 +71,13 @@ export default {
             'Máte stabilní marketingové zázemí a dobře postavenou značku, ale potřebujete neotřelou, inovativní komunikaci, abyste neztratili krok s konkurencí? Zajistíme, abyste nejen neztráceli tempo, ale byli vždy o krok napřed.'
         }
       ],
-      grid: [
-        [{ type: 'video', id: 'surgeryClinic' }],
-        [
+      grid: {
+        0: [{ type: 'video', id: 'surgeryClinic' }],
+        1: [
           { type: 'project', id: 'backstage' },
           { type: 'project', id: 'dropDnd' }
         ]
-      ]
+      }
     },
     {
       name: 'Video & animace',
@@ -105,13 +103,13 @@ export default {
             'Máte stabilní marketingové zázemí a dobře postavenou značku, ale potřebujete neotřelou, inovativní komunikaci, abyste neztratili krok s konkurencí? Zajistíme, abyste nejen neztráceli tempo, ale byli vždy o krok napřed.'
         }
       ],
-      grid: [
-        [{ type: 'video', id: 'surgeryClinic' }],
-        [
+      grid: {
+        0: [{ type: 'video', id: 'surgeryClinic' }],
+        1: [
           { type: 'project', id: 'backstage' },
           { type: 'project', id: 'dropDnd' }
         ]
-      ]
+      }
     }
   ]
 };

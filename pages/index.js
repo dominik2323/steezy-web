@@ -20,7 +20,7 @@ const Homepage = () => {
   const { hero, intro, about, grid: gridRef } = pages.homepage;
 
   const transformedGridData = transformGridReferencesIntoGrid(
-    gridRef,
+    Object.values(gridRef),
     globals.projects
   );
   return (
@@ -33,8 +33,8 @@ const Homepage = () => {
         <Navbar />
 
         <Hero
-          posterSrc={`/static/img/homepage/${hero.bg.posterSrc}`}
-          videoSrc={`/static/img/homepage/${hero.bg.videoSrc}`}
+          posterSrc={`/static/img/homepage/hero_homepage.png`}
+          videoSrc={`/static/img/homepage/steezy_showreel.mp4`}
           playerRef={playerRef}
         >
           {{
@@ -97,7 +97,7 @@ export const transformGridReferencesIntoGrid = (gridRef, projects) => {
     const fullProject = projects.find(project => project.id === id);
     if (type === `project`) {
       return {
-        img: `${id}/${fullProject.hero.bg.posterSrc}`,
+        img: `${id}/${fullProject.hero.posterSrc}`,
         alt: fullProject.name,
         name: fullProject.name,
         client: fullProject.client,

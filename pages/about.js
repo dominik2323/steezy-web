@@ -20,7 +20,7 @@ export default function About() {
       <div className="about container-fluid">
         <Navbar />
         <Hero
-          posterSrc={`/static/img/about/about_hero.png`}
+          posterSrc={`${process.env.PREFIX}/static/img/about/about_hero.png`}
           className={`about`}
         >
           {{
@@ -38,7 +38,7 @@ export default function About() {
           }}
         </Hero>
         <IntroText perex={about.intro.perex} tags={about.intro.tags} />
-        <Grid grid={about.grid} folder={`/about`} />
+        <Grid grid={Object.values(about.grid)} folder={`/about`} />
         <Footer />
       </div>
     </React.Fragment>

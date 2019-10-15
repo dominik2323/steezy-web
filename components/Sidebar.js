@@ -3,6 +3,7 @@ import posed from 'react-pose';
 import Link from './Link';
 import { DataContext } from '../pages/_app';
 import { scrollTo } from '../hooks/scrollTo';
+import Img from './Img';
 
 const PosedSidebar = posed.div({
   show: {
@@ -33,14 +34,14 @@ const Sidebar = ({ showSidebar, toggleSidebar }) => {
       className={`col-5 sidebar`}
       style={{ display: 'none' }}
     >
-      <img
+      <Img
         onClick={() => (toggleSidebar(false), toggleServicesSelector(false))}
         className={`close-icon`}
         src={`/static/img/globals/close.svg`}
         alt="close icon"
       />
       <nav>
-        {navbar.map(page => {
+        {navbar.pages.map(page => {
           if (page.url === 'footer') {
             return (
               <PosedLink key={page.displayName}>
@@ -61,7 +62,7 @@ const Sidebar = ({ showSidebar, toggleSidebar }) => {
         {globals.socials.map(icon => {
           return (
             <Link key={icon.id} path={icon.url}>
-              <img src={`/static/img/globals/${icon.img}`} alt={icon.id} />
+              <Img src={`/static/img/globals/${icon.img}`} alt={icon.id} />
             </Link>
           );
         })}

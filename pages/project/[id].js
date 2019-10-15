@@ -83,10 +83,11 @@ const Project = () => {
     };
   };
   const neighbourProjects = findNeighbourProjects();
-  const isVideoAvaible = project.hero.bg.videoSrc.length !== 0;
+  const isVideoAvaible = project.hero.videoSrc.length !== 0;
   const introTags = transformIntroTags(pages.projectDetail, project);
 
-  const projectWithReference = project.presentation.concat([
+  const transformGridIntoArr = Object.values(project.presentation);
+  const projectWithReference = transformGridIntoArr.concat([
     [Object.assign({}, project.reference, { landscape: true, id: projectId })]
   ]);
 
@@ -107,8 +108,8 @@ const Project = () => {
       <PoseGroup preEnterPose={`preEnter`} direction={direction}>
         <PosedProject key={projectId}>
           <Hero
-            posterSrc={`/static/img/project/${projectId}/${project.hero.bg.posterSrc}`}
-            videoSrc={`/static/img/project/${projectId}/${project.hero.bg.videoSrc}`}
+            posterSrc={`/static/img/project/${projectId}/${project.hero.posterSrc}`}
+            videoSrc={`/static/img/project/${projectId}/${project.hero.videoSrc}`}
             className={`project`}
             playerRef={playerRef}
           >

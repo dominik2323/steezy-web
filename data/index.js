@@ -2,7 +2,6 @@ import button from './components/buttonData';
 import footer from './components/footerData';
 import heroFooterLogotypes from './components/heroFooterLogotypesData';
 import navbar from './components/navbarData';
-import servicesOverview from './components/servicesOverviewData';
 
 import globals from './globals/globalsData';
 import projects from './globals/projectsData';
@@ -18,8 +17,7 @@ export default {
     button: button,
     footer: footer,
     heroFooterLogotypes: heroFooterLogotypes,
-    navbar: navbar,
-    servicesOverview: servicesOverview
+    navbar: navbar
   },
   globals: {
     ...globals,

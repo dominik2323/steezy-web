@@ -1,4 +1,5 @@
 import React from 'react';
+import Img from './Img';
 
 const HeroBg = ({ playerRef, isVideoPlaying, videoSrc, posterSrc }) => {
   const isVideoAvaible = videoSrc.split('.').length === 2;
@@ -12,9 +13,13 @@ const HeroBg = ({ playerRef, isVideoPlaying, videoSrc, posterSrc }) => {
       onClick={() => null}
     >
       {isVideoAvaible ? (
-        <video src={videoSrc} ref={playerRef} poster={posterSrc} />
+        <video
+          src={process.env.PREFIX + videoSrc}
+          ref={playerRef}
+          poster={process.env.PREFIX + posterSrc}
+        />
       ) : (
-        <img src={posterSrc} alt="smth" />
+        <Img src={posterSrc} alt="smth" />
       )}
     </div>
   );

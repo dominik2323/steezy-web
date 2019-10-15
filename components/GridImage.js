@@ -1,5 +1,6 @@
 import React from 'react';
 import GridImageHover from './GridImageHover';
+import Img from './Img';
 
 const ProjectGridImage = ({
   img,
@@ -20,7 +21,7 @@ const ProjectGridImage = ({
       {name && client && tags && id && (
         <GridImageHover name={name} client={client} tags={tags} id={id} />
       )}
-      <img src={`/static/img${folder}/${img}`} alt={alt} />
+      <Img src={`/static/img${folder}/${img}`} alt={alt} />
     </div>
   );
 };

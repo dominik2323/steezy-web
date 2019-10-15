@@ -3,6 +3,7 @@ import posed from 'react-pose';
 
 import { DataContext } from '../pages/_app';
 import Link from './Link';
+import Img from './Img';
 
 const Copied = posed.div({
   in: {
@@ -69,7 +70,7 @@ const Footer = () => {
       </div>
       <div className="footer__navbar">
         <div className="footer__navbar__menu">
-          {navbar.map(page =>
+          {navbar.pages.map(page =>
             page.url === `footer` ? null : (
               <Link key={page.displayName} path={`${page.url}`}>
                 <h5>{page.displayName}</h5>
@@ -80,7 +81,7 @@ const Footer = () => {
         <div className="footer__navbar__socials">
           {socials.map(social => (
             <Link key={social.id} href={social.url}>
-              <img src={`/static/img/globals/${social.img}`} alt={social.id} />
+              <Img src={`/static/img/globals/${social.img}`} alt={social.id} />
             </Link>
           ))}
         </div>

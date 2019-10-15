@@ -56,7 +56,7 @@ const Services = () => {
             activeTag={activeSection}
           />
         </Navbar>
-        <Hero posterSrc={`static/img/services/${hero.bg.posterSrc}`}>
+        <Hero posterSrc={`/static/img/services/${hero.posterSrc}`}>
           {{
             content: <h1>{hero.header}</h1>,
             footer: <HeroFooterLogotypes />

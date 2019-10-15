@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { DataContext } from '../pages/_app';
+import Img from './Img';
 
 const ProjectSwitch = ({ neighbourProjects }) => {
   const { nextProjectId, prevProjectId } = neighbourProjects;
@@ -17,8 +18,8 @@ const ProjectSwitch = ({ neighbourProjects }) => {
           <div className={`project-switch__side__nav`}>
             <h3>{prevProject.name}</h3>
           </div>
-          <img
-            src={`/static/img/project/${prevProjectId}/${prevProject.hero.bg.posterSrc}`}
+          <Img
+            src={`/static/img/project/${prevProjectId}/${prevProject.hero.posterSrc}`}
             alt={``}
           />
         </div>
@@ -28,8 +29,8 @@ const ProjectSwitch = ({ neighbourProjects }) => {
           <div className={`project-switch__side__nav`}>
             <h3>{nextProject.name}</h3>
           </div>
-          <img
-            src={`/static/img/project/${nextProjectId}/${nextProject.hero.bg.posterSrc}`}
+          <Img
+            src={`/static/img/project/${nextProjectId}/${nextProject.hero.posterSrc}`}
             alt={``}
           />
         </div>

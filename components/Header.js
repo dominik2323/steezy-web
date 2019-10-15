@@ -6,7 +6,7 @@ const Header = ({ children }) => {
       {children}
       <link
         rel="shortcut icon"
-        href="/static/img/globals/favicon.ico"
+        href={`${process.env.PREFIX}/static/img/globals/favicon.ico`}
         type="image/x-icon"
       />
     </Head>

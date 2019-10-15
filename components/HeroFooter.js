@@ -1,4 +1,5 @@
 import React from 'react';
+import Img from './Img';
 
 const HeroFooter = ({
   children,
@@ -57,7 +58,7 @@ const HeroFooter = ({
         }}
       />
       {controls.map(({ fn, label }, i) => (
-        <img src={`/static/img/globals/${label}`} key={i} onClick={fn} />
+        <Img src={`/static/img/globals/${label}`} key={i} onClick={fn} />
       ))}
     </div>
   ) : (

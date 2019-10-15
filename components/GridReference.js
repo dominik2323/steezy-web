@@ -1,4 +1,5 @@
 import React from 'react';
+import Img from './Img';
 
 const GridReference = ({
   quote,
@@ -19,7 +20,7 @@ const GridReference = ({
         `}
       >
         <div className={`grid__row__item--reference__person`}>
-          <img src={`/static/img/project/${id}/${img}`} alt={name} />
+          <Img src={`/static/img/project/${id}/${img}`} alt={name} />
           <p className={`red`}>{name}</p>
           <p>{client}</p>
         </div>

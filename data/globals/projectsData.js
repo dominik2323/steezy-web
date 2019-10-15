@@ -15,10 +15,8 @@ export default [
       client: 'Infinit Wellness'
     },
     hero: {
-      bg: {
-        posterSrc: 'dropDnd_intro.png',
-        videoSrc: ''
-      }
+      posterSrc: 'dropDnd_intro.png',
+      videoSrc: ''
     },
     intro: {
       img: 'dropDnd_intro.png',
@@ -30,8 +28,8 @@ export default [
       'NODUM atelier (architektonický návrh), Tomáš Lino (fotografie)',
     year: '2016',
     location: 'Česká republika, Brno',
-    presentation: [
-      [
+    presentation: {
+      0: [
         {
           img: 'logo.18.png',
           alt: 'dummy'
@@ -41,19 +39,19 @@ export default [
           alt: 'dummy'
         }
       ],
-      [
+      1: [
         {
           blockquote:
             'Nový vizuální styl se výrazně propsal i do interiéru salonu, který se tak odlišil od konkurenčních podniků ve městě.'
         }
       ],
-      [
+      2: [
         {
           img: 'Backstage2.png',
           alt: 'dummy'
         }
       ],
-      [
+      3: [
         {
           img: 'web.png',
           alt: 'dummy'
@@ -63,25 +61,25 @@ export default [
           alt: 'dummy'
         }
       ],
-      [
+      4: [
         {
           img: 'Backstage3.png',
           alt: 'dummy'
         }
       ],
-      [
+      5: [
         {
           blockquote:
             'Nový vizuální styl se výrazně propsal i do interiéru salonu, který se tak odlišil od konkurenčních podniků ve městě.'
         }
       ],
-      [
+      6: [
         {
           img: 'backstage_matro.png',
           alt: 'dummy'
         }
       ],
-      [
+      7: [
         {
           img: 'FOTO_slide1.png',
           alt: 'dummy'
@@ -91,7 +89,7 @@ export default [
           alt: 'dummy'
         }
       ],
-      [
+      8: [
         {
           img: 'IMG_1202.png',
           alt: 'dummy'
@@ -101,14 +99,14 @@ export default [
           alt: 'dummy'
         }
       ],
-      [
+      9: [
         {
           blockquote:
             'Firemní identitu salonu Backstage jsme podtrhli krátkým, dynamickým spotem prezentující mladistvou atmosféru v salonu. '
         }
       ],
-      [{ videoVimeoId: '215836460' }]
-    ]
+      10: [{ videoVimeoId: '215836460' }]
+    }
   },
   {
     active: true,
@@ -127,10 +125,8 @@ export default [
       client: 'Backstage Hair Salon'
     },
     hero: {
-      bg: {
-        posterSrc: 'backstage_intro.png',
-        videoSrc: 'dummy_video.mp4'
-      }
+      posterSrc: 'backstage_intro.png',
+      videoSrc: 'dummy_video.mp4'
     },
     intro: {
       img: 'backstage_intro.png',
@@ -142,8 +138,8 @@ export default [
       'NODUM atelier (architektonický návrh), Tomáš Lino (fotografie)',
     year: '2016',
     location: 'Česká republika, Brno',
-    presentation: [
-      [
+    presentation: {
+      0: [
         {
           img: 'logo.18.png',
           alt: 'dummy'
@@ -153,19 +149,19 @@ export default [
           alt: 'dummy'
         }
       ],
-      [
+      1: [
         {
           blockquote:
             'Nový vizuální styl se výrazně propsal i do interiéru salonu, který se tak odlišil od konkurenčních podniků ve městě.'
         }
       ],
-      [
+      2: [
         {
           img: 'Backstage2.png',
           alt: 'dummy'
         }
       ],
-      [
+      3: [
         {
           img: 'web.png',
           alt: 'dummy'
@@ -175,25 +171,25 @@ export default [
           alt: 'dummy'
         }
       ],
-      [
+      4: [
         {
           img: 'Backstage3.png',
           alt: 'dummy'
         }
       ],
-      [
+      5: [
         {
           blockquote:
             'Nový vizuální styl se výrazně propsal i do interiéru salonu, který se tak odlišil od konkurenčních podniků ve městě.'
         }
       ],
-      [
+      6: [
         {
           img: 'backstage_matro.png',
           alt: 'dummy'
         }
       ],
-      [
+      7: [
         {
           img: 'FOTO_slide1.png',
           alt: 'dummy'
@@ -203,7 +199,7 @@ export default [
           alt: 'dummy'
         }
       ],
-      [
+      8: [
         {
           img: 'IMG_1202.png',
           alt: 'dummy'
@@ -213,14 +209,14 @@ export default [
           alt: 'dummy'
         }
       ],
-      [
+      9: [
         {
           blockquote:
             'Firemní identitu salonu Backstage jsme podtrhli krátkým, dynamickým spotem prezentující mladistvou atmosféru v salonu. '
         }
       ],
-      [{ videoVimeoId: '215836460' }]
-    ]
+      10: [{ videoVimeoId: '215836460' }]
+    }
   },
   {
     active: true,
@@ -239,10 +235,8 @@ export default [
       client: 'Infinit Wellness'
     },
     hero: {
-      bg: {
-        posterSrc: 'surgeryClinic_intro.png',
-        videoSrc: ''
-      }
+      posterSrc: 'surgeryClinic_intro.png',
+      videoSrc: ''
     },
     intro: {
       img: 'surgeryClinic_intro.png',
@@ -254,8 +248,8 @@ export default [
       'NODUM atelier (architektonický návrh), Tomáš Lino (fotografie)',
     year: '2016',
     location: 'Česká republika, Brno',
-    presentation: [
-      [
+    presentation: {
+      0: [
         {
           img: 'logo.18.png',
           alt: 'dummy'
@@ -265,19 +259,19 @@ export default [
           alt: 'dummy'
         }
       ],
-      [
+      1: [
         {
           blockquote:
             'Nový vizuální styl se výrazně propsal i do interiéru salonu, který se tak odlišil od konkurenčních podniků ve městě.'
         }
       ],
-      [
+      2: [
         {
           img: 'Backstage2.png',
           alt: 'dummy'
         }
       ],
-      [
+      3: [
         {
           img: 'web.png',
           alt: 'dummy'
@@ -287,25 +281,25 @@ export default [
           alt: 'dummy'
         }
       ],
-      [
+      4: [
         {
           img: 'Backstage3.png',
           alt: 'dummy'
         }
       ],
-      [
+      5: [
         {
           blockquote:
             'Nový vizuální styl se výrazně propsal i do interiéru salonu, který se tak odlišil od konkurenčních podniků ve městě.'
         }
       ],
-      [
+      6: [
         {
           img: 'backstage_matro.png',
           alt: 'dummy'
         }
       ],
-      [
+      7: [
         {
           img: 'FOTO_slide1.png',
           alt: 'dummy'
@@ -315,7 +309,7 @@ export default [
           alt: 'dummy'
         }
       ],
-      [
+      8: [
         {
           img: 'IMG_1202.png',
           alt: 'dummy'
@@ -325,13 +319,13 @@ export default [
           alt: 'dummy'
         }
       ],
-      [
+      9: [
         {
           blockquote:
             'Firemní identitu salonu Backstage jsme podtrhli krátkým, dynamickým spotem prezentující mladistvou atmosféru v salonu. '
         }
       ],
-      [{ videoVimeoId: '215836460' }]
-    ]
+      10: [{ videoVimeoId: '215836460' }]
+    }
   }
 ];

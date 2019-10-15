@@ -3,10 +3,11 @@ import Router from 'next/router';
 // import Link from 'next/link';
 import { DataContext } from '../pages/_app';
 import Button from './Button';
+import Img from './Img';
 
 export const ServiceItem = ({ name, img, perex, btn, id }) => (
   <div className="services-overview__service" key={name}>
-    <img src={`/static/img/globals/${img}`} alt={name} />
+    <Img src={`/static/img/globals/${img}`} alt={name} />
     <h2>{name}</h2>
     <p>{perex}</p>
     {
