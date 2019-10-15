@@ -1,18 +1,20 @@
 export default {
   pageName: 'Studio',
   hero: {
-    header: 'Jsme otevřeni kreativním ',
-    subHeader:
-      'Nestačí být dobrý v tom, co děláte. Měli by o tom vědět i ostatní.',
+    header: 'Jsme designéři a filmaři, co\u00a0nemaj rádi prázdný kecy.',
+    subHeader: '',
+    footer: {
+      header: 'sociální případy'
+    },
     btn: 'MÁM ZÁJEM O MÍSTO'
   },
   intro: {
     perex:
-      'V roce 2019 se volné uskupení specialistů na grafický design, branding, motion design, průmyslový design A video, přetvořilo na plnohodnotné studio Steezy. Díky Této multioborové zkušenosti se studio specializuje Především na komplexní projekty vizuální komunikace Pro České i zahraniční společnosti.',
+      'Jsme designérské a filmařské studio specializované na inovativní a komplexní řešení vizuální komunikace. Tvoříme různorodý tým profesionálů se specializí v klasických i digitálních kreativních oborech. Naše práce je typická silným konceptem a přirozeným prolínáním tvůrčích přístupů od grafického designu přes video a animaci až k prostorové tvorbě. Tuto multioborovou výbavu využíváme primárně k tomu, abychom zajímavým firmám, lidem, institucím, start-upům nebo veřejně prospěšným projektům pomohli ukázat, jak jsou skvělí.',
     tags: [
-      { header: 'POČET PIV NA OSOBU:', bullet: '28 / den' },
-      { header: 'STUDIOVÍ PEJSCI:', bullet: 'Stingáček & Iriska' },
-      { header: 'NEJNASKILLENĚJŠÍ BOY:', bullet: 'Benny Láva' }
+      { header: 'KOLIK NÁS JE?', bullet: 'Nyní 6, od ledna 10' },
+      { header: 'OBLÍBENÁ MUZIKA', bullet: 'Rap' },
+      { header: 'NEJNASKILLENĚJŠÍ BOY', bullet: 'Benny Láva' }
     ]
   },
   grid: {

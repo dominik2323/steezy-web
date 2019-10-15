@@ -6,6 +6,7 @@ import Footer from '../components/Footer';
 import Grid from '../components/Grid';
 import HeroFooterLogotypes from '../components/HeroFooterLogotypes';
 import IntroText from '../components/IntroText';
+import Img from '../components/Img';
 
 import { DataContext } from '../pages/_app';
 
@@ -20,21 +21,31 @@ export default function About() {
       <div className="about container-fluid">
         <Navbar />
         <Hero
-          posterSrc={`${process.env.PREFIX}/static/img/about/about_hero.png`}
+          posterSrc={`/static/img/about/about_hero.png`}
           className={`about`}
         >
           {{
             content: (
               <div className={`about__hero-content`}>
                 <h1>{about.hero.header}</h1>
-                <h2>{about.hero.subHeader}</h2>
                 <Button
                   label={about.hero.btn}
                   handleClick={() => console.log('about cta')}
                 />
               </div>
             ),
-            footer: <HeroFooterLogotypes />
+            footer: (
+              <div className={`hero-footer`}>
+                <h5>{about.hero.footer.header.toUpperCase()}</h5>
+                <div>
+                  {globals.socials.map(({ id, url, img }) => (
+                    <a key={id} href={url}>
+                      <Img src={`/static/img/globals/${img}`} />
+                    </a>
+                  ))}
+                </div>
+              </div>
+            )
           }}
         </Hero>
         <IntroText perex={about.intro.perex} tags={about.intro.tags} />

@@ -11,6 +11,7 @@ import HeroFooterLogotypes from '../components/HeroFooterLogotypes';
 import ServicesItem from '../components/ServicesItem';
 import Footer from '../components/Footer';
 import NavbarFilter from '../components/NavbarFilter';
+import ClientLogotypes from '../components/ClientLogotypes';
 
 const Services = () => {
   const { globals, pages } = React.useContext(DataContext);
@@ -74,6 +75,7 @@ const Services = () => {
             projects={globals.projects}
           />
         ))}
+        <ClientLogotypes />
         <Footer />
       </div>
     </React.Fragment>

@@ -32,7 +32,7 @@
           &:before {
             content: '';
             display: block;
-            background-image: url('/static/img/globals/quotes.svg');
+            background-image: url('#{$prefix}/static/img/globals/quotes.svg');
             background-size: 100%;
             background-repeat: no-repeat;
           }
@@ -98,7 +98,7 @@
           width: 100%;
           transition: all 0.6s cubic-bezier(0.19, 1, 0.22, 1);
           min-height: cols(5);
-          height: auto;
+          height: 100%;
           // max-height: 800px;
         }
         &__hover {

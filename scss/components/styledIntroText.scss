@@ -9,19 +9,32 @@
     line-height: 50px;
     letter-spacing: 0.02em;
     font-weight: 500;
+    .btn-ghost {
+      margin-top: cols(0.5);
+    }
   }
   ul {
     margin-left: cols(1);
-    width: cols(2);
+    max-width: cols(3);
+    min-width: cols(2);
     min-width: 275px;
     li {
+      display: flex;
       margin-bottom: 75px;
-      h5 {
-        color: $white;
-        margin-bottom: 17px;
+      span {
+        color: $primary;
+        font-size: 24px;
+        font-weight: 400;
+        margin-right: 50px;
       }
-      small {
-        color: $med-gray;
+      div {
+        h5 {
+          color: $white;
+          margin-bottom: 17px;
+        }
+        small {
+          color: $med-gray;
+        }
       }
     }
   }

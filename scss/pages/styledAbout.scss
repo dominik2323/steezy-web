@@ -1,11 +1,24 @@
 .about {
-  &__hero-content {
-    h1 {
-      margin-bottom: 15px;
-    }
-    h2 {
-      margin-bottom: 100px;
-      color: $light-gray;
+  .hero-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    left: cols(1);
+    right: cols(1);
+    height: cols(1);
+    padding: 0 cols(1);
+    > div {
+      display: flex;
+      align-items: center;
+      a {
+        &:not(:last-child) {
+          margin-right: 30px;
+        }
+        img {
+          width: auto;
+          height: auto;
+        }
+      }
     }
   }
   .grid__row__item--image img {

@@ -14,13 +14,16 @@
     width: cols(11);
     transition: transform 0.5s ease-in-out;
     h1 {
-      width: cols(6);
+      width: cols(10);
+      font-size: 80px;
+      line-height: 1.2em;
+      margin-bottom: cols(0.5);
     }
-    h2 {
+    /* h2 {
       color: $med-gray;
       width: cols(6);
       margin: 10px 0 100px;
-    }
+    } */
   }
   @media screen and (max-width: 1366px) {
     &__content {

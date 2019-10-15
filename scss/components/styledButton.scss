@@ -11,7 +11,7 @@
     &:before {
       // padding: 25px 40px 25px 90px;
       margin-right: 20px;
-      background: url('/static/img/globals/playBtn.svg');
+      background: url('#{$prefix}/static/img/globals/playBtn.svg');
       mask-repeat: no-repeat;
       mask-position: center;
       content: '';
@@ -31,7 +31,8 @@
       color: $white;
       &.play-icon {
         &:before {
-          background: url('/static/img/globals/playBtn_hover.svg');
+          content: '';
+          background: url('#{$prefix}/static/img/globals/playBtn_hover.svg');
         }
       }
     }

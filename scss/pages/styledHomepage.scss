@@ -37,7 +37,7 @@
     height: 100vh;
     max-height: 1080px;
     width: 100%;
-    background-image: url('/static/img/homepage/steezy.png');
+    background-image: url('#{$prefix}/static/img/homepage/steezy.png');
     display: flex;
     justify-content: center;
     align-content: center;

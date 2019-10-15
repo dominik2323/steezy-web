@@ -2,28 +2,28 @@
   font-family: 'eina';
   font-weight: 300;
   font-style: normal;
-  src: url('#{$prefix}/static/fonts/393C9C_2_0.woff') format('woff');
+  src: url('/static/fonts/393C9C_2_0.woff') format('woff');
 }
 
 @font-face {
   font-family: 'eina';
   font-weight: 400;
   font-style: normal;
-  src: url('#{$prefix}/static/fonts/393C9C_1_0.woff') format('woff');
+  src: url('/static/fonts/393C9C_1_0.woff') format('woff');
 }
 
 @font-face {
   font-family: 'eina';
   font-weight: 500;
   font-style: normal;
-  src: url('#{$prefix}/static/fonts/393C9C_0_0.woff') format('woff');
+  src: url('/static/fonts/393C9C_0_0.woff') format('woff');
 }
 
 @font-face {
   font-family: 'eina';
   font-weight: 600;
   font-style: normal;
-  src: url('#{$prefix}/static/fonts/393C9C_3_0.woff') format('woff');
+  src: url('/static/fonts/393C9C_3_0.woff') format('woff');
 }
 
 ul {
@@ -31,9 +31,9 @@ ul {
 }
 
 h1 {
-  font-size: 60px;
+  font-size: 48px;
   letter-spacing: 0.02em;
-  line-height: 1.2em;
+  line-height: 65px;
   color: $white;
 }
 

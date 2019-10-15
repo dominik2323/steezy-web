@@ -18,6 +18,12 @@ const Homepage = () => {
 
   const { pages, globals, components } = React.useContext(DataContext);
   const { hero, intro, about, grid: gridRef } = pages.homepage;
+  const { content: servicesContent } = pages.services;
+
+  const transformServicesContent = servicesContent.map(({ name, bullets }) => ({
+    header: name,
+    bullet: bullets.map(({ header }) => `${header}, `)
+  }));
 
   const transformedGridData = transformGridReferencesIntoGrid(
     Object.values(gridRef),
@@ -43,7 +49,6 @@ const Homepage = () => {
                 <h1 className="homepage__hero__content__header">
                   {hero.header}
                 </h1>
-                <h2>{hero.subHeader}</h2>
                 <Button
                   label={components.button.playShowreel}
                   playIcon
@@ -55,12 +60,24 @@ const Homepage = () => {
           }}
         </Hero>
 
-        <IntroText perex={intro.perex} tags={intro.tags} />
+        <IntroText
+          perex={intro.perex}
+          tags={transformServicesContent}
+          numbered={true}
+        >
+          <Button
+            label={components.button.howCanWeHelp}
+            handleClick={async () => {
+              await Router.push({ pathname: '/services' });
+              window.scrollTo(0, 0);
+            }}
+          />
+        </IntroText>
 
-        <ServicesOverview
+        {/* <ServicesOverview
           services={globals.services}
           className={`homepage__services-overview`}
-        />
+        />*/}
 
         <Grid grid={transformedGridData} folder={`/project`} />
         <Button
@@ -73,7 +90,6 @@ const Homepage = () => {
         />
 
         <div className="homepage__about">
-          <h2>{about.header}</h2>
           <p>{about.paragraph}</p>
           <Button
             label={components.button.aboutStudio}
