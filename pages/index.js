@@ -12,6 +12,7 @@ import HeroFooterLogotypes from '../components/HeroFooterLogotypes';
 import Button from '../components/Button';
 import IntroText from '../components/IntroText';
 import ServicesOverview from '../components/ServicesOverview';
+import ClientLogotypes from '../components/ClientLogotypes';
 
 const Homepage = () => {
   const playerRef = useRef(null);
@@ -22,7 +23,7 @@ const Homepage = () => {
 
   const transformServicesContent = servicesContent.map(({ name, bullets }) => ({
     header: name,
-    bullet: bullets.map(({ header }) => `${header}, `)
+    bullet: bullets.map(({ header }) => `${header}\n`)
   }));
 
   const transformedGridData = transformGridReferencesIntoGrid(
@@ -89,6 +90,7 @@ const Homepage = () => {
           style={{ margin: 'auto' }}
         />
 
+        <ClientLogotypes />
         <div className="homepage__about">
           <p>{about.paragraph}</p>
           <Button

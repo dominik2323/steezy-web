@@ -7,11 +7,16 @@ import Link from './Link';
 import Button from './Button';
 import Sidebar from './Sidebar';
 
-const Navbar = React.forwardRef(({ children }, ref) => {
+const Navbar = React.forwardRef(({ children, hasBg }, ref) => {
   const [showSidebar, toggleSidebar] = useState(false);
   // const { activeTag, invertNavbar } = useSelector(x => x);
   return (
-    <div ref={ref} className={`topbar topbar--fixed justify-content-center`}>
+    <div
+      ref={ref}
+      className={`topbar topbar--fixed justify-content-center ${
+        hasBg ? `has-bg` : ``
+      }`}
+    >
       <div className={`topbar__navbar col-11`}>
         <Link path="/">
           <div className={`topbar__navbar__brand`} />
@@ -31,15 +36,17 @@ const Navbar = React.forwardRef(({ children }, ref) => {
 
 const PosedNavbar = posed(Navbar)({
   navPre: { opacity: 1, y: -100 },
-  navIn: { opacity: 1, y: 0 },
+  navIn: { opacity: 1, y: 0, transition: { duration: 300 } },
   navOut: { opacity: 0, y: -100, transition: { duration: 700 } }
 });
 
 export default ({ children }) => {
-  const isFixed = useFixedNav();
+  const { showNav, hasBg } = useFixedNav();
   return (
     <PoseGroup preEnterPose={`navPre`} enterPose={`navIn`} exitPose={`navOut`}>
-      {isFixed && <PosedNavbar key={'navbar'} children={children} />}
+      {showNav && (
+        <PosedNavbar key={'navbar'} children={children} hasBg={hasBg} />
+      )}
     </PoseGroup>
   );
 };

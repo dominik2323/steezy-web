@@ -1,7 +1,7 @@
 export default {
   pageName: 'Homepage',
   hero: {
-    header: 'Ukazujeme světu, jak jste skvělí.',
+    header: 'Ukazujeme světu,\njak jste skvělí',
     subHeader: '',
     posterSrc: 'hero_homepage.png',
     videoSrc: 'steezy_showreel.mp4'

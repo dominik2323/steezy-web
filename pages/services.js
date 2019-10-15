@@ -11,7 +11,6 @@ import HeroFooterLogotypes from '../components/HeroFooterLogotypes';
 import ServicesItem from '../components/ServicesItem';
 import Footer from '../components/Footer';
 import NavbarFilter from '../components/NavbarFilter';
-import ClientLogotypes from '../components/ClientLogotypes';
 
 const Services = () => {
   const { globals, pages } = React.useContext(DataContext);
@@ -63,9 +62,10 @@ const Services = () => {
             footer: <HeroFooterLogotypes />
           }}
         </Hero>
-        {content.map(({ name, perex, id, bullets, img, grid }) => (
+        {content.map(({ name, perex, id, bullets, img, grid, btn }) => (
           <ServicesItem
             key={name}
+            btn={btn}
             name={name}
             id={id}
             grid={grid}
@@ -75,7 +75,6 @@ const Services = () => {
             projects={globals.projects}
           />
         ))}
-        <ClientLogotypes />
         <Footer />
       </div>
     </React.Fragment>

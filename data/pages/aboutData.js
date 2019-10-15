@@ -1,7 +1,7 @@
 export default {
   pageName: 'Studio',
   hero: {
-    header: 'Jsme designéři a filmaři, co\u00a0nemaj rádi prázdný kecy.',
+    header: 'Jsme designéři a filmaři, co\u00a0nemaj rádi prázdný kecy',
     subHeader: '',
     footer: {
       header: 'sociální případy'

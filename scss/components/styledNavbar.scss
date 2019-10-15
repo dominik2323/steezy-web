@@ -3,10 +3,14 @@
   display: flex;
   justify-content: center;
   z-index: 2;
+  // background-color: transparent;
+  &.has-bg {
+    background-color: $dark-gray;
+  }
   &__navbar {
     width: cols(11);
     display: flex;
-    margin-top: 50px;
+    // margin-top: 50px;
     position: absolute !important;
     &__brand {
       background: url('#{$prefix}/static/img/globals/steezy.svg');
@@ -37,11 +41,11 @@
   &--fixed {
     position: fixed;
     width: 100%;
-    height: 27px;
-    top: 20px;
+    height: 70px;
+    top: 0px;
     z-index: 2;
+    align-items: center;
     .topbar__navbar {
-      margin-top: 10px;
       &__label {
         color: $light-gray;
         margin-left: 50px;

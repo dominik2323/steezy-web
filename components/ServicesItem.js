@@ -6,7 +6,16 @@ import { DataContext } from '../pages/_app';
 import Router from 'next/router';
 import Img from './Img';
 
-const ServicesItem = ({ name, perex, bullets, img, grid, projects, id }) => {
+const ServicesItem = ({
+  name,
+  perex,
+  bullets,
+  img,
+  grid,
+  projects,
+  id,
+  btn
+}) => {
   const transformGrid = transformGridReferencesIntoGrid(
     Object.values(grid),
     projects
@@ -45,7 +54,7 @@ const ServicesItem = ({ name, perex, bullets, img, grid, projects, id }) => {
           });
           window.scrollTo(0, 0);
         }}
-        label={name.toUpperCase()}
+        label={btn}
       />
     </div>
   );

@@ -7,6 +7,7 @@ import Grid from '../components/Grid';
 import HeroFooterLogotypes from '../components/HeroFooterLogotypes';
 import IntroText from '../components/IntroText';
 import Img from '../components/Img';
+import { scrollTo } from '../hooks/scrollTo';
 
 import { DataContext } from '../pages/_app';
 
@@ -30,7 +31,7 @@ export default function About() {
                 <h1>{about.hero.header}</h1>
                 <Button
                   label={about.hero.btn}
-                  handleClick={() => console.log('about cta')}
+                  handleClick={() => scrollTo('footer')}
                 />
               </div>
             ),
