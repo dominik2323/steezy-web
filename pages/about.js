@@ -50,7 +50,11 @@ export default function About() {
           }}
         </Hero>
         <IntroText perex={about.intro.perex} tags={about.intro.tags} />
-        <Grid grid={Object.values(about.grid)} folder={`/about`} />
+        <Grid
+          grid={Object.values(about.grid)}
+          folder={`/about`}
+          noCrop={true}
+        />
         <Footer />
       </div>
     </React.Fragment>

@@ -152,7 +152,11 @@ const Project = () => {
             }}
           </Hero>
           <IntroText perex={project.about} tags={introTags} />
-          <Grid grid={projectWithReference} folder={`/project/${projectId}`} />
+          <Grid
+            grid={projectWithReference}
+            folder={`/project/${projectId}`}
+            noCrop={true}
+          />
           <ProjectSwitch neighbourProjects={neighbourProjects} />
           <Footer />
         </PosedProject>

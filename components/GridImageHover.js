@@ -1,9 +1,9 @@
 import React from 'react';
 import Link from 'next/link';
 
-const GridImageHover = ({ id, name, client, tags }) => {
+const GridImageHover = ({ projectId, name, client, tags }) => {
   return (
-    <Link href={`/project/[id]`} as={`/project/${id}`}>
+    <Link href={`/project/[id]`} as={`/project/${projectId}`}>
       <div className="grid__row__item--image__hover">
         <h2>{name}</h2>
         <h3>{client}</h3>

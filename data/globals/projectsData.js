@@ -159,6 +159,10 @@ export default [
         {
           img: 'Backstage2.png',
           alt: 'dummy'
+        },
+        {
+          blockquote:
+            'Nový vizuální styl se výrazně propsal i do interiéru salonu, který se tak odlišil od konkurenčních podniků ve městě.'
         }
       ],
       3: [

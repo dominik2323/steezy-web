@@ -4,8 +4,9 @@
   margin: cols(2) 0;
   &__row {
     width: 100%;
+    height: cols(6);
     display: flex;
-    margin: cols(0.5) cols(1);
+    margin: cols(0.25) cols(1);
     &:first-child {
       margin-top: 0;
     }
@@ -15,8 +16,7 @@
     &__item {
       &--reference {
         display: flex;
-        // width: cols(9);
-        margin: cols(0.5) auto;
+        margin: cols(2) auto;
         align-items: center;
         &__person {
           img {
@@ -87,9 +87,10 @@
         }
       }
       &--image {
+        cursor: pointer;
         flex-grow: 1;
         &:not(:last-child) {
-          margin-right: cols(1);
+          margin-right: cols(0.5);
         }
         position: relative;
         overflow: hidden;
@@ -165,14 +166,78 @@
       }
     }
   }
+  &.no-crop {
+    .grid {
+      &__row {
+        height: auto;
+        &__item {
+          &--image {
+            cursor: default;
+            img {
+              min-height: initial;
+            }
+          }
+        }
+      }
+    }
+  }
   @media screen and (min-width: 1920px) {
     &__row {
       &__item {
         &--reference {
         }
         &--image {
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 768px) {
+    margin: cols(3) 0;
+    &__row {
+      flex-direction: column;
+      margin: cols(0.5) cols(1);
+      // min-height: cols(9);
+      // max-height: cols(18);
+      height: auto;
+      &__item {
+        &--reference {
+          flex-direction: column-reverse;
+          align-items: flex-start;
+          &--landscape {
+            .grid__row__item--reference {
+              &__quote {
+                width: cols(13);
+                margin: auto;
+                p {
+                  // text-align: center;
+                  margin-bottom: cols(2);
+                  font-size: 24px;
+                  line-height: 1.5em;
+                }
+              }
+            }
+          }
+        }
+        &--image {
+          &__hover {
+            padding: cols(1.5);
+            ul {
+              display: none;
+            }
+            h2 {
+              font-size: 21px;
+            }
+            h3 {
+              font-size: 14px;
+            }
+          }
+          height: cols(12);
+          &:not(:last-child) {
+            margin-right: 0;
+            margin-bottom: cols(1);
+          }
           img {
-            max-height: cols(4);
+            // min-height: cols(7);
           }
         }
       }

@@ -16,17 +16,17 @@
       // }
     }
   }
-  .grid {
+  /* .grid {
     margin-bottom: cols(0.5);
     &__row {
-      max-height: 800px;
+      // max-height: 800px;
       &__item {
         &--image {
           cursor: pointer;
         }
       }
     }
-  }
+  } */
   &__intro {
   }
   &__services-overview {
@@ -57,10 +57,17 @@
     }
   }
   @media screen and (min-width: 1920px) {
+    &__hero {
+      &__content {
+        // width: cols();
+      }
+    }
     &__about {
       p {
         max-width: cols(8);
       }
     }
+  }
+  @media screen and (max-width: 768px) {
   }
 }

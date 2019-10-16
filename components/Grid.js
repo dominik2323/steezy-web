@@ -6,11 +6,11 @@ import GridReference from './GridReference';
 import GridImage from './GridImage';
 import ErrorMsg from './ErrorMsg';
 
-const Grid = ({ grid, folder, children }) => {
+const Grid = ({ grid, folder, children, noCrop = false }) => {
   if (!grid || grid.length === 0)
     return <ErrorMsg header={`Žádné projekty neodpovídají výběru`} />;
   return (
-    <div className="grid">
+    <div className={`grid ${noCrop ? `no-crop` : ``}`}>
       {grid.map((row, i) => {
         return (
           <div className="grid__row" key={i}>

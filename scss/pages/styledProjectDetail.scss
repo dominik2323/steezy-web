@@ -1,7 +1,12 @@
-.grid__row__item--image img {
-  min-height: initial;
-}
 .project {
+  /* .grid__row {
+    height: auto;
+    &__item--image img {
+      min-height: initial;
+    }
+    @media screen and (max-width: 768px) {
+    }
+  } */
   &__hero {
     &__footer {
       display: flex;

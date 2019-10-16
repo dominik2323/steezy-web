@@ -14,45 +14,30 @@
     width: cols(11);
     transition: transform 0.5s ease-in-out;
     h1 {
-      width: cols(10);
       font-size: 80px;
       line-height: 1.2em;
       margin-bottom: cols(0.5);
     }
-    /* h2 {
-      color: $med-gray;
-      width: cols(6);
-      margin: 10px 0 100px;
-    } */
   }
   @media screen and (max-width: 1366px) {
     &__content {
-      h1,
-      h2 {
-        width: 70%;
-      }
-      h2 {
-        margin-bottom: 50px;
+      h1 {
+        font-size: 60px;
       }
     }
   }
   @media screen and (max-width: 992px) {
-    h1,
-    h2 {
-      width: 100%;
-      // margin-bottom: 15px;
+    &__content {
+      h1 {
+        font-size: 50px;
+        white-space: normal;
+        margin-bottom: cols(1);
+      }
     }
   }
   @media screen and (max-width: 768px) {
-    h1,
-    h2 {
-      text-align: center;
-    }
     h1 {
-      margin-bottom: cols(1);
-    }
-    .btn-ghost {
-      margin: auto;
+      font-size: cols(1.5);
     }
   }
 }

@@ -13,6 +13,7 @@
       // padding: 25px 40px 25px 90px;
       margin-right: 20px;
       background: url('#{$prefix}/static/img/globals/playBtn.svg');
+      background-size: 100%;
       mask-repeat: no-repeat;
       mask-position: center;
       content: '';
@@ -34,13 +35,33 @@
         &:before {
           content: '';
           background: url('#{$prefix}/static/img/globals/playBtn_hover.svg');
+          background-size: 100%;
         }
       }
     }
   }
   @media screen and (max-width: 1366px) {
+    padding: 20px 35px;
     &.play-icon {
       padding: 20px 35px;
+    }
+  }
+  @media screen and (max-width: 992px) {
+    &.play-icon {
+      padding: 15px 25px;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    border: 1px solid;
+    font-size: 11px;
+    &.play-icon {
+      &:before {
+        width: 20px;
+        height: 20px;
+      }
+    }
+    &--red {
+      border-color: $primary;
     }
   }
 }

@@ -6,7 +6,7 @@
   p {
     width: cols(6);
     font-size: 30px;
-    line-height: 50px;
+    line-height: 1.6em;
     letter-spacing: 0.02em;
     font-weight: 500;
     .btn-ghost {
@@ -39,5 +39,55 @@
   }
   @media screen and (min-width: 1920px) {
     width: cols(10);
+  }
+  @media screen and (max-width: 1366px) {
+    width: cols(13);
+    p {
+      font-size: 24px;
+      width: cols(8);
+    }
+    ul {
+      max-width: cols(5);
+    }
+  }
+  @media screen and (max-width: 992px) {
+    flex-direction: column-reverse;
+    p {
+      width: 80%;
+      .btn-ghost {
+        margin: cols(1) 0 0;
+      }
+    }
+    ul {
+      max-width: 100%;
+      display: flex;
+      flex-shrink: 0;
+      margin-left: 0;
+      justify-content: space-around;
+      li {
+        width: 33.33%;
+        flex-direction: column;
+        span,
+        h5,
+        small {
+          display: block;
+          // text-align: center;
+        }
+        span {
+          margin-right: 0;
+          font-size: 14px;
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 768px) {
+    p {
+      width: 100%;
+      font-size: 21px;
+      .btn-ghost {
+        margin: cols(2) auto 0;
+      }
+    }
   }
 }

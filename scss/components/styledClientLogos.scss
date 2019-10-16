@@ -24,4 +24,22 @@
   @media screen and (min-width: 1920px) {
     width: cols(9);
   }
+  @media screen and (max-width: 768px) {
+    margin: cols(4) auto;
+    width: cols(13);
+    &__list {
+      &__item {
+        width: calc(100% / 3);
+        // max-height: cols(1);
+        padding: 0 cols(1);
+        // min-height: cols(0.8);
+        margin: cols(1) 0;
+        img {
+          // width: auto;
+          // height: auto;
+          // object-fit: contain;
+        }
+      }
+    }
+  }
 }
