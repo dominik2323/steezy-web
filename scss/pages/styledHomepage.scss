@@ -36,7 +36,7 @@
   &__about {
     height: 100vh;
     max-height: 1080px;
-    width: 100%;
+    width: 100vw;
     background-image: url('#{$prefix}/static/img/homepage/steezy.png');
     display: flex;
     justify-content: center;
@@ -44,10 +44,6 @@
     flex-direction: column;
     padding: 0 calc(100% / 15 * 2);
     margin-top: calc(100vw / 15);
-    h2 {
-      font-size: 30px;
-      color: $light-gray;
-    }
     p {
       font-size: 60px;
       letter-spacing: 0.02em;
@@ -58,6 +54,13 @@
     }
     button {
       align-self: flex-start;
+    }
+  }
+  @media screen and (min-width: 1920px) {
+    &__about {
+      p {
+        max-width: cols(8);
+      }
     }
   }
 }

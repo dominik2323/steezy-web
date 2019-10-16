@@ -1,7 +1,7 @@
 export default {
   pageName: 'Služby',
   hero: {
-    header: 'Srozumitelná komunikace je\u00a0základ úspěchu',
+    header: 'Srozumitelná komunikace\nje\u00a0základ úspěchu',
     posterSrc: 'hero_homepage.png'
   },
   intro: {

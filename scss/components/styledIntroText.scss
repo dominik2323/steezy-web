@@ -17,7 +17,6 @@
     margin-left: cols(1);
     max-width: cols(3);
     min-width: cols(2);
-    min-width: 275px;
     li {
       display: flex;
       margin-bottom: 75px;
@@ -37,5 +36,8 @@
         }
       }
     }
+  }
+  @media screen and (min-width: 1920px) {
+    width: cols(10);
   }
 }

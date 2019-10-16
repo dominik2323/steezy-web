@@ -23,9 +23,10 @@
         }
       }
       &__icon {
+        width: cols(3);
         margin-left: cols(1);
         img {
-          width: auto;
+          width: 100%;
           height: auto;
         }
       }

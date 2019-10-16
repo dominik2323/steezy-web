@@ -13,10 +13,9 @@
       margin-bottom: 0;
     }
     &__item {
-      // min-height: 670px;
       &--reference {
         display: flex;
-        width: cols(9);
+        // width: cols(9);
         margin: cols(0.5) auto;
         align-items: center;
         &__person {
@@ -70,7 +69,8 @@
           justify-content: space-between;
           .grid__row__item--reference {
             &__quote {
-              width: 675px;
+              width: cols(5);
+              margin-left: cols(1);
               &:before {
                 width: 38px;
                 height: 24px;
@@ -91,7 +91,6 @@
         &:not(:last-child) {
           margin-right: cols(1);
         }
-        // margin-bottom: cols(1);
         position: relative;
         overflow: hidden;
         img {
@@ -99,7 +98,6 @@
           transition: all 0.6s cubic-bezier(0.19, 1, 0.22, 1);
           min-height: cols(5);
           height: 100%;
-          // max-height: 800px;
         }
         &__hover {
           z-index: 1;
@@ -144,7 +142,6 @@
         }
         &:hover &__hover {
           transform: translateX(0%);
-          // background-color: rgba(0,0,0,0.7);
           ~ img {
             opacity: 0.2;
           }
@@ -159,37 +156,24 @@
         }
       }
       &--video {
-        // position: relative;
-        // padding-bottom: 56.25%;
-        // overflow: hidden;
-        // width: cols(13);
-        // height: calc(100vw / 15 * 13 / 16 * 9);
-        // &__overlay {
-        //   position: absolute;
-        //   inset: 0 0 0 0;
-        //   // background-color: $dark-gray;
-        //   z-index: 1;
-        //   display: flex;
-        //   justify-content: center;
-        //   align-items: center;
-        //   &.paused {
-        //     opacity: 1;
-        //     ~ iframe {
-        //       opacity: 0.5;
-        //     }
-        //   }
-        //   &.playing {
-        //     opacity: 0;
-        //     ~ iframe {
-        //       opacity: 1;
-        //     }
-        //   }
-        // }
         iframe,
         object,
         embed {
           width: 100%;
           height: 100%;
+        }
+      }
+    }
+  }
+  @media screen and (min-width: 1920px) {
+    &__row {
+      &__item {
+        &--reference {
+        }
+        &--image {
+          img {
+            max-height: cols(4);
+          }
         }
       }
     }
