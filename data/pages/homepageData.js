@@ -39,7 +39,7 @@ export default {
     ],
     3: [
       {
-        id: 'backstage',
+        id: 'cafeRepublic',
         type: 'project',
         width: 'lg'
       }

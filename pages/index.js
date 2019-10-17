@@ -21,10 +21,13 @@ const Homepage = () => {
   const { hero, intro, about, grid: gridRef } = pages.homepage;
   const { content: servicesContent } = pages.services;
 
-  const transformServicesContent = servicesContent.map(({ name, bullets }) => ({
-    header: name,
-    bullet: bullets.map(({ header }) => `${header}\n`)
-  }));
+  const transformServicesContent = servicesContent.map(
+    ({ name, bullets, id }) => ({
+      id: id,
+      header: name,
+      bullet: bullets.map(({ header }) => `${header}\n`)
+    })
+  );
 
   const transformedGridData = transformGridReferencesIntoGrid(
     Object.values(gridRef),
@@ -65,6 +68,9 @@ const Homepage = () => {
           perex={intro.perex}
           tags={transformServicesContent}
           numbered={true}
+          handleClick={id => {
+            Router.push({ pathname: '/services', query: { section: id } });
+          }}
         >
           <Button
             label={components.button.howCanWeHelp}
@@ -115,7 +121,7 @@ export const transformGridReferencesIntoGrid = (gridRef, projects) => {
     const fullProject = projects.find(project => project.id === id);
     if (type === `project`) {
       return {
-        img: `${id}/${fullProject.hero.posterSrc}`,
+        img: `${id}/${fullProject.intro.img}`,
         alt: fullProject.name,
         name: fullProject.name,
         client: fullProject.client,

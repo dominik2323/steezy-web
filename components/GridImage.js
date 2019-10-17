@@ -9,20 +9,25 @@ const ProjectGridImage = ({
   tags,
   alt,
   folder = ``,
-  id
+  id,
+  noCrop
 }) => {
-  const [aspect, setAspect] = React.useState(1);
+  const [width, setWidth] = React.useState(1);
+
   React.useEffect(() => {
-    const el = document.getElementById(img);
-    setAspect(el.naturalWidth);
+    if (noCrop) {
+      const el = document.getElementById(img);
+      setWidth(el.naturalWidth);
+    }
   }, []);
+
   return (
     <div
       className={`
           grid__row__item 
           grid__row__item--image 
           `}
-      style={{ flexGrow: aspect }}
+      style={{ flexGrow: width }}
     >
       {name && client && tags && id && (
         <GridImageHover

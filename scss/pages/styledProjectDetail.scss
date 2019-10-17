@@ -1,4 +1,7 @@
 .project {
+  .grid {
+    margin-bottom: 0;
+  }
   /* .grid__row {
     height: auto;
     &__item--image img {
@@ -30,11 +33,13 @@
     right: 0;
     bottom: 0;
     height: cols(1);
+    min-height: 100px;
     display: flex;
     justify-content: space-between;
     &__arrow {
       background-color: dark-gray-opacity(0.5);
       height: cols(1);
+      min-height: 100px;
       width: cols(1);
       display: flex;
       justify-content: center;

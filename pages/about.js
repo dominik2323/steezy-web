@@ -53,7 +53,7 @@ export default function About() {
         <Grid
           grid={Object.values(about.grid)}
           folder={`/about`}
-          noCrop={true}
+          noCrop={false}
         />
         <Footer />
       </div>

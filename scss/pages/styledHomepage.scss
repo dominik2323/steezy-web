@@ -27,6 +27,12 @@
       }
     }
   } */
+  .grid {
+    margin-bottom: cols(1);
+    &__row__item--image {
+      flex-grow: 1 !important;
+    }
+  }
   &__intro {
   }
   &__services-overview {

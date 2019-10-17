@@ -1,5 +1,6 @@
 import React, { Fragment, useState } from 'react';
 import posed from 'react-pose';
+import { useRouter } from 'next/router';
 
 import { DataContext } from '../pages/_app';
 import Link from './Link';
@@ -20,6 +21,8 @@ const Footer = () => {
   const { globals, components } = React.useContext(DataContext);
   const defaultAnimState = { id: -1, x: 30, y: 50 };
   const [{ id, x, y }, setAnimId] = useState(defaultAnimState);
+  const router = useRouter();
+  const { pathname } = router;
   const { address, phone, ico, dic } = globals.contact;
   const { footer, navbar } = components;
   const { socials } = globals;
@@ -73,7 +76,9 @@ const Footer = () => {
           {navbar.pages.map(page =>
             page.url === `footer` ? null : (
               <Link key={page.displayName} path={`${page.url}`}>
-                <h5>{page.displayName}</h5>
+                <h5 className={pathname === page.url ? `active` : ``}>
+                  {page.displayName.toUpperCase()}
+                </h5>
               </Link>
             )
           )}

@@ -2,7 +2,7 @@
   display: flex;
   &__side {
     width: 50%;
-    height: 500px;
+    height: cols(5);
     position: relative;
     cursor: pointer;
     &__nav {

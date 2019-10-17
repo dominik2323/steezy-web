@@ -1,0 +1,12 @@
+.grid__row__item--blockquote {
+  margin: cols(2) auto;
+  width: cols(8);
+  h1 {
+    text-align: center;
+    color: $med-gray;
+  }
+  @media screen and (max-width: 768px) {
+    width: cols(13);
+    margin: cols(4) auto;
+  }
+}

@@ -24,7 +24,7 @@ const ProjectSwitch = ({ neighbourProjects }) => {
           />
         </div>
       </Link>
-      <Link href={`/project/[id]`} as={`/project/${prevProjectId}`}>
+      <Link href={`/project/[id]`} as={`/project/${nextProjectId}`}>
         <div className={`project-switch__side project-switch__side--right`}>
           <div className={`project-switch__side__nav`}>
             <h3>{nextProject.name}</h3>

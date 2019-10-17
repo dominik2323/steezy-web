@@ -4,6 +4,7 @@ import Link from './Link';
 import { DataContext } from '../pages/_app';
 import { scrollTo } from '../hooks/scrollTo';
 import Img from './Img';
+import Router, { useRouter } from 'next/router';
 
 const PosedSidebar = posed.div({
   show: {
@@ -27,6 +28,8 @@ const PosedLink = posed.div({
 const Sidebar = ({ showSidebar, toggleSidebar }) => {
   const [showServicesSelector, toggleServicesSelector] = React.useState(false);
   const { components, globals } = React.useContext(DataContext);
+  const router = useRouter();
+  const { pathname } = router;
   const { navbar } = components;
   return (
     <PosedSidebar
@@ -35,7 +38,7 @@ const Sidebar = ({ showSidebar, toggleSidebar }) => {
       style={{ display: 'none' }}
     >
       <Img
-        onClick={() => (toggleSidebar(false), toggleServicesSelector(false))}
+        onClick={() => toggleSidebar(false)}
         className={`close-icon`}
         src={`/static/img/globals/close.svg`}
         alt="close icon"
@@ -45,14 +48,29 @@ const Sidebar = ({ showSidebar, toggleSidebar }) => {
           if (page.url === 'footer') {
             return (
               <PosedLink key={page.displayName}>
-                <h1 onClick={() => scrollTo(page.url)}>{page.displayName}</h1>
+                <h1
+                  onClick={() => {
+                    toggleSidebar(false);
+                    scrollTo(page.url);
+                  }}
+                >
+                  {page.displayName}
+                </h1>
               </PosedLink>
             );
           }
           return (
             <PosedLink key={page.displayName}>
               <Link path={`${page.url}`}>
-                <h1>{page.displayName}</h1>
+                <h1
+                  className={pathname === page.url ? `active` : ``}
+                  onClick={() => {
+                    toggleSidebar(false);
+                    Router.push({ pathname: page.url });
+                  }}
+                >
+                  {page.displayName}
+                </h1>
               </Link>
             </PosedLink>
           );

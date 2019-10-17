@@ -5,6 +5,7 @@ import Button from './Button';
 import { DataContext } from '../pages/_app';
 import Router from 'next/router';
 import Img from './Img';
+import Lottie from './Lottie';
 
 const ServicesItem = ({
   name,
@@ -22,18 +23,23 @@ const ServicesItem = ({
   );
   const { components } = React.useContext(DataContext);
   return (
-    <div id={id} className={`services-item`}>
-      <div className={`services-item__about`}>
-        <div className={`services-item__about__intro`}>
-          <div className={`services-item__about__intro__perex`}>
+    <div id={id} className={`services__content__services-item`}>
+      <div className={`services__content__services-item__about`}>
+        <div className={`services__content__services-item__about__intro`}>
+          <div
+            className={`services__content__services-item__about__intro__perex`}
+          >
             <h1>{name}</h1>
             <p className={`big`}>{perex}</p>
           </div>
-          <div className={`services-item__about__intro__icon`}>
-            <Img src={`/static/img/services/${img}`} alt="" />
+          <div
+            className={`services__content__services-item__about__intro__icon`}
+          >
+            <Lottie src={`/static/img/services/${img}`} />
+            {/*<Img src={`/static/img/services/${img}`} alt="" />*/}
           </div>
         </div>
-        <ul className={`services-item__about__bullets`}>
+        <ul className={`services__content__services-item__about__bullets`}>
           {bullets.map(({ header, perex }, i) => (
             <li key={i}>
               <h2>

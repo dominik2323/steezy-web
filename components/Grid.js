@@ -6,11 +6,13 @@ import GridReference from './GridReference';
 import GridImage from './GridImage';
 import ErrorMsg from './ErrorMsg';
 
-const Grid = ({ grid, folder, children, noCrop = false }) => {
+const Grid = ({ grid, folder, children, noCrop = false, square = false }) => {
   if (!grid || grid.length === 0)
     return <ErrorMsg header={`Žádné projekty neodpovídají výběru`} />;
   return (
-    <div className={`grid ${noCrop ? `no-crop` : ``}`}>
+    <div
+      className={`grid ${noCrop ? `no-crop` : ``} ${square ? `square` : ``}`}
+    >
       {grid.map((row, i) => {
         return (
           <div className="grid__row" key={i}>
@@ -45,6 +47,7 @@ const Grid = ({ grid, folder, children, noCrop = false }) => {
               else
                 return (
                   <GridImage
+                    noCrop={noCrop}
                     key={item.img}
                     img={item.img}
                     alt={item.alt}

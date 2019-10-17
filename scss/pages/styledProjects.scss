@@ -1,9 +1,6 @@
 .projects {
-  margin-top: 100px;
-  /* .grid {
-    // margin: cols(1) 0;
-    &__row__item {
-      cursor: pointer;
-    }
-  } */
+  margin-top: cols(2);
+  .grid {
+    margin-top: cols(3);
+  }
 }

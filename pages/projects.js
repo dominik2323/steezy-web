@@ -5,11 +5,13 @@ import Grid from '../components/Grid';
 import NavbarFilter from '../components/NavbarFilter';
 import { useRouter } from 'next/router';
 import { DataContext } from '../pages/_app';
+import { useViewportSize } from '../hooks/useViewportSize';
 
 const Projects = () => {
   const { globals, pages } = React.useContext(DataContext);
   const { projects } = globals;
   const router = useRouter();
+  const { w } = useViewportSize();
   const { filterQuery } = router.query;
   const [filter, setFilter] = React.useState(
     filterQuery ? filterQuery : pages.projects.filterTags[0].id
@@ -27,7 +29,7 @@ const Projects = () => {
         {
           id: curr.id,
           name: curr.name,
-          img: `${curr.id}/${curr.hero.posterSrc}`,
+          img: `${curr.id}/${curr.intro.img}`,
           alt: curr.name,
           client: curr.client,
           tags: curr.tags
@@ -37,15 +39,7 @@ const Projects = () => {
     return acc;
   }, []);
 
-  const gridArray = gridData.reduce((acc, curr, i, arr) => {
-    if (i === 0 || i % 3 === 0) {
-      let period = [curr];
-      period = i + 1 + 1 <= arr.length ? [...period, arr[i + 1]] : [period];
-      period = i + 1 + 2 <= arr.length ? [period, [arr[i + 2]]] : [period];
-      return period;
-    }
-    return acc;
-  }, []);
+  const gridArray = [gridData];
 
   return (
     <div className={`projects`}>
@@ -53,13 +47,29 @@ const Projects = () => {
         <title>{`${globals.webTitle}\u2002/\u2002${pages.projects.pageName}`}</title>
       </Header>
       <Navbar>
+        {w > 1200 && (
+          <NavbarFilter
+            list={pages.projects.filterTags}
+            selectFilter={selectFilter}
+            activeTag={filter}
+          />
+        )}
+      </Navbar>
+      {w <= 1200 && (
         <NavbarFilter
           list={pages.projects.filterTags}
           selectFilter={selectFilter}
           activeTag={filter}
         />
-      </Navbar>
-      <Grid grid={gridArray} folder={`/project`} />
+      )}
+      {
+        <Grid
+          grid={gridArray}
+          folder={`/project`}
+          noCrop={false}
+          square={true}
+        />
+      }
       <Footer />
     </div>
   );

@@ -17,6 +17,15 @@
         margin-bottom: 40px;
       }
       &__email {
+        &:not(:last-child) {
+          h1 {
+            margin-bottom: cols(1);
+            // position: relative;
+            &:hover {
+              opacity: 0.7;
+            }
+          }
+        }
         cursor: pointer;
         &__copied {
           display: block;
@@ -27,13 +36,6 @@
             color: $white;
             background: $dark-gray;
             padding: 5px 10px;
-          }
-        }
-        h1 {
-          margin-bottom: 130px;
-          // position: relative;
-          &:hover {
-            opacity: 0.7;
           }
         }
       }
@@ -63,9 +65,11 @@
           margin-right: 50px;
         }
         h5 {
+          &.active {
+            opacity: 0.7;
+          }
           cursor: pointer;
           color: $white;
-          text-transform: uppercase;
         }
         &:hover {
           opacity: 0.7;
@@ -87,28 +91,91 @@
       }
     }
   }
+  @media screen and (max-width: 992px) {
+    height: auto;
+    padding: cols(2) cols(2) cols(1);
+    &__content {
+      flex-direction: column;
+      &__cta {
+        flex-grow: 0;
+        h5 {
+          margin-bottom: 20px;
+        }
+      }
+      &__address {
+        margin-top: cols(1);
+      }
+    }
+    &__navbar {
+      width: 100%;
+      margin-top: cols(2);
+      position: static;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    &__content {
+      &__cta {
+      }
+      &__address {
+        margin-top: cols(2);
+      }
+    }
+    &__navbar {
+      // margin-top: 0;
+      &__menu {
+        flex-wrap: wrap;
+      }
+      flex-direction: column;
+      &__socials {
+        margin-top: 30px;
+      }
+    }
+  }
+  @media screen and (max-width: 320px) {
+    padding: cols(3) cols(2) cols(2);
+    &__content {
+      &__cta {
+        h5 {
+          font-size: 14px;
+          letter-spacing: 0.05em;
+        }
+        &__email {
+          h1 {
+            font-size: 24px;
+          }
+          &:not(:last-child) {
+            h1 {
+              margin-bottom: cols(2);
+            }
+          }
+        }
+      }
+      &__address {
+        margin-top: cols(3);
+        h3 {
+          font-size: 14px;
+          line-height: 1.4em;
+          letter-spacing: 0.05em;
+        }
+      }
+    }
+    &__navbar {
+      margin-top: cols(3);
+      &__menu {
+        flex-direction: column;
+        a {
+          &:not(:last-child) {
+            margin-right: 50px;
+          }
+          h5 {
+            margin-bottom: 10px;
+          }
+        }
+      }
+      &__socials {
+        width: 100%;
+        justify-content: space-between;
+      }
+    }
+  }
 }
-// opacity: 0;
-/* &.anim {
-            animation: appear 0.4s ease-in-out, disappear 0.3s ease-in-out 0.9s;
-            display: block;
-            animation-fill-mode: forwards;
-            @keyframes disappear {
-              0% {
-                opacity: 1;
-              }
-              100% {
-                opacity: 0;
-              }
-            }
-            @keyframes appear {
-              0% {
-                opacity: 0;
-                transform: translateY(0);
-              }
-              100% {
-                opacity: 1;
-                transform: translateY(50px);
-              }
-            }
-          } */

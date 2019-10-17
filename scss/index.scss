@@ -1,8 +1,14 @@
+@import './globals/fonts';
 @import './globals/variables';
 @import './globals/typo';
 @import './globals/globals';
+
 @import './globals/grid';
-@import './globals/fonts';
+@import './globals/gridImage';
+@import './globals/gridImageHover';
+@import './globals/gridBlockquote';
+@import './globals/gridVideo';
+@import './globals/gridReference';
 
 @import './components/styledHero';
 @import './components/styledNavbar';

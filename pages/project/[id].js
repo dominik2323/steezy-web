@@ -15,6 +15,8 @@ import Hero from '../../components/Hero';
 import Button from '../../components/Button';
 import IntroText from '../../components/IntroText';
 import NavbarFilter from '../../components/NavbarFilter';
+import { transformGridReferencesIntoGrid } from '../';
+import { useViewportSize } from '../../hooks/useViewportSize';
 
 const transformIntroTags = (header, bullet) => [
   {
@@ -52,6 +54,7 @@ const PosedProject = posed.div({
 
 const Project = () => {
   const router = useRouter();
+  const { w } = useViewportSize();
   const [direction, setDirection] = React.useState('');
   const { id: projectId } = router.query;
   const playerRef = React.useRef(null);
@@ -61,9 +64,40 @@ const Project = () => {
   const { button, projectDetail } = components;
 
   const project = projects.find(x => x.id === projectId);
+  const currentIndex = projects.indexOf(project);
+
+  const nextProjects = () => {
+    function next() {
+      const overflow = currentIndex + 1 + 3 - projects.length;
+
+      if (overflow === 1) {
+        return [
+          projects[currentIndex + 1],
+          projects[currentIndex + 2],
+          projects[0]
+        ];
+      } else if (overflow === 2) {
+        return [projects[currentIndex + 1], projects[0], projects[1]];
+      } else if (overflow === 3) {
+        return [projects[0], projects[1], projects[2]];
+      } else {
+        return projects.slice(currentIndex + 1, currentIndex + 1 + 3);
+      }
+    }
+
+    return [
+      next().map(item => ({
+        img: `${item.id}/${item.intro.img}`,
+        alt: item.name,
+        name: item.name,
+        client: item.client,
+        tags: item.tags,
+        id: item.id
+      }))
+    ];
+  };
 
   const findNeighbourProjects = () => {
-    const currentIndex = projects.indexOf(project);
     const projectsLength = projects.length;
     let prevProjectIndex, nextProjectIndex;
 
@@ -106,7 +140,7 @@ const Project = () => {
         </Link>*/}
       </Navbar>
       <PoseGroup preEnterPose={`preEnter`} direction={direction}>
-        <PosedProject key={projectId}>
+        <PosedProject key={projectId} className={`project`}>
           <Hero
             posterSrc={`/static/img/project/${projectId}/${project.hero.posterSrc}`}
             videoSrc={`/static/img/project/${projectId}/${project.hero.videoSrc}`}
@@ -157,7 +191,16 @@ const Project = () => {
             folder={`/project/${projectId}`}
             noCrop={true}
           />
-          <ProjectSwitch neighbourProjects={neighbourProjects} />
+          <div className={`project__next-projects`}>
+            <Grid
+              grid={
+                w <= 1200 ? [nextProjects()[0].slice(0, 2)] : nextProjects()
+              }
+              folder={`/project`}
+              noCrop={false}
+              square={true}
+            />
+          </div>
           <Footer />
         </PosedProject>
       </PoseGroup>

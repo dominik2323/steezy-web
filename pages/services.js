@@ -62,19 +62,21 @@ const Services = () => {
             footer: <HeroFooterLogotypes />
           }}
         </Hero>
-        {content.map(({ name, perex, id, bullets, img, grid, btn }) => (
-          <ServicesItem
-            key={name}
-            btn={btn}
-            name={name}
-            id={id}
-            grid={grid}
-            perex={perex}
-            bullets={bullets}
-            img={img}
-            projects={globals.projects}
-          />
-        ))}
+        <div className={`services__content`}>
+          {content.map(({ name, perex, id, bullets, img, grid, btn }) => (
+            <ServicesItem
+              key={name}
+              btn={btn}
+              name={name}
+              id={id}
+              grid={grid}
+              perex={perex}
+              bullets={bullets}
+              img={img}
+              projects={globals.projects}
+            />
+          ))}
+        </div>
         <Footer />
       </div>
     </React.Fragment>
