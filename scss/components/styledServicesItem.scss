@@ -2,9 +2,6 @@
   margin: cols(1) 0;
   &__services-item {
     padding: cols(1) 0;
-    .grid {
-      margin: cols(1) 0;
-    }
     .btn-ghost {
       margin: auto;
     }
@@ -56,6 +53,10 @@
         }
       }
     }
+    .grid {
+      margin-top: cols(1);
+      margin-bottom: cols(0.5);
+    }
   }
   @media screen and (max-width: 1366px) {
     &__services-item {
@@ -102,13 +103,7 @@
   }
   @media screen and (max-width: 768px) {
     &__services-item {
-      // &:not(:last-child) {
-      //   margin-bottom: cols(3);
-      // }
-      padding: cols(2) 0;
-      .grid {
-        margin: cols(1) 0;
-      }
+      // padding: cols(2) 0;
       &__about {
         &__intro {
           flex-direction: column-reverse;
@@ -130,16 +125,18 @@
           }
         }
       }
+      .grid {
+        margin-bottom: cols(1);
+      }
     }
   }
-  @media screen and (max-width: 320px) {
-    margin: cols(6) 0;
+  @media screen and (max-width: 540px) {
+    margin: cols(4) 0;
     &__services-item {
       &:not(:last-child) {
-        margin-bottom: cols(6);
+        margin-bottom: cols(4);
       }
       &__about {
-        // margin-top: cols(5);
         &__intro {
           margin-bottom: cols(3);
           &__icon {

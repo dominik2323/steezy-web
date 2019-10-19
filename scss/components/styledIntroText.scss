@@ -5,10 +5,10 @@
   justify-content: space-between;
   p {
     width: cols(6);
-    font-size: 30px;
-    line-height: 1.6em;
-    letter-spacing: 0.02em;
-    font-weight: 500;
+    // font-size: 30px;
+    // line-height: 1.6em;
+    // letter-spacing: 0.02em;
+    // font-weight: 500;
     .btn-ghost {
       margin-top: cols(0.5);
     }
@@ -43,7 +43,7 @@
   @media screen and (max-width: 1366px) {
     width: cols(13);
     p {
-      font-size: 24px;
+      // font-size: 24px;
       width: cols(8);
     }
     ul {
@@ -51,7 +51,7 @@
     }
   }
   @media screen and (max-width: 992px) {
-    flex-direction: column-reverse;
+    flex-direction: column;
     p {
       width: 80%;
       .btn-ghost {
@@ -62,11 +62,16 @@
       max-width: 100%;
       display: flex;
       flex-shrink: 0;
+      margin-top: cols(2);
       margin-left: 0;
-      justify-content: space-around;
+      justify-content: space-between;
       li {
         width: 33.33%;
         flex-direction: column;
+        &:not(:last-child) {
+          margin-right: cols(0.5);
+        }
+        margin-bottom: 0;
         span,
         h5,
         small {
@@ -83,10 +88,36 @@
   }
   @media screen and (max-width: 768px) {
     p {
-      width: 100%;
-      font-size: 21px;
+      width: cols(11);
+      // font-size: 21px;
       .btn-ghost {
         margin: cols(2) auto 0;
+      }
+    }
+    ul {
+      flex-direction: column;
+      margin-top: cols(2);
+      li {
+        width: 100%;
+        margin-bottom: cols(1);
+        &:last-child {
+          margin-bottom: 0;
+        }
+        div h5 {
+          margin-bottom: 5px;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 540px) {
+    margin: cols(4) auto;
+    p {
+      width: 100%;
+    }
+    ul {
+      margin-top: cols(3);
+      li {
+        margin-bottom: cols(2);
       }
     }
   }

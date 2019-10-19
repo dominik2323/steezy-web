@@ -17,7 +17,7 @@
     cursor: pointer;
     justify-self: flex-start;
     position: absolute;
-    top: 30px;
+    top: 40px;
     margin-right: 5px;
   }
   nav {
@@ -78,7 +78,31 @@
       }
     }
   }
+  @media screen and (max-width: 1366px) {
+  }
+  @media screen and (max-width: 1200px) {
+    padding-right: cols(1);
+    nav {
+      h1 {
+        font-size: 40px;
+      }
+    }
+  }
   @media screen and (max-width: 992px) {
+    width: cols(9);
+  }
+  @media screen and (max-width: 768px) {
+    img.close-icon {
+      width: 19px;
+      height: 19px;
+    }
     width: 100%;
+  }
+  @media screen and (max-width: 768px) and (orientation: landscape) {
+    nav {
+      h1 {
+        font-size: 28px;
+      }
+    }
   }
 }

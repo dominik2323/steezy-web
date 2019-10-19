@@ -9,7 +9,7 @@ const IntroText = ({
 }) => {
   return (
     <div className="intro-text">
-      <p>
+      <p className={`big`}>
         {perex}
         {children}
       </p>

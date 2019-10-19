@@ -86,7 +86,11 @@ const Homepage = () => {
           className={`homepage__services-overview`}
         />*/}
 
-        <Grid grid={transformedGridData} folder={`/project`} />
+        <Grid
+          grid={transformedGridData}
+          folder={`/project`}
+          addClassName={`no-crop`}
+        />
         <Button
           label={components.button.allProjects}
           handleClick={async () => {

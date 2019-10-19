@@ -67,7 +67,7 @@ const Projects = () => {
           grid={gridArray}
           folder={`/project`}
           noCrop={false}
-          square={true}
+          addClassName={`square`}
         />
       }
       <Footer />

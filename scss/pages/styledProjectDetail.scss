@@ -1,15 +1,12 @@
 .project {
-  .grid {
-    margin-bottom: 0;
-  }
-  /* .grid__row {
+  .grid__row__item--image {
     height: auto;
-    &__item--image img {
-      min-height: initial;
+  }
+  &__next-projects {
+    .grid {
+      margin-bottom: cols(1);
     }
-    @media screen and (max-width: 768px) {
-    }
-  } */
+  }
   &__hero {
     &__footer {
       display: flex;
@@ -17,6 +14,7 @@
       align-items: flex-start;
       justify-content: center;
       height: cols(1);
+      max-height: 150px;
       left: cols(1);
       right: cols(1);
       padding-left: cols(1);
@@ -24,22 +22,27 @@
         color: $white;
         margin-bottom: 10px;
       }
+      h5 {
+        font-size: 16px;
+        letter-spacing: 0.02em;
+      }
     }
   }
   &__arrows {
-    width: 100%;
+    width: cols(15);
     position: absolute;
-    left: 0;
+    left: cols(-1);
     right: 0;
     bottom: 0;
+    max-height: 150px;
     height: cols(1);
     min-height: 100px;
     display: flex;
     justify-content: space-between;
     &__arrow {
       background-color: dark-gray-opacity(0.5);
-      height: cols(1);
-      min-height: 100px;
+      height: 100%;
+      // min-height: 100px;
       width: cols(1);
       display: flex;
       justify-content: center;
@@ -70,6 +73,68 @@
           transform: rotateZ(-180deg);
         }
       }
+    }
+  }
+  @media screen and (min-width: 1921px) {
+    &__hero {
+      &__footer {
+        left: cols(2);
+        right: cols(2);
+      }
+    }
+    &__arrows {
+      width: cols(13);
+    }
+  }
+  @media screen and (max-width: 1200px) {
+    &__hero__footer {
+      left: cols(1.5);
+      right: cols(1.5);
+      height: auto;
+      padding: 30px cols(1.5);
+    }
+    &__arrows {
+      height: 100%;
+      left: cols(-1.5);
+      right: cols(-1.5);
+      &__arrow {
+        width: cols(1.5);
+      }
+    }
+  }
+  @media screen and (max-width: 992px) {
+    &__hero__footer {
+    }
+    &__arrows {
+    }
+  }
+  @media screen and (max-width: 768px) {
+    &__hero__footer {
+      display: flex !important;
+      flex-direction: column;
+      width: cols(15);
+      left: 0;
+      padding: cols(1) cols(1) 0;
+    }
+    &__arrows {
+      // position: static;
+      width: cols(15);
+      left: 0;
+      right: 0;
+      height: 100px;
+      top: -100px;
+      &__arrow {
+        width: 50%;
+      }
+    }
+  }
+  @media screen and (max-width: 540px) {
+    &__hero__footer {
+      // height: cols(3);
+    }
+    &__arrows {
+      // bottom: cols(3);
+      // height: cols(3);
     }
   }
 }

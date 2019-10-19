@@ -1,47 +1,53 @@
 .grid {
   display: flex;
   flex-wrap: wrap;
-  // margin: cols(2) 0;
+  margin: 0 cols(1);
   &__row {
-    width: 100%;
-    height: cols(6);
     display: flex;
-    margin: cols(0.25) cols(1);
+    flex-basis: 100%;
+    margin-bottom: cols(0.5);
     &:first-child {
       margin-top: 0;
     }
     &:last-child {
       margin-bottom: 0;
     }
-  }
-  &.no-crop {
-    .grid__row {
-      height: auto;
-    }
-  }
-  @media screen and (max-width: 768px) {
-    // margin: cols(3) 0;
-    &__row {
-      flex-direction: column;
-      margin: cols(0.5) cols(1);
-      height: auto;
+    &__item {
+      &:not(:last-child) {
+        margin-right: cols(0.5);
+      }
     }
   }
   &.square {
     .grid {
       &__row {
+        margin: cols(-0.25) 0;
         flex-wrap: wrap;
         height: auto;
-        justify-content: space-between;
+        // justify-content: space-between;
       }
-      @media screen and (max-width: 1200px) {
-        margin-top: cols(1);
+    }
+  }
+
+  @media screen and (min-width: 1921px) {
+    margin: 0 cols(2);
+  }
+  @media screen and (max-width: 768px) {
+    &__row {
+      flex-wrap: wrap;
+      margin-bottom: cols(1);
+      &__item {
+        &:not(:last-child) {
+          margin-right: 0;
+          margin-bottom: cols(1);
+        }
       }
-      @media screen and (max-width: 768px) {
-        margin-top: cols(2);
-      }
-      @media screen and (max-width: 700px) {
-        margin-top: cols(3);
+    }
+    &.square {
+      .grid {
+        &__row {
+          margin: cols(-0.5) 0;
+        }
       }
     }
   }

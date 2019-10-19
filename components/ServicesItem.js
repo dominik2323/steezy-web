@@ -51,7 +51,7 @@ const ServicesItem = ({
           ))}
         </ul>
       </div>
-      <Grid grid={transformGrid} folder={`/project`} />
+      <Grid grid={transformGrid} folder={`/project`} addClassName={`no-crop`} />
       <Button
         handleClick={async () => {
           await Router.push({

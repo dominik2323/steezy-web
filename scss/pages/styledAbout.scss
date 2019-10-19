@@ -24,18 +24,17 @@
       }
     }
   }
-  /* .grid__row__item--image img {
-    height: 670px;
-  } */
-  .footer {
-    margin-top: cols(2);
+  .grid {
+    margin-bottom: cols(1);
   }
-  @media screen and (min-width: 1920px) {
+  @media screen and (max-width: 768px) {
     .grid {
-      &__row {
-        // height: cols(6);
-        // max-height: cols(8);
-      }
+      margin-bottom: cols(2);
+    }
+  }
+  @media screen and (max-width: 540px) {
+    .grid {
+      margin-bottom: cols(3);
     }
   }
 }

@@ -4,15 +4,15 @@ import GridBlockquote from './GridBlockquote';
 import GridVideo from './GridVideo';
 import GridReference from './GridReference';
 import GridImage from './GridImage';
+import GridLottie from './GridLottie';
 import ErrorMsg from './ErrorMsg';
 
-const Grid = ({ grid, folder, children, noCrop = false, square = false }) => {
-  if (!grid || grid.length === 0)
+const Grid = ({ grid, folder, children, addClassName }) => {
+  if (!grid || grid.length === 0) {
     return <ErrorMsg header={`Žádné projekty neodpovídají výběru`} />;
+  }
   return (
-    <div
-      className={`grid ${noCrop ? `no-crop` : ``} ${square ? `square` : ``}`}
-    >
+    <div className={`grid ${addClassName}`}>
       {grid.map((row, i) => {
         return (
           <div className="grid__row" key={i}>
@@ -38,16 +38,22 @@ const Grid = ({ grid, folder, children, noCrop = false, square = false }) => {
                     id={item.id}
                     name={item.name}
                     img={item.img}
-                    landscape={item.landscape}
                     client={item.client}
                     position={item.position}
                     quote={item.quote}
                   />
                 );
+              else if (Object.keys(item).includes('lottieSrc'))
+                return (
+                  <GridLottie
+                    key={item.lottieSrc}
+                    src={item.lottieSrc}
+                    folder={folder}
+                  />
+                );
               else
                 return (
                   <GridImage
-                    noCrop={noCrop}
                     key={item.img}
                     img={item.img}
                     alt={item.alt}

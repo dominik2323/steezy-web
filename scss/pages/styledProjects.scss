@@ -1,6 +1,16 @@
 .projects {
-  margin-top: cols(2);
   .grid {
-    margin-top: cols(3);
+    margin-top: cols(1);
+    margin-bottom: cols(1);
+  }
+  margin-top: cols(1.5);
+  @media screen and (min-width: 1921px) {
+    margin-top: cols(1);
+  }
+  @media screen and (max-width: 768px) {
+    margin-top: cols(2.5);
+  }
+  @media screen and (max-width: 540px) {
+    margin-top: cols(4);
   }
 }

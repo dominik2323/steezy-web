@@ -17,7 +17,7 @@ export default {
     {
       name: 'Branding',
       id: 'branding',
-      img: 'branding/data.json',
+      img: 'branding.json',
       btn: 'PROJEKTY: BRANDING',
       perex:
         'V osobním životě vás ostatní posuzují podle toho, jak se k nim chováte, o čem s nimi mluvíte, ale i podle toho, jak se oblékáte. Myslíte, že si lidé těchto věcí všímají i u firem? O tom nepochybujte. Branding se proto nezabývá pouze tím, jak vaši společnost “obléknout” (jak si mnozí mylně představují). Našim úkolem je rozebrat vaší firemní komunikaci jako celek a navrhnout vám nejn uvěřitelnou a jasně rozpoznatelnou tvář –  ale i obsah. Když bude vaše image ladit s vašimi byznysovými záměry, máte na půl vyhráno.',
@@ -47,7 +47,7 @@ export default {
     },
     {
       name: 'Web & aplikace',
-      img: 'web-apps/data.json',
+      img: 'web-apps.json',
       id: 'web-apps',
       btn: 'PROJEKTY: WEB & APLIKACE',
       perex:
@@ -79,7 +79,7 @@ export default {
     {
       name: 'Video & animace',
       id: 'video-animations',
-      img: 'video-animations/data.json',
+      img: 'video-animations.json',
       btn: 'PROJEKTY: VIDEO & ANIMACE',
       perex:
         'Máte skvělou službu či produkt, ale nikdo o vás neslyšel? Jste na špici v oboru, ale nedaří se vám nalákat nové zaměstnance? Jste lepší než vaše konkurence, ale zdaleka neprodáváte tolik? Nebo máte zatím jen geniální nápad a nevíte, kde začít? Pomůžeme nastavit komunikaci vaší značky, ať jste zkušenými matadory v oboru, snažíte se nabrat druhý dech nebo se teprve chystáte dobít pozice na trhu.',

@@ -12,7 +12,8 @@ export const useViewportSize = () => {
 
   React.useEffect(() => {
     handleResize();
-    window.onresize = handleResize;
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
   }, []);
 
   return viewportSize;

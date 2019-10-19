@@ -5,8 +5,40 @@
     text-align: center;
     color: $med-gray;
   }
+  @media screen and (min-width: 1921px) {
+    h1 {
+      font-size: 60px;
+    }
+  }
+  @media screen and (max-width: 1920px) {
+    h1 {
+      font-size: 50px;
+    }
+  }
+  @media screen and (max-width: 1366px) {
+    h1 {
+      font-size: 40px;
+    }
+  }
+  @media screen and (max-width: 992px) {
+    width: cols(10);
+    margin: cols(3) auto;
+    h1 {
+      font-size: 35px;
+    }
+  }
   @media screen and (max-width: 768px) {
-    width: cols(13);
-    margin: cols(4) auto;
+    margin: cols(3) cols(0);
+    width: cols(11);
+    h1 {
+      font-size: 35px;
+      text-align: left;
+    }
+  }
+  @media screen and (max-width: 540px) {
+    width: 100%;
+    h1 {
+      font-size: 28px;
+    }
   }
 }

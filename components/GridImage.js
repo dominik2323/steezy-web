@@ -1,5 +1,6 @@
 import React from 'react';
 import GridImageHover from './GridImageHover';
+import { useViewportSize } from '../hooks/useViewportSize';
 import Img from './Img';
 
 const ProjectGridImage = ({
@@ -9,27 +10,33 @@ const ProjectGridImage = ({
   tags,
   alt,
   folder = ``,
-  id,
-  noCrop
+  id
 }) => {
-  const [width, setWidth] = React.useState(1);
+  const [aspect, setAspect] = React.useState(`unset`);
+
+  const handleResize = () => {
+    let el = document.getElementById(img);
+    setAspect(`${(el.naturalWidth / el.naturalHeight) * 100}%`);
+  };
 
   React.useEffect(() => {
-    if (noCrop) {
-      const el = document.getElementById(img);
-      setWidth(el.naturalWidth);
-    }
-  }, []);
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  });
+
+  const hasHover = name && client && tags && id;
 
   return (
     <div
       className={`
           grid__row__item 
-          grid__row__item--image 
+          grid__row__item--image
+          ${hasHover ? `grid__row__item--has-hover` : ``} 
           `}
-      style={{ flexGrow: width }}
+      style={{ flexBasis: aspect }}
     >
-      {name && client && tags && id && (
+      {hasHover && (
         <GridImageHover
           name={name}
           client={client}

@@ -6,7 +6,14 @@ import Button from './Button';
 import HeroBg from './HeroBg';
 import { useViewportSize } from '../hooks/useViewportSize';
 
-const Hero = ({ className, children, playerRef, posterSrc, videoSrc = `` }) => {
+const Hero = ({
+  className,
+  children,
+  playerRef,
+  posterSrc,
+  videoSrc = ``,
+  loopSrc = ``
+}) => {
   const [isVideoPaused, setIsVideoPaused] = useState(true);
   const { h } = useViewportSize();
   const toggleVideo = e => setIsVideoPaused(e.target.paused);
@@ -68,6 +75,7 @@ const Hero = ({ className, children, playerRef, posterSrc, videoSrc = `` }) => {
           posterSrc={posterSrc}
           playerRef={playerRef}
           isVideoPlaying={!isVideoPaused}
+          loopSrc={loopSrc}
           // isVideoAvaible={isVideoAvaible}
         />
       </div>

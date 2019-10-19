@@ -2,6 +2,7 @@
   display: flex;
   margin: cols(2) auto;
   align-items: center;
+  justify-content: space-between;
   &__person {
     img {
       width: 140px;
@@ -12,6 +13,19 @@
     }
   }
   &__quote {
+    width: cols(6);
+    margin-left: cols(1);
+    &:before {
+      width: 38px;
+      height: 24px;
+      margin-bottom: 50px;
+    }
+    p {
+      font-size: 30px;
+      letter-spacing: 0.02em;
+      line-height: 50px;
+      font-weight: 500;
+    }
     &:before {
       content: '';
       display: block;
@@ -21,77 +35,43 @@
     }
   }
 
-  &--portrait {
-    flex-direction: column-reverse;
-    .grid__row__item--reference {
-      &__quote {
-        &:before {
-          width: 46px;
-          height: 30px;
-          margin: auto;
-          margin-bottom: 50px;
-        }
-        p {
-          text-align: center;
-          font-weight: 700;
-          font-size: 48px;
-          letter-spacing: 0.02em;
-          line-height: 65px;
-          color: $white;
-          margin-bottom: 100px;
-        }
-      }
-      &__person {
-        text-align: center;
-        img {
-          margin: 0 auto 30px;
-        }
+  @media screen and (max-width: 1366px) {
+    &__quote {
+      width: cols(8);
+    }
+  }
+
+  @media screen and (max-width: 1200px) {
+    &__quote {
+      p {
+        font-size: 24px;
+        line-height: 1.5em;
       }
     }
   }
-  &--landscape {
-    justify-content: space-between;
-    .grid__row__item--reference {
-      &__quote {
-        width: cols(5);
-        margin-left: cols(1);
-        &:before {
-          width: 38px;
-          height: 24px;
-          margin-bottom: 50px;
-        }
-        p {
-          font-size: 30px;
-          letter-spacing: 0.02em;
-          line-height: 50px;
-          font-weight: 500;
-        }
-      }
-    }
-  }
+
   @media screen and (max-width: 768px) {
     flex-direction: column-reverse;
     align-items: flex-start;
     margin: cols(4) auto;
-    &--landscape {
-      .grid__row__item--reference {
-        &__quote {
-          width: cols(13);
-          margin: auto;
-          p {
-            // text-align: center;
-            width: cols(12);
-            margin-bottom: cols(2);
-            font-size: 24px;
-            line-height: 1.5em;
-          }
-        }
-        &__person {
-          img {
-            width: cols(5);
-            height: cols(5);
-          }
-        }
+    &__quote {
+      width: cols(13);
+      margin: auto;
+      p {
+        // text-align: center;
+        width: cols(12);
+        margin-bottom: cols(2);
+      }
+    }
+    &__person {
+      img {
+        width: cols(4);
+        height: cols(4);
+      }
+      p {
+        font-size: 18px;
+        letter-spacing: 0.02em;
+        line-height: 1.6em;
       }
     }
   }

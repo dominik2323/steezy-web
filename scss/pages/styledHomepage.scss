@@ -1,49 +1,17 @@
 .homepage {
-  &__hero {
-    &__content {
-      &__header {
-        // margin: 80px 0;
-      }
-      // &__tags {
-      //   display: flex;
-      //   li {
-      //     margin-right: 30px;
-      //     color: $light-gray;
-      //     font-weight: 600;
-      //     font-size: 24px;
-      //     letter-spacing: 0.02em;
-      //   }
-      // }
-    }
-  }
-  /* .grid {
-    margin-bottom: cols(0.5);
-    &__row {
-      // max-height: 800px;
-      &__item {
-        &--image {
-          cursor: pointer;
-        }
-      }
-    }
-  } */
   .grid {
     margin-bottom: cols(1);
     &__row__item--image {
       flex-grow: 1 !important;
     }
   }
-  &__intro {
-  }
-  &__services-overview {
-    // padding: 0 calc(100% / 15 * 2);
-    // margin-bottom: 250px;
-  }
   &__about {
     height: 100vh;
     max-height: 1080px;
     width: 100vw;
     background-image: url('#{$prefix}/static/img/homepage/steezy.png');
+    background-size: cover;
+    background-repeat: no-repeat;
     display: flex;
     justify-content: center;
     align-content: center;
@@ -53,27 +21,42 @@
     p {
       font-size: 60px;
       letter-spacing: 0.02em;
-      line-height: 1.2em;
+      line-height: 1.4em;
       color: $white;
       font-weight: 600;
-      margin: 80px 0;
+      margin: 0 0 80px;
     }
     button {
       align-self: flex-start;
     }
   }
   @media screen and (min-width: 1920px) {
-    &__hero {
-      &__content {
-        // width: cols();
-      }
-    }
     &__about {
       p {
         max-width: cols(8);
       }
     }
   }
+  @media screen and (max-width: 1200px) {
+    &__about {
+      height: cols(15);
+      p {
+        font-size: 40px;
+      }
+    }
+  }
   @media screen and (max-width: 768px) {
+    &__about {
+      padding: cols(3) cols(2);
+      height: auto;
+      p {
+        font-size: 30px;
+      }
+    }
+  }
+  @media screen and (max-width: 540px) {
+    &__about {
+      padding: cols(5) cols(2);
+    }
   }
 }

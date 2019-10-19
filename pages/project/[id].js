@@ -152,6 +152,26 @@ const Project = () => {
                 <div className={`hero-footer project__hero__footer`}>
                   <h4>{project.name}</h4>
                   <h5>{project.client}</h5>
+                  <div className="project__arrows">
+                    <Link
+                      href={`/project/[id]`}
+                      as={`/project/${neighbourProjects.prevProjectId}`}
+                    >
+                      <div
+                        className="project__arrows__arrow project__arrows__arrow--left"
+                        onClick={() => setDirection(-1)}
+                      />
+                    </Link>
+                    <Link
+                      href={`/project/[id]`}
+                      as={`/project/${neighbourProjects.nextProjectId}`}
+                    >
+                      <div
+                        className="project__arrows__arrow project__arrows__arrow--right"
+                        onClick={() => setDirection(1)}
+                      />
+                    </Link>
+                  </div>
                 </div>
               ),
               content: isVideoAvaible && (
@@ -161,35 +181,14 @@ const Project = () => {
                   handleClick={() => playerRef.current.play()}
                 />
               ),
-              arrows: (
-                <div className="project__arrows">
-                  <Link
-                    href={`/project/[id]`}
-                    as={`/project/${neighbourProjects.prevProjectId}`}
-                  >
-                    <div
-                      className="project__arrows__arrow project__arrows__arrow--left"
-                      onClick={() => setDirection(-1)}
-                    />
-                  </Link>
-                  <Link
-                    href={`/project/[id]`}
-                    as={`/project/${neighbourProjects.nextProjectId}`}
-                  >
-                    <div
-                      className="project__arrows__arrow project__arrows__arrow--right"
-                      onClick={() => setDirection(1)}
-                    />
-                  </Link>
-                </div>
-              )
+              arrows: null
             }}
           </Hero>
           <IntroText perex={project.about} tags={introTags} />
           <Grid
             grid={projectWithReference}
             folder={`/project/${projectId}`}
-            noCrop={true}
+            addClassName={`no-crop`}
           />
           <div className={`project__next-projects`}>
             <Grid
@@ -197,8 +196,7 @@ const Project = () => {
                 w <= 1200 ? [nextProjects()[0].slice(0, 2)] : nextProjects()
               }
               folder={`/project`}
-              noCrop={false}
-              square={true}
+              addClassName={`square`}
             />
           </div>
           <Footer />

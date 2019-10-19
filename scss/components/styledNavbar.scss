@@ -53,6 +53,11 @@
       }
     }
   }
+  @media screen and (max-width: 1200px) {
+    &__navbar {
+      width: cols(13);
+    }
+  }
   @media screen and (max-width: 768px) {
     &__navbar {
       &__brand {
@@ -63,11 +68,6 @@
         width: 25px;
         height: 19px;
       }
-    }
-  }
-  @media screen and (max-width: 1200px) {
-    &__navbar {
-      width: cols(13);
     }
   }
 }
