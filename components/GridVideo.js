@@ -2,19 +2,15 @@ import React from 'react';
 import Player from '@vimeo/player';
 
 const GridVideo = ({ videoVimeoId }) => {
-  const [dim, setDimensions] = React.useState({
-    w: 1920,
-    h: 800
-  });
+  const [dim, setDimensions] = React.useState(`100%`);
   const { w, h, scrollbarWidth } = dim;
   const vimeoPlayerRef = React.useRef(null);
 
   React.useEffect(() => {
     async function fetchDimensios() {
-      setDimensions({
-        w: await vimeoPlayer.getVideoWidth(),
-        h: await vimeoPlayer.getVideoHeight()
-      });
+      const width = await vimeoPlayer.getVideoWidth();
+      const height = await vimeoPlayer.getVideoHeight();
+      setDimensions(vimeoPlayerRef.current.clientWidth / (width / height));
     }
     const vimeoPlayer = new Player(vimeoPlayerRef.current);
     fetchDimensios();
@@ -27,7 +23,7 @@ const GridVideo = ({ videoVimeoId }) => {
       data-vimeo-id={videoVimeoId}
       style={{
         width: `100%`,
-        height: `calc(((100vw / 15) * 13 * (${h} / ${w})))`
+        height: dim
       }}
     />
   );

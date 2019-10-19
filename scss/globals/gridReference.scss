@@ -4,6 +4,8 @@
   align-items: center;
   justify-content: space-between;
   &__person {
+    width: auto;
+    flex-shrink: 0;
     img {
       width: 140px;
       height: 140px;
@@ -13,7 +15,7 @@
     }
   }
   &__quote {
-    width: cols(6);
+    // width: cols(6);
     margin-left: cols(1);
     &:before {
       width: 38px;
@@ -35,6 +37,22 @@
     }
   }
 
+  @media screen and (min-width: 1921px) {
+    margin: cols(1) cols(1.5);
+    &__quote {
+      width: auto;
+      &:before {
+        width: 33px;
+        height: 20px;
+        margin-bottom: 20px;
+      }
+      p {
+        font-size: 22px;
+        line-height: 1.5em;
+        letter-spacing: 0.02em;
+      }
+    }
+  }
   @media screen and (max-width: 1366px) {
     &__quote {
       width: cols(8);

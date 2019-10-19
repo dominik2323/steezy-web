@@ -6,12 +6,11 @@ export default {
   tags: ['branding', 'aplikace', 'animace', 'dubai'],
   filterTags: ['branding', 'web-apps', 'video-animations'],
   reference: {
-    quote:
-      'Spolupracovat ze Steezy bylo naprosto osvobozující. Věnovali se každému detailu s osobním nasazením a nestandardní péčí.',
+    quote: '',
     img: 'reference.png',
-    name: 'Roman Svačina',
-    position: 'jednatel',
-    client: 'Infinit Wellness'
+    name: 'Tomas Doležal',
+    position: 'manažer',
+    client: 'Drop DnD'
   },
   hero: {
     posterSrc: 'HeroImage.png',
@@ -22,7 +21,7 @@ export default {
     videoVimeoId: '215836460'
   },
   about:
-    'Backstage Hair Salon is a brand new studio of Lukáš Kříž, young and talented hair stylist educated at London TONI&GUY Academy and based in Brno, Czech Republic. Lukáš is very precise, neat and teasteful when he takes care about his clients and he had same expectations from new visual identity for his hair salon in city center.\n\nWe found an inspiration in Scandinavian design, chose very clean typography and composition based on confessed bold grid. Symbolic A from logotype (the scissors or umlaut „ä“ which is typical for Nordic languages) brings the idea/philosophy of the salon and can be used separately as a logo.',
+    'DropDnD je aukční aplikace s použitým zbožím, která v reálném čase propojuje nabídku a poptávku systémem tzv. Holandské aukce.\n\nNaším úkolem bylo nové aplikaci vytvořit nejen důvěryhodnou a nezaměnitelnou značku, ale navrhnout i plynulý a srozumitelný průchod aplikací a UI design, který bude krok před konkurencí v regionu. Součástí zadání byla také launch kampaň pro Dubaj (SAE), kde firma sídlí včetně animovaného produktového videa.',
   cooperation: 'NODUM atelier (architektonický návrh), Tomáš Lino (fotografie)',
   year: '2016',
   location: 'Česká republika, Brno',
@@ -60,7 +59,7 @@ export default {
     3: [
       {
         blockquote:
-          'Nový vizuální styl se výrazně propsal i do interiéru salonu, který se tak odlišil od konkurenčních podniků ve městě.'
+          'Sladěný UI kit, včetně na míru dělaných pixel perfect ikon, byl základem pro čistý a přehledný interface design.'
       }
     ],
     4: [
@@ -82,7 +81,7 @@ export default {
     6: [
       {
         blockquote:
-          'Nový vizuální styl se výrazně propsal i do interiéru salonu, který se tak odlišil od konkurenčních podniků ve městě.'
+          'Před uvedením produktu na trh byla spuštěna rozsáhlá kampaň na internetu, a veřejných prostorech Dubaje včetně metra.'
       }
     ],
     7: [
@@ -94,7 +93,7 @@ export default {
     8: [
       {
         blockquote:
-          'Nový vizuální styl se výrazně propsal i do interiéru salonu, který se tak odlišil od konkurenčních podniků ve městě.'
+          'Součástí launch kampaně bylo i animované promo video, kde jsme do ulic Dubaje nechali spadnout stovky padáku s aukčními položkami.'
       }
     ],
     9: [
@@ -115,6 +114,6 @@ export default {
           'Nový vizuální styl se výrazně propsal i do interiéru salonu, který se tak odlišil od konkurenčních podniků ve městě.'
       }
     ],
-    12: [{ videoVimeoId: '215836460' }]
+    12: [{ videoVimeoId: '366974485' }]
   }
 };

@@ -63,6 +63,14 @@ small {
   color: $primary !important;
 }
 
+@media screen and (min-width: 1921px) {
+  p {
+    &.big {
+      font-size: 27px;
+      line-height: 1.6em;
+    }
+  }
+}
 @media screen and (max-width: 1366px) {
   h1 {
     font-size: 40px;

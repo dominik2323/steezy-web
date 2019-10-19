@@ -6,12 +6,11 @@ export default {
   tags: ['branding', 'kavárna', 'petřín'],
   filterTags: ['branding', 'web-apps'],
   reference: {
-    quote:
-      'Studio Steezy odvedlo úžasný kus práce za velmi krátký časový úsek. Modrá barva jasně odlišuje salon od konkurence a tvoří příjemnou atmosféru interiéru. Klienti se často ptají, kdo byl autorem návrhu.',
-    img: 'pyszko.png',
-    name: 'Marek Pyszko',
-    position: 'jednatel',
-    client: 'NODUM atelier'
+    quote: '',
+    img: '',
+    name: '',
+    position: '',
+    client: ''
   },
   hero: {
     posterSrc: 'HeroImage.png',
@@ -33,39 +32,39 @@ export default {
         alt: 'dummy'
       },
       {
-        img: 'cafeRepublic01.png',
+        img: 'cafeRepublic02.png',
         alt: 'dummy'
       }
     ],
     1: [
       {
-        img: 'cafeRepublic02.png',
-        alt: 'dummy'
-      },
-      {
         img: 'cafeRepublic03.png',
         alt: 'dummy'
-      }
-    ],
-    2: [
+      },
       {
         img: 'cafeRepublic04.png',
         alt: 'dummy'
       }
     ],
-    3: [
+    2: [
       {
         img: 'cafeRepublic05.png',
         alt: 'dummy'
-      },
+      }
+    ],
+    3: [
       {
         img: 'cafeRepublic06.png',
+        alt: 'dummy'
+      },
+      {
+        img: 'cafeRepublic07.png',
         alt: 'dummy'
       }
     ],
     4: [
       {
-        img: 'cafeRepublic07.png',
+        img: 'cafeRepublic08.png',
         alt: 'dummy'
       }
     ],
@@ -83,27 +82,27 @@ export default {
     ],
     7: [
       {
-        img: 'cafeRepublic09.png',
+        img: 'cafeRepublic10.png',
         alt: 'dummy'
       },
       {
-        img: 'cafeRepublic10.png',
+        img: 'cafeRepublic11.png',
         alt: 'dummy'
       }
     ],
     8: [
       {
-        img: 'cafeRepublic11.png',
+        img: 'cafeRepublic12.png',
         alt: 'dummy'
       },
       {
-        img: 'cafeRepublic12.png',
+        img: 'cafeRepublic13.png',
         alt: 'dummy'
       }
     ],
     9: [
       {
-        img: 'cafeRepublic13.png',
+        img: 'cafeRepublic14.png',
         alt: 'dummy'
       }
     ],
@@ -115,21 +114,21 @@ export default {
     ],
     11: [
       {
-        img: 'cafeRepublic14.png',
+        img: 'cafeRepublic15.png',
         alt: 'dummy'
       },
       {
-        img: 'cafeRepublic15.png',
+        img: 'cafeRepublic16.png',
         alt: 'dummy'
       }
     ],
     12: [
       {
-        img: 'cafeRepublic16.png',
+        img: 'cafeRepublic17.png',
         alt: 'dummy'
       },
       {
-        img: 'cafeRepublic17.png',
+        img: 'cafeRepublic18.png',
         alt: 'dummy'
       }
     ]

@@ -7,6 +7,17 @@ import mico from './projects/micoData';
 import tamAZpet from './projects/tamAZpetData';
 import infinit from './projects/infinitData';
 
+import abb from './projects/abbData';
+import century21 from './projects/century21Data';
+import gumotex from './projects/gumotexData';
+import pokorny from './projects/pokornyData';
+import ricaip from './projects/ricaipData';
+import siestaCloud from './projects/siestaCloudData';
+import siestaSolution from './projects/siestaSolutionData';
+import sparco from './projects/sparcoData';
+import tullamore from './projects/tullamoreData';
+import tbbbike from './projects/tbbbikeData';
+
 export default [
   infinit,
   dropDnd,
@@ -15,5 +26,15 @@ export default [
   cafeRepublic,
   ferrari,
   mico,
-  tamAZpet
+  tamAZpet,
+  abb,
+  century21,
+  gumotex,
+  pokorny,
+  ricaip,
+  siestaCloud,
+  siestaSolution,
+  sparco,
+  tullamore,
+  tbbbike
 ];

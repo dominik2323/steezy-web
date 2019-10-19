@@ -91,6 +91,13 @@
       }
     }
   }
+  @media screen and (min-width: 1921px) {
+    padding: 0 cols(3);
+    &__navbar {
+      left: cols(3);
+      right: cols(3);
+    }
+  }
   @media screen and (max-width: 992px) {
     height: auto;
     padding: cols(2) cols(2) cols(1);

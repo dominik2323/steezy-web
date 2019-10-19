@@ -2,16 +2,15 @@ export default {
   active: true,
   id: 'ferrari',
   name: 'Expozice F1 Ferrari',
-  client: 'Expozice F1 Ferrari',
+  client: 'Garrett Motion',
   tags: ['print', '3D'],
   filterTags: ['branding', 'web-apps'],
   reference: {
-    quote:
-      'Studio Steezy odvedlo úžasný kus práce za velmi krátký časový úsek. Modrá barva jasně odlišuje salon od konkurence a tvoří příjemnou atmosféru interiéru. Klienti se často ptají, kdo byl autorem návrhu.',
-    img: 'pyszko.png',
-    name: 'Marek Pyszko',
-    position: 'jednatel',
-    client: 'NODUM atelier'
+    quote: '',
+    img: '',
+    name: '',
+    position: '',
+    client: ''
   },
   hero: {
     posterSrc: 'HeroImage.png',
@@ -22,7 +21,7 @@ export default {
     videoVimeoId: ''
   },
   about:
-    'Café Re:public je zbrusu nová kavárna a bistro v těsné blízkosti Petřínské rozhledny. Na vzniku podniku jsme se podíleli od samého počátku (průzkum trhu, strategie, naming) a identitu kavárny tvořili po celou dobu v úzké spolupráci s architekty a investory.\n\nRučně kreslený logotyp vychází z moderního charakteru budovy, zároveň ale nese hravý dekor sousední secesní petřínské věže. Tento princip se propsal do vizuálního stylu celé kavárny. Z jednotlivých elementů loga jsme poskládali pestrou paletu avatarů různých kultur a jazyků a vytvořili tak grafické esperanto, kterým lze komunikovat s návštěvníky z celého světa.',
+    'Švýcarská společnost Garrett je už více než 60 let pionýrem ve vývoji turbo-technologií v automobilovém průmyslu. Málokdo však ví, že výzkumné a vývojové centrum Garrett, kde vznikají turba pro Mercedesy či BMW, sídlí v Brně. A nejen to. Kromě těchto konvenčních technologií zde brněnští inženýři každý rok vyvíjí také svatý grál tohoto odvětví – turbo do Formule 1 Ferrari.\n\nNa základě naší dlouhodobé spolupráce na poli vizuální komunikace jsme proto dostali od Garrett příležitost navrhnout expozici pro F1 Ferrari, která byla k příložitosti setkání leaderů společnosti dovezena do Brna přímo z italského Maranella. ',
   cooperation: 'NODUM atelier (architektonický návrh)',
   year: '2019',
   location: 'Česká republika, Praha',
@@ -54,7 +53,7 @@ export default {
     4: [
       {
         blockquote:
-          'V Café Re:public jsme se podíleli také na konceptu interiéru, kde byl kladen důraz na kvalitu, materiály a\u00a0lokální výrobce a\u00a0designéry.'
+          'Expozice pro nový model Ferrari F1 z roku 2018 vznikla přímo naproti budově Garrett v Brně, kde se vyvíjí a testují turbodmychadla pro tento vyjímečně krásný vůz.'
       }
     ],
     5: [

@@ -1,17 +1,16 @@
 export default {
   active: true,
   id: 'surgeryClinic',
-  name: 'VUTM  –  Launch IoT produktu ze Sillicon Valley',
+  name: 'VU\u2122 –  Launch IoT produktu ze Sillicon Valley',
   client: 'Sport Surgery Clinic Dublin',
   tags: ['video', 'animace', 'dublin', 'sport'],
   filterTags: ['web-apps', 'video-animations'],
   reference: {
-    quote:
-      'Spolupracovat ze Steezy bylo naprosto osvobozující. Věnovali se každému detailu s osobním nasazením a nestandardní péčí.',
-    img: 'svacina.png',
-    name: 'Roman Svačina',
-    position: 'jednatel',
-    client: 'Infinit Wellness'
+    quote: '',
+    img: '',
+    name: '',
+    position: '',
+    client: ''
   },
   hero: {
     posterSrc: 'HeroImage.png',
@@ -22,7 +21,7 @@ export default {
     videoVimeoId: '215836460'
   },
   about:
-    'V roce 2017 spojil Turingsense, start-up ze Sillicon valley, síly s přední evropskou sportovní klinikou Sport Surgery Clinic Dublin, aby vznikl projekt VUTM. Tato unikátní IoT technologie umožňovala do té doby nemožné. Dokonale zachytit pohyb sportovce pomocí malých, synchronizovaných, pohybových senzorů umístěných ve speciálním oblečení. Získaná data pak VUTM okamžitě porovnají s lékařskou databází tisíců špičkových sportovců na dublinské sportovní klinice a výsledky zároveň zobrazí v aplikaci na tabletu.\n\nNa základě této revoluční technologie tak mohou fyzioterapeutické týmy vyhodnotit zdravotní stav špičkových sportovců a předcházet zraněním, aniž by museli cestovat do speciálních pohybových laboratoři v Irsku. Naše studio mělo na starosti release kampaň produktu a jeho uvedení na trh, které proběhlo na světové fyzio konferenci na barcelonském stadionu Camp Nou.',
+    'V roce 2017 spojil Turingsense, start-up ze Sillicon valley, síly s přední evropskou sportovní klinikou Sport Surgery Clinic Dublin, aby vznikl projekt VU\u2122. Tato unikátní IoT technologie umožňovala do té doby nemožné. Dokonale zachytit pohyb sportovce pomocí malých, synchronizovaných, pohybových senzorů umístěných ve speciálním oblečení. Získaná data pak VU\u2122 okamžitě porovnají s lékařskou databází tisíců špičkových sportovců na dublinské sportovní klinice a výsledky zároveň zobrazí v aplikaci na tabletu.\n\nNa základě této revoluční technologie tak mohou fyzioterapeutické týmy vyhodnotit zdravotní stav špičkových sportovců a předcházet zraněním, aniž by museli cestovat do speciálních pohybových laboratoři v Irsku. Naše studio mělo na starosti release kampaň produktu a jeho uvedení na trh, které proběhlo na světové fyzio konferenci na barcelonském stadionu Camp Nou.',
   cooperation: 'Jaroslav Sijka',
   year: '2017',
   location: 'Irsko, Dublin\nSan Francisco, USA',
