@@ -37,7 +37,7 @@
       }
     }
   }
-  @media only screen and (min-resolution: 200dpi) {
+  @media screen and (min-width: 1920px) {
     // width: cols(10);
     margin: cols(1) cols(3);
     ul {
