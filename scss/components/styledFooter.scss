@@ -6,7 +6,7 @@
   flex-wrap: wrap;
   align-items: center;
   position: relative;
-  padding: 0 cols(2);
+  padding: 0 cols(3);
   &__content {
     display: flex;
     justify-content: space-between;
@@ -55,8 +55,10 @@
     justify-content: space-between;
     position: absolute;
     bottom: 50px;
-    left: calc(100% / 15 * 2);
-    right: calc(100% / 15 * 2);
+    // left: calc(100% / 15 * 2);
+    // right: calc(100% / 15 * 2);
+    left: cols(3);
+    right: cols(3);
     // right: 0;
     &__menu {
       display: flex;
@@ -89,13 +91,6 @@
           opacity: 0.7;
         }
       }
-    }
-  }
-  @media screen and (min-width: 1920px) {
-    padding: 0 cols(3);
-    &__navbar {
-      left: cols(3);
-      right: cols(3);
     }
   }
   @media screen and (max-width: 992px) {

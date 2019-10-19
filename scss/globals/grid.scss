@@ -1,7 +1,8 @@
 .grid {
   display: flex;
   flex-wrap: wrap;
-  margin: 0 cols(1);
+  // margin: 0 cols(1);
+  margin: 0 cols(3);
   &__row {
     display: flex;
     flex-basis: 100%;
@@ -29,9 +30,6 @@
     }
   }
 
-  @media screen and (min-width: 1920px) {
-    margin: 0 cols(3);
-  }
   @media screen and (max-width: 768px) {
     &__row {
       flex-wrap: wrap;

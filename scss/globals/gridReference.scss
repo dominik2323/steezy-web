@@ -1,6 +1,7 @@
 .grid__row__item--reference {
   display: flex;
-  margin: cols(2) auto;
+  // margin: cols(2) auto;
+  margin: cols(1) cols(1.5);
   align-items: center;
   justify-content: space-between;
   &__person {
@@ -17,15 +18,21 @@
   &__quote {
     // width: cols(6);
     margin-left: cols(1);
+    width: auto;
     &:before {
-      width: 38px;
-      height: 24px;
-      margin-bottom: 50px;
+      // width: 38px;
+      width: 33px;
+      // height: 24px;
+      height: 20px;
+      // margin-bottom: 50px;
+      margin-bottom: 20px;
     }
     p {
-      font-size: 30px;
+      // font-size: 30px;
+      font-size: 22px;
       letter-spacing: 0.02em;
-      line-height: 50px;
+      // line-height: 50px;
+      line-height: 1.5em;
       font-weight: 500;
     }
     &:before {
@@ -34,23 +41,6 @@
       background-image: url('#{$prefix}/static/img/globals/quotes.svg');
       background-size: 100%;
       background-repeat: no-repeat;
-    }
-  }
-
-  @media screen and (min-width: 1920px) {
-    margin: cols(1) cols(1.5);
-    &__quote {
-      width: auto;
-      &:before {
-        width: 33px;
-        height: 20px;
-        margin-bottom: 20px;
-      }
-      p {
-        font-size: 22px;
-        line-height: 1.5em;
-        letter-spacing: 0.02em;
-      }
     }
   }
   @media screen and (max-width: 1366px) {
