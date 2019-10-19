@@ -63,7 +63,7 @@ small {
   color: $primary !important;
 }
 
-@media screen and (min-width: 1921px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
+@media (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
   p {
     &.big {
       font-size: 27px;
