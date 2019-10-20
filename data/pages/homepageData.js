@@ -56,7 +56,7 @@ export default {
     ],
     5: [
       {
-        id: 'backstage',
+        id: 'eggo',
         type: 'project'
       },
       {

@@ -98,6 +98,13 @@
     }
     width: 100%;
   }
+  @media screen and (max-width: 768px) {
+    nav {
+      h1 {
+        font-size: 30px;
+      }
+    }
+  }
   @media screen and (max-width: 768px) and (orientation: landscape) {
     nav {
       h1 {

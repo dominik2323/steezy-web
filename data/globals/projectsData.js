@@ -6,6 +6,8 @@ import ferrari from './projects/ferrariData';
 import mico from './projects/micoData';
 import tamAZpet from './projects/tamAZpetData';
 import infinit from './projects/infinitData';
+import eggo from './projects/eggoData';
+import pivon from './projects/pivonData';
 
 import abb from './projects/abbData';
 import century21 from './projects/century21Data';
@@ -19,9 +21,11 @@ import tullamore from './projects/tullamoreData';
 import tbbbike from './projects/tbbbikeData';
 
 export default [
+  pivon,
   infinit,
   abb,
   cafeRepublic,
+  eggo,
   siestaCloud,
   dropDnd,
   backstage,
