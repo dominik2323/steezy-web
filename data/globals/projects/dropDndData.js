@@ -6,8 +6,9 @@ export default {
   tags: ['branding', 'aplikace', 'animace', 'dubai'],
   filterTags: ['branding', 'web-apps', 'video-animations'],
   reference: {
-    active: false,
-    quote: '',
+    active: true,
+    quote:
+      'DropDnD byl velmi rozsáhlý projekt, který studio Sleezy zpracovalo naprosto bravurně a s velkou autonomií. Dodané materiály byly na čas, komunikace probíhala strukturovaně a k věci a výsledná podoba aplikace i marketingová kampaň měla velmi dobrý ohlas na straně veřejnosti.',
     img: 'reference.png',
     name: 'Tomas Doležal',
     position: 'manažer',
@@ -22,7 +23,7 @@ export default {
     videoVimeoId: '215836460'
   },
   about:
-    'DropDnD je aukční aplikace s použitým zbožím, která v reálném čase propojuje nabídku a poptávku systémem tzv. Holandské aukce.\n\nNaším úkolem bylo nové aplikaci vytvořit nejen důvěryhodnou a nezaměnitelnou značku, ale navrhnout i plynulý a srozumitelný průchod aplikací a UI design, který bude krok před konkurencí v regionu. Součástí zadání byla také launch kampaň pro Dubaj (SAE), kde firma sídlí včetně animovaného produktového videa.',
+    'DropDnD je aukční aplikace s\u00a0použitým zbožím, která v\u00a0reálném čase propojuje nabídku a\u00a0poptávku systémem tzv.\u00a0Holandské aukce.\n\nNaším úkolem bylo nové aplikaci vytvořit nejen důvěryhodnou a\u00a0nezaměnitelnou značku, ale navrhnout i\u00a0plynulý a\u00a0srozumitelný průchod aplikací a\u00a0UI design, který bude o\u00a0krok před konkurencí v\u00a0regionu. Součástí zadání byla také launch kampaň pro Dubaj\u00a0(SAE), kde firma sídlí a\u00a0animované produktové video.',
   cooperation: 'NODUM atelier (architektonický návrh), Tomáš Lino (fotografie)',
   year: '2016',
   location: 'Česká republika, Brno',

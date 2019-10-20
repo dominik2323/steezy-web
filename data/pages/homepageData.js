@@ -1,14 +1,14 @@
 export default {
   pageName: 'Homepage',
   hero: {
-    header: 'Ukazujeme světu,\njak jste\u00a0skvělí',
+    header: 'Dnes už nestačí být nejlepší.\nMusí o tom vědět i ostatní.',
     subHeader: '',
     posterSrc: 'hero_homepage.png',
     videoSrc: 'steezy_showreel.mp4'
   },
   intro: {
     perex:
-      'Máte skvělou službu či produkt, ale nikdo o\u00a0vás neslyšel? Jste na špici\u00a0v oboru, ale nedaří se vám nalákat nové zákazníky či zaměstnance? Máte pocit, že jste lepší než vaše konkurence, ale zdaleka neprodáváte tolik? Nebo máte zatím jen geniální nápad a\u00a0nevíte, kde začít?\n\nPomůžeme nastavit vaši komunikaci tak, aby odpovídala vašemu záměru. Ať už jste zkušenými matadory v\u00a0oboru anebo se teprve chystáte dobít svou pozici na trhu, výrazná a\u00a0přitom srozumitelná prezentace je v\u00a0dnešní informacemi zahlcené době základním faktorem úspěchu.'
+      'Máte skvělou službu či produkt, ale nikdo o\u00a0vás neslyšel? Jste na špici\u00a0v oboru, ale nedaří se vám nalákat nové zákazníky či zaměstnance? Máte pocit, že jste lepší než vaše konkurence, ale zdaleka neprodáváte tolik? Nebo máte zatím jen geniální nápad a\u00a0nevíte, kde začít?\n\nPomůžeme nastavit vaši komunikaci tak, aby odpovídala vašemu záměru. Jste zkušenými matadory v\u00a0oboru anebo se teprve chystáte dobít svou pozici na trhu? Výrazná a\u00a0přitom srozumitelná prezentace je v\u00a0dnešní informacemi zahlcené době základním faktorem úspěchu.'
   },
   grid: {
     0: [
@@ -67,6 +67,6 @@ export default {
   },
   about: {
     paragraph:
-      'Jsme designérské a\u00a0filmařské studio specializované na inovativní a\u00a0komplexní řešení vizuální komunikace. '
+      'Jsme kreativní studio zaměřené na\u00a0komplexní řešení vizuální komunikace.'
   }
 };

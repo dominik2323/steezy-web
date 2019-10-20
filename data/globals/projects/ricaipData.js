@@ -18,7 +18,7 @@ export default {
     videoSrc: ''
   },
   intro: {
-    img: 'HeroImage.png',
+    img: 'ricaip01.jpg',
     videoVimeoId: ''
   },
   about:

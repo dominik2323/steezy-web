@@ -4,7 +4,7 @@ export default {
   name: 'Branding kadeřnického salonu',
   client: 'Backstage Hair Salon',
   tags: ['branding', 'interiér', 'video', 'brno'],
-  filterTags: ['branding', 'video-animations'],
+  filterTags: ['branding', 'video-animations', 'web-apps'],
   reference: {
     active: true,
     id: 'kriz',
@@ -24,7 +24,7 @@ export default {
     videoVimeoId: '215836460'
   },
   about:
-    'Backstage Hair Salon je špičkový, brněnský kadeřnický salon na ulici Pellicova. Lukáš kříž, majitel salonu vyškolený na London TONI & GUY Academy, si zakládá na precizním řemesle, rozhledu v oboru a nadčasovosti. Stejné očekávání měl i od nové vizuální identity.\n\nNašli jsme inspiraci ve skandinávském designu, vypustili obligátní dekor a zvolili nadčasovou typografii. Záměrného odlišení od konkurenčních salonu jsme dosáhli volbou netradiční, modré barvy a grafický styl, podtrhující precizní přístup ke klientům, založili na přiznaném tučném gridu. Symbolický znak A z logotypu (nůžky nebo přehláskované „ä“, které jsou typické pro nordické jazyky) odráží přístup salonu a lze jej použít samostatně jako logo.',
+    'Backstage Hair Salon je špičkový, brněnský kadeřnický salon na ulici Pellicova. Lukáš kříž, majitel salonu vyškolený na London TONI & GUY Academy, si zakládá na precizním řemesle, rozhledu v oboru a nadčasovosti. Stejné očekávání měl i od nové vizuální identity.\n\nNašli jsme inspiraci ve skandinávském designu, vypustili obligátní dekor a zvolili nadčasovou typografii. Záměrného odlišení od konkurenčních salónů jsme dosáhli volbou netradiční, modré barvy a grafický styl, podtrhující precizní přístup ke klientům, založili na přiznaném tučném gridu. Symbolický znak A z logotypu (nůžky nebo přehláskované „ä“, které jsou typické pro nordické jazyky) odráží přístup salonu a lze jej použít samostatně jako logo.',
   cooperation: 'NODUM atelier (architektonický návrh), Tomáš Lino (fotografie)',
   year: '2016',
   location: 'Česká republika, Brno',

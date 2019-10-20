@@ -4,7 +4,7 @@ export default {
   name: 'Branding průmyslového holdingu',
   client: 'Moravian Industrial Company',
   tags: ['branding', 'video', 'veletrzni_stanek'],
-  filterTags: ['branding', 'web-apps'],
+  filterTags: ['branding', 'web-apps', 'video-animations'],
   reference: {
     active: true,
     quote:
@@ -24,7 +24,7 @@ export default {
     videoVimeoId: ''
   },
   about:
-    'Společnost MICo, neboli Moravian Industrial Company, se více než 25 let zabývá zakázkovou výrobou složitých strojírenských celků pro energetický průmysl. Až do roku 2018 se tato veřejnosti nepřilíš známá firma s miliardovým obratem a více než 400 zaměstnanci spokojila s původním vizuálním stylem z roku 1993. Nové strategické cíle, ambice rozšířit byznys a přetvořit společnost na holding, však kladly zvýšené nároky i na marketing a komunikaci. Nároky na rebranding tak byly jasně dané. Vytvořit nadčasovou a sebevědomou, sdílenou vizuální identitu, která bude působit jednotně jako celek a zároveň umožní rostoucímu portfoliu dceřinných firem určitou míru individuality.',
+    'Společnost MICo, neboli Moravian Industrial Company, se více než 25 let zabývá zakázkovou výrobou složitých strojírenských celků pro energetický průmysl. Až do roku 2018 se tato veřejnosti nepřilíš známá firma s miliardovým obratem a více než 400 zaměstnanci spokojila s původním vizuálním stylem z roku 1993. Nové strategické cíle, ambice rozšířit byznys a přetvořit společnost na holding, však kladly zvýšené nároky i na marketing a komunikaci.\n\nNároky na rebranding tak byly jasně dané. Vytvořit nadčasovou a sebevědomou, sdílenou vizuální identitu, která bude působit jednotně jako celek a zároveň umožní rostoucímu portfoliu dceřinných firem určitou míru individuality.',
   cooperation: 'Oldřich Hrb (fotografie)',
   year: '2018',
   location: 'Česká republika, Třebíč',
@@ -75,10 +75,6 @@ export default {
       {
         img: 'mico08.png',
         alt: 'dummy'
-      },
-      {
-        img: 'mico09.png',
-        alt: 'dummy'
       }
     ],
     6: [
@@ -93,11 +89,14 @@ export default {
         alt: 'dummy'
       }
     ],
-    8: [{ img: 'mico12.png', alt: 'dummy' }],
+    8: [
+      { img: 'mico12.5.png', alt: 'dummy' },
+      { img: 'mico12.5b.png', alt: 'dummy' }
+    ],
     9: [
       {
         blockquote:
-          'Vizuální styl společnosti jsme mimojiné postavili i na krásných fotkách a videích, které lze pořídit i v takovém oboru jako je těžké strojírenství. '
+          'I v takovém oboru, jakým je těžké strojírenství, lze pořídit krásné fotografie. Obrazem MICo nově vypráví příběhy nejen svých precizních výrobků, ale i lidí, kteří za nimi stojí.'
       }
     ],
     10: [
@@ -126,19 +125,24 @@ export default {
         alt: 'dummy'
       }
     ],
-
     13: [
       {
-        videoVimeoId: '367061255'
+        blockquote:
+          'Unikátní výrobní haly MICo o rozloze několika desítek tisíc m2 jsme zachytili také na video.'
       }
     ],
     14: [
       {
-        blockquote:
-          'Vizuální styl společnosti jsme mimojiné postavili i na krásných fotkách a videích, které lze pořídit i v takovém oboru jako je těžké strojírenství. '
+        videoVimeoId: '367061255'
       }
     ],
     15: [
+      {
+        blockquote:
+          'Pro holding MICo jsme v rámci rebrandingu vytvořili také koncept externí prezentace, například pro strojírenský veletrh.'
+      }
+    ],
+    16: [
       {
         img: 'mico18.png',
         alt: 'dummy'
@@ -148,7 +152,7 @@ export default {
         alt: 'dummy'
       }
     ],
-    16: [
+    17: [
       {
         img: 'mico20.png',
         alt: 'dummy'
@@ -158,7 +162,7 @@ export default {
         alt: 'dummy'
       }
     ],
-    17: [
+    18: [
       {
         img: 'mico22.png',
         alt: 'dummy'

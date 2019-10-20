@@ -21,10 +21,7 @@ export default function About() {
       </Head>
       <div className="about container-fluid">
         <Navbar />
-        <Hero
-          posterSrc={`/static/img/about/about_hero.png`}
-          className={`about`}
-        >
+        <Hero posterSrc={`/static/img/about/HeroImage.png`} className={`about`}>
           {{
             content: (
               <div className={`about__hero-content`}>

@@ -8,7 +8,7 @@ export default {
   reference: {
     active: true,
     quote:
-      'Tam & zpět je unikát - od začátku až do konce. Logo je vlastnoruční práce studia, jeho autorské písmo, které vdechlo brandu jednoduchost, rafinovanovanost a nadčasovost. Jeho podpis se s námi nese již od počátku a já jsem mu za to dodnes vděčná.',
+      'Tam & zpět je unikát - od začátku až do konce. Logo je vlastnoruční práce studia Steezy. Jde o autorské písmo, které vdechlo obálce jednoduchost, rafinovanovanost a nadčasovost. Jeho podpis se s námi nese již od počátku a já jsem jim za to dodnes vděčná.',
     img: 'reference.png',
     name: 'Jana Valíčková',
     position: 'jednatelka',
@@ -47,7 +47,7 @@ export default {
     2: [
       {
         blockquote:
-          'Obálku deníku tvoří italské plátno, do kterého je vyražené logo/název ve zlaté a bílé barvě.'
+          'Obálku deníku tvoří italské plátno, do kterého je vyražený logotyp ve zlaté a bílé barvě.'
       }
     ],
     3: [

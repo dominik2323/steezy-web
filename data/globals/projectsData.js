@@ -20,21 +20,21 @@ import tbbbike from './projects/tbbbikeData';
 
 export default [
   infinit,
+  abb,
+  cafeRepublic,
+  siestaCloud,
   dropDnd,
   backstage,
+  sparco,
   surgeryClinic,
-  cafeRepublic,
-  ferrari,
+  gumotex,
   mico,
   tamAZpet,
-  abb,
   century21,
-  gumotex,
-  pokorny,
   ricaip,
-  siestaCloud,
+  ferrari,
   siestaSolution,
-  sparco,
   tullamore,
+  pokorny,
   tbbbike
 ];

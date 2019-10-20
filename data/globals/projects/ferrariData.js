@@ -4,7 +4,7 @@ export default {
   name: 'Expozice F1 Ferrari',
   client: 'Garrett Motion',
   tags: ['print', '3D'],
-  filterTags: ['branding', 'web-apps'],
+  filterTags: ['branding'],
   reference: {
     active: false,
     quote: '',
@@ -54,16 +54,12 @@ export default {
     4: [
       {
         blockquote:
-          'Expozice pro nový model Ferrari F1 z roku 2018 vznikla přímo naproti budově Garrett v Brně, kde se vyvíjí a testují turbodmychadla pro tento vyjímečně krásný vůz.'
+          'Expozice pro formuli Ferrari vznikla přímo naproti budově Garrett v Brně, kde se vyvíjí a testují turbodmychadla pro tento vyjímečně krásný vůz.'
       }
     ],
     5: [
       {
         img: 'ferrari04.png',
-        alt: 'dummy'
-      },
-      {
-        img: 'ferrari05.png',
         alt: 'dummy'
       }
     ],

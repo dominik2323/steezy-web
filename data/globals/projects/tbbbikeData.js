@@ -4,7 +4,7 @@ export default {
   name: 'Branding lifestylové módní značky',
   client: 'TBB-BIKE',
   tags: ['print', '3D'],
-  filterTags: ['video-animations'],
+  filterTags: ['branding', 'video-animations'],
   reference: {
     active: false,
     quote: '',
