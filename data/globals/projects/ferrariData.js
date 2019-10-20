@@ -17,15 +17,19 @@ export default {
     posterSrc: 'HeroImage.png',
     videoSrc: ''
   },
+  introText: {
+    about:
+      'Švýcarská společnost Garrett je už více než 60 let pionýrem ve vývoji turbo-technologií v automobilovém průmyslu. Málokdo však ví, že výzkumné a vývojové centrum Garrett, kde vznikají turba pro Mercedesy či BMW, sídlí v Brně. A nejen to. Kromě těchto konvenčních technologií zde brněnští inženýři každý rok vyvíjí také svatý grál tohoto odvětví – turbo do Formule 1 Ferrari.\n\nNa základě naší dlouhodobé spolupráce na poli vizuální komunikace jsme proto dostali od Garrett příležitost navrhnout expozici pro F1 Ferrari, která byla k příložitosti setkání leaderů společnosti dovezena do Brna přímo z italského Maranella. ',
+    tags: [
+      { header: 'role', content: '#print\n#3D' },
+      { header: 'realizace', content: 'Brno, 2019' },
+      { header: 'foto', content: 'Tomáš Carda' }
+    ]
+  },
   intro: {
     img: 'HeroImage.png',
     videoVimeoId: ''
   },
-  about:
-    'Švýcarská společnost Garrett je už více než 60 let pionýrem ve vývoji turbo-technologií v automobilovém průmyslu. Málokdo však ví, že výzkumné a vývojové centrum Garrett, kde vznikají turba pro Mercedesy či BMW, sídlí v Brně. A nejen to. Kromě těchto konvenčních technologií zde brněnští inženýři každý rok vyvíjí také svatý grál tohoto odvětví – turbo do Formule 1 Ferrari.\n\nNa základě naší dlouhodobé spolupráce na poli vizuální komunikace jsme proto dostali od Garrett příležitost navrhnout expozici pro F1 Ferrari, která byla k příložitosti setkání leaderů společnosti dovezena do Brna přímo z italského Maranella. ',
-  cooperation: 'NODUM atelier (architektonický návrh)',
-  year: '2019',
-  location: 'Česká republika, Praha',
   presentation: {
     0: [
       {

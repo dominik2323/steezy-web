@@ -6,10 +6,12 @@ export default function useFixedNav() {
 
   let prevScrollPos = 0;
   const handleScroll = e => {
-    if (window.scrollY < prevScrollPos) {
+    if (window.scrollY < prevScrollPos || prevScrollPos < 0) {
+      // U P  –  S H O W
       setBg(window.scrollY > window.innerHeight ? true : false);
       toggleNav(true);
     } else {
+      // D O W N  –  H I D E
       toggleNav(false);
     }
     prevScrollPos = window.scrollY;

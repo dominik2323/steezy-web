@@ -22,11 +22,15 @@ export default {
     img: 'HeroImage.png',
     videoVimeoId: ''
   },
-  about:
-    'Tam & zpět je tak trochu jiný start-upový produkt. Nemá displej, nenajdete ho na iTunes, ani vám neposílá notifikace. A možná právě proto se za necelé dva roky dostal už k několika tisícům čtenářu. Pro tento zvláštní deník, který se vás každý den po dobu pěti let ptá na jinou otázku, jsme navrhli nadčasovou, elegantní a univerzální značku. To byl ale teprve začátek.\n\nSe zakladatelkou projektu jsme pak hledali několik měsíců to správné knižní zpracování. Testovali jsme materiály, plátna, ražbu a pracovali na sazbě vnitřních stran, která se ani po letech neokouká. Výsledkem je série krásných deníků, které dělají radost nejen nám, ale také čtenářům u nás a nově i na Slovensku.',
-  cooperation: '',
-  year: '2018',
-  location: 'Česká republika, Slovensko',
+  introText: {
+    about:
+      'Tam & zpět je tak trochu jiný start-upový produkt. Nemá displej, nenajdete ho na iTunes, ani vám neposílá notifikace. A možná právě proto se za necelé dva roky dostal už k několika tisícům čtenářu. Pro tento zvláštní deník, který se vás každý den po dobu pěti let ptá na jinou otázku, jsme navrhli nadčasovou, elegantní a univerzální značku. To byl ale teprve začátek.\n\nSe zakladatelkou projektu jsme pak hledali několik měsíců to správné knižní zpracování. Testovali jsme materiály, plátna, ražbu a pracovali na sazbě vnitřních stran, která se ani po letech neokouká. Výsledkem je série krásných deníků, které dělají radost nejen nám, ale také čtenářům u nás a nově i na Slovensku.',
+    tags: [
+      { header: 'role', content: '#branding\n#print' },
+      { header: 'realizace', content: 'Česká republika,\nSlovensko\n2018' },
+      { header: 'lokalita', content: 'Oldřich Hrb' }
+    ]
+  },
   presentation: {
     0: [
       {

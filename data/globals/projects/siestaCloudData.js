@@ -21,11 +21,15 @@ export default {
     img: 'IntroImage.png',
     videoVimeoId: ''
   },
-  about:
-    'Siesta Cloud je inovativní platformou, která umožňuje svým zákazníkům jednoduše a pohodlně vytvářet cestovní portály, spravovat je a poskytovat další služby spojené s cestovním ruchem se značnou automatizací aktuálně manuálně prováděných procesů.\n\nProtože se jedná o sofistikované a komplexní řešení, dostali jsme za úkol všechny jeho benefity vizualizovat a zjednodušenou formou vysvětlit zákazníkům.\n\nPro tento úkol jsme se vydali cestou 3D animace. Vytvořili jsme systém zjednodušených scén a person potencionálních klientů a v tomto světě příběh Siesta Cloud odvyprávěli.',
-  cooperation: 'NODUM atelier (architektonický návrh)',
-  year: '2019',
-  location: 'Česká republika, Praha',
+  introText: {
+    about:
+      'Siesta Cloud je inovativní platformou, která umožňuje svým zákazníkům jednoduše a pohodlně vytvářet cestovní portály, spravovat je a poskytovat další služby spojené s cestovním ruchem se značnou automatizací aktuálně manuálně prováděných procesů.\n\nProtože se jedná o sofistikované a komplexní řešení, dostali jsme za úkol všechny jeho benefity vizualizovat a zjednodušenou formou vysvětlit zákazníkům.\n\nPro tento úkol jsme se vydali cestou 3D animace. Vytvořili jsme systém zjednodušených scén a person potencionálních klientů a v tomto světě příběh Siesta Cloud odvyprávěli.',
+    tags: [
+      { header: 'role', content: '#kreativa\n#3dmodelování\n#3danimace' },
+      { header: 'realizace', content: '2019' },
+      { header: 'lokalita', content: 'Celosvětová kampaň' }
+    ]
+  },
   presentation: {
     0: [
       {

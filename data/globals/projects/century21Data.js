@@ -21,11 +21,16 @@ export default {
     img: 'IntroImage.png',
     videoVimeoId: ''
   },
-  about:
-    'Homestaging neboli úprava nemovitostí hraje při prodeji nemovitosti jednu z klíčových rolí. Pro společnost Century 21 jsme ve spolupráci s mediální agenturou Tvision připravili tento animovaný spot.\n\nO kreativu k tomuto spotu se postaral známý český stand-up komik Pavel Tomeš a náš tým pak ilustrovanému domku vdechl život. Příběh osamělého domku tak mohl divákům na sociálních sítích zábavnou formou přiblížit podstatu homestagingu.',
-  cooperation: 'NODUM atelier (architektonický návrh)',
-  year: '2019',
-  location: 'Česká republika, Praha',
+  introText: {
+    about:
+      'Homestaging neboli úprava nemovitostí hraje při prodeji nemovitosti jednu z klíčových rolí. Pro společnost Century 21 jsme ve spolupráci s mediální agenturou Tvision připravili tento animovaný spot.\n\nO kreativu k tomuto spotu se postaral známý český stand-up komik Pavel Tomeš a náš tým pak ilustrovanému domku vdechl život. Příběh osamělého domku tak mohl divákům na sociálních sítích zábavnou formou přiblížit podstatu homestagingu.',
+    tags: [
+      { header: 'role', content: '#animace' },
+      { header: 'realizace', content: '2016' },
+      { header: 'lokalita', content: 'Česká Republika' },
+      { header: 'agentura', content: 'Tvision' }
+    ]
+  },
   presentation: {
     0: [
       {

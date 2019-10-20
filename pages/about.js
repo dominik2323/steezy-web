@@ -46,7 +46,7 @@ export default function About() {
             )
           }}
         </Hero>
-        <IntroText perex={about.intro.perex} tags={about.intro.tags} />
+        <IntroText perex={about.introText.about} tags={about.introText.tags} />
         <Grid
           grid={Object.values(about.grid)}
           folder={`/about`}

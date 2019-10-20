@@ -21,11 +21,15 @@ export default {
     img: 'HeroImage.png',
     videoVimeoId: ''
   },
-  about:
-    'Siesta Solution je systémem pro správu a hotelů a dalších ubytovacích zařízení. Jeho výhodou oproti konkurenci je snadná škálovatelnost a integrace všech potřebných služeb v jednom systému. Tým Siesta Solution za námi přišel s úkolem, jejich zákazníkům rychle a srozumitelně tento produkt představit.\n\nPro tento úkol jsme se vydal cestou ilustrovaného videa. Vytvořili jsme ilustrace na míru, které zapadali do jejich nastavené vizuální komunikace a následně jim vdechli život. Výsledkem je video, které v několika minutách srozumitelně představí jejich službu.',
-  cooperation: 'NODUM atelier (architektonický návrh)',
-  year: '2019',
-  location: 'Česká republika, Praha',
+  introText: {
+    about:
+      'Siesta Solution je systémem pro správu a hotelů a dalších ubytovacích zařízení. Jeho výhodou oproti konkurenci je snadná škálovatelnost a integrace všech potřebných služeb v jednom systému. Tým Siesta Solution za námi přišel s úkolem, jejich zákazníkům rychle a srozumitelně tento produkt představit.\n\nPro tento úkol jsme se vydal cestou ilustrovaného videa. Vytvořili jsme ilustrace na míru, které zapadali do jejich nastavené vizuální komunikace a následně jim vdechli život. Výsledkem je video, které v několika minutách srozumitelně představí jejich službu.',
+    tags: [
+      { header: 'role', content: '#kreativa\n#ilustrace\n#animace' },
+      { header: 'realizace', content: '2018' },
+      { header: 'lokalita', content: 'Česká Republika, Evropa' }
+    ]
+  },
   presentation: {
     0: [
       {

@@ -21,11 +21,15 @@ export default {
     img: 'IntroImage.png',
     videoVimeoId: ''
   },
-  about:
-    'Sparco je celosvětovou ikonou ve světě motorsportu. Český distributor této značky za námi přišel s poptávkou na vytvoření televizního reklamního spotu. Tento spot si následně našel pozornost i samotné společnosti Sparco a vysloužil si i celosvětovou variantu tohto spotu.\n\nNa začátku stála pouze fotka osvežovače do auta ve tvaru závodníka a úkol tento produkt odprezentovat. Vzali jsme tento úkol z jiného konce. Vytvořili 3D model produktu a postavili celé město, kde jsme uspořádali závod mezi jednotlivými variantami vůní.',
-  cooperation: 'NODUM atelier (architektonický návrh)',
-  year: '2019',
-  location: 'Česká republika, Praha',
+  introText: {
+    about:
+      'Sparco je celosvětovou ikonou ve světě motorsportu. Český distributor této značky za námi přišel s poptávkou na vytvoření televizního reklamního spotu. Tento spot si následně našel pozornost i samotné společnosti Sparco a vysloužil si i celosvětovou variantu tohto spotu.\n\nNa začátku stála pouze fotka osvežovače do auta ve tvaru závodníka a úkol tento produkt odprezentovat. Vzali jsme tento úkol z jiného konce. Vytvořili 3D model produktu a postavili celé město, kde jsme uspořádali závod mezi jednotlivými variantami vůní.',
+    tags: [
+      { header: 'role', content: '#kreativa\n#3dmodelování\n#3danimace' },
+      { header: 'realizace', content: '2019' },
+      { header: 'lokalita', content: 'Česká Republika, Svět' }
+    ]
+  },
   presentation: {
     0: [
       {

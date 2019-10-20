@@ -5,6 +5,15 @@ export default {
   client: 'Moravian Industrial Company',
   tags: ['branding', 'video', 'veletrzni_stanek'],
   filterTags: ['branding', 'web-apps', 'video-animations'],
+  introText: {
+    tags: [
+      { header: 'role', content: '#branding\n#video\n#veletrzni_stanek' },
+      { header: 'realizace', content: 'Třebíč, 2018' },
+      { header: 'fotografie', content: 'Oldřich Hrb' }
+    ],
+    about:
+      'Společnost MICo, neboli Moravian Industrial Company, se více než 25 let zabývá zakázkovou výrobou složitých strojírenských celků pro energetický průmysl. Až do roku 2018 se tato veřejnosti nepřilíš známá firma s miliardovým obratem a více než 400 zaměstnanci spokojila s původním vizuálním stylem z roku 1993. Nové strategické cíle, ambice rozšířit byznys a přetvořit společnost na holding, však kladly zvýšené nároky i na marketing a komunikaci.\n\nNároky na rebranding tak byly jasně dané. Vytvořit nadčasovou a sebevědomou, sdílenou vizuální identitu, která bude působit jednotně jako celek a zároveň umožní rostoucímu portfoliu dceřinných firem určitou míru individuality.'
+  },
   reference: {
     active: true,
     quote:
@@ -23,11 +32,6 @@ export default {
     img: 'HeroImage.png',
     videoVimeoId: ''
   },
-  about:
-    'Společnost MICo, neboli Moravian Industrial Company, se více než 25 let zabývá zakázkovou výrobou složitých strojírenských celků pro energetický průmysl. Až do roku 2018 se tato veřejnosti nepřilíš známá firma s miliardovým obratem a více než 400 zaměstnanci spokojila s původním vizuálním stylem z roku 1993. Nové strategické cíle, ambice rozšířit byznys a přetvořit společnost na holding, však kladly zvýšené nároky i na marketing a komunikaci.\n\nNároky na rebranding tak byly jasně dané. Vytvořit nadčasovou a sebevědomou, sdílenou vizuální identitu, která bude působit jednotně jako celek a zároveň umožní rostoucímu portfoliu dceřinných firem určitou míru individuality.',
-  cooperation: 'Oldřich Hrb (fotografie)',
-  year: '2018',
-  location: 'Česká republika, Třebíč',
   presentation: {
     0: [
       {

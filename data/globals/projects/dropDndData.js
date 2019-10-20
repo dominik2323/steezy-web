@@ -22,11 +22,14 @@ export default {
     img: 'HeroImage.png',
     videoVimeoId: '215836460'
   },
-  about:
-    'DropDnD je aukční aplikace s\u00a0použitým zbožím, která v\u00a0reálném čase propojuje nabídku a\u00a0poptávku systémem tzv.\u00a0Holandské aukce.\n\nNaším úkolem bylo nové aplikaci vytvořit nejen důvěryhodnou a\u00a0nezaměnitelnou značku, ale navrhnout i\u00a0plynulý a\u00a0srozumitelný průchod aplikací a\u00a0UI design, který bude o\u00a0krok před konkurencí v\u00a0regionu. Součástí zadání byla také launch kampaň pro Dubaj\u00a0(SAE), kde firma sídlí a\u00a0animované produktové video.',
-  cooperation: 'NODUM atelier (architektonický návrh), Tomáš Lino (fotografie)',
-  year: '2016',
-  location: 'Česká republika, Brno',
+  introText: {
+    about:
+      'DropDnD je aukční aplikace s\u00a0použitým zbožím, která v\u00a0reálném čase propojuje nabídku a\u00a0poptávku systémem tzv.\u00a0Holandské aukce.\n\nNaším úkolem bylo nové aplikaci vytvořit nejen důvěryhodnou a\u00a0nezaměnitelnou značku, ale navrhnout i\u00a0plynulý a\u00a0srozumitelný průchod aplikací a\u00a0UI design, který bude o\u00a0krok před konkurencí v\u00a0regionu. Součástí zadání byla také launch kampaň pro Dubaj\u00a0(SAE), kde firma sídlí a\u00a0animované produktové video.',
+    tags: [
+      { header: 'role', content: '#branding\n#aplikace\n#kampaň\n#animace' },
+      { header: 'realizace', content: 'Dubaj,\u00a0SAE\n2017' }
+    ]
+  },
   presentation: {
     0: [
       {
@@ -108,12 +111,6 @@ export default {
       {
         img: 'dropDnd11.png',
         alt: 'dummy'
-      }
-    ],
-    11: [
-      {
-        blockquote:
-          'Nový vizuální styl se výrazně propsal i do interiéru salonu, který se tak odlišil od konkurenčních podniků ve městě.'
       }
     ],
     12: [{ videoVimeoId: '366974485' }]

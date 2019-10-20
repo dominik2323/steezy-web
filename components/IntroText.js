@@ -15,12 +15,12 @@ const IntroText = ({
       </p>
       {tags && (
         <ul>
-          {tags.map(({ header, bullet, id }, i) => (
+          {tags.map(({ header, content, id }, i) => (
             <li key={header} onClick={() => handleClick(id)}>
               {numbered && <span>{`0${i + 1}`}</span>}
               <div>
                 <h5>{header.toUpperCase()}</h5>
-                <small>{bullet}</small>
+                <small>{content}</small>
               </div>
             </li>
           ))}

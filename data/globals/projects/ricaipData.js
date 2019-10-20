@@ -21,11 +21,15 @@ export default {
     img: 'ricaip01.jpg',
     videoVimeoId: ''
   },
-  about:
-    'Evropský projekt RICAIP spojuje české a německé výzkumné testbedy a snaží se naplnit potenciál, který v oblasti virtualizace výroby nabízí příchod průmyslu 4.0.\n\nRICAIP nás oslovil s nelehkým úkolem pro tento velmi komplexní a komplikovaný projekt vytvořit vizuální jazyk, díky kterému budou moci lépe komunikovat výsledky jejich výzkumu.\n\nPomocí 3D vizualizací jsme nakonec přišli s řešením, které umožnilo snadno vyobrazit jejich snažení propojit virtuální produkci s fyzickou a vzájemně probíhající procesy srozumitelně odprezentovat.',
-  cooperation: 'NODUM atelier (architektonický návrh)',
-  year: '2019',
-  location: 'Česká republika, Praha',
+  introText: {
+    about:
+      'Evropský projekt RICAIP spojuje české a německé výzkumné testbedy a snaží se naplnit potenciál, který v oblasti virtualizace výroby nabízí příchod průmyslu 4.0.\n\nRICAIP nás oslovil s nelehkým úkolem pro tento velmi komplexní a komplikovaný projekt vytvořit vizuální jazyk, díky kterému budou moci lépe komunikovat výsledky jejich výzkumu.\n\nPomocí 3D vizualizací jsme nakonec přišli s řešením, které umožnilo snadno vyobrazit jejich snažení propojit virtuální produkci s fyzickou a vzájemně probíhající procesy srozumitelně odprezentovat.',
+    tags: [
+      { header: 'role', content: '#kreativa\n#3danimace\n#video\n#print' },
+      { header: 'realizace', content: '2018/2019' },
+      { header: 'lokalita', content: 'Česká Republika, Německo' }
+    ]
+  },
   presentation: {
     0: [
       {

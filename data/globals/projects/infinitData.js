@@ -5,6 +5,22 @@ export default {
   client: 'Infinit wellness',
   tags: ['branding', 'video', 'animace', 'webdesign', 'print', 'kampaň'],
   filterTags: ['branding', 'web-apps', 'video-animations'],
+  introText: {
+    about:
+      'Infinit wellness tvoří síť několika relaxačních center v Praze a Brně a s více než stovkou zaměstnanců je lídrem ve wellness službách na českém trhu. Strategické cíle společnosti kladly nové výzvy i pro komunikační styl, který bylo třeba revidovat a sjednotit.\n\naše uvažování se řídilo základní myšlenkou wellness: co nejméně rušit zákazníka při relaxaci. Ústředním motivem rebrandingu proto byla redukce obsahu, vizuálního smogu, sjednocení barevné palety a kultivace grafického stylu.\n\nNová firemní identita je založená na autorském písmu Infinit, které jsme vytvořili společnosti na míru. Charakteristický vizuální styl se tak propíše do všech materiálů, aniž by bylo nutné vše razítkovat logem.\n\nPro Infinit jsme kromě písma, sady logotypů a vizuálního stylu tiskovin navrhli i jednotný orientační systém wellness center a webové stránky. V rámci celého procesu jsme vytvořili také sérii fotografií a videí, které se soustředí na vnitřní klid a prožitek klienta.',
+    tags: [
+      {
+        header: 'role',
+        content: '#branding\n#video\n#animace\n#webdesign\n#print\n#kampaň'
+      },
+      { header: 'realizace', content: 'Praha, Brno,\n2019' },
+      {
+        header: 'spolupráce',
+        content:
+          'Michal\u00a0Ondráček (grafický\u00a0design), Martin\u00a0Faltejsek\u00a0(foto), Jiří\u00a0Mucha\u00a0(video)'
+      }
+    ]
+  },
   reference: {
     active: true,
     quote:
@@ -22,12 +38,6 @@ export default {
     img: 'IntroImage.png',
     videoVimeoId: ''
   },
-  about:
-    'Infinit wellness tvoří síť několika relaxačních center v Praze a Brně a s více než stovkou zaměstnanců je lídrem ve wellness službách na českém trhu. Strategické cíle společnosti kladly nové výzvy i pro komunikační styl, který bylo třeba revidovat a sjednotit.\n\naše uvažování se řídilo základní myšlenkou wellness: co nejméně rušit zákazníka při relaxaci. Ústředním motivem rebrandingu proto byla redukce obsahu, vizuálního smogu, sjednocení barevné palety a kultivace grafického stylu.\n\nNová firemní identita je založená na autorském písmu Infinit, které jsme vytvořili společnosti na míru. Charakteristický vizuální styl se tak propíše do všech materiálů, aniž by bylo nutné vše razítkovat logem.\n\nPro Infinit jsme kromě písma, sady logotypů a vizuálního stylu tiskovin navrhli i jednotný orientační systém wellness center a webové stránky. V rámci celého procesu jsme vytvořili také sérii fotografií a videí, které se soustředí na vnitřní klid a prožitek klienta.',
-  cooperation:
-    'Michal\u00a0Ondráček\u00a0(grafický design), Martin\u00a0Faltejsek\u00a0(foto), Jiří\u00a0Mucha\u00a0(video)',
-  year: '2019',
-  location: 'Česká republika, Praha & Brno',
   presentation: {
     0: [
       {

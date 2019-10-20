@@ -21,11 +21,22 @@ export default {
     img: 'IntroImage.png',
     videoVimeoId: ''
   },
-  about:
-    'Café Re:public je zbrusu nová kavárna a bistro v těsné blízkosti Petřínské rozhledny. Na vzniku podniku jsme se podíleli od samého počátku (průzkum trhu, strategie, naming) a identitu kavárny tvořili po celou dobu v úzké spolupráci s architekty a investory.\n\nRučně kreslený logotyp vychází z moderního charakteru budovy, zároveň ale nese hravý dekor sousední secesní petřínské věže. Tento princip se propsal do vizuálního stylu celé kavárny. Z jednotlivých elementů loga jsme poskládali pestrou paletu avatarů různých kultur a jazyků a vytvořili tak grafické esperanto, kterým lze komunikovat s návštěvníky z celého světa.',
-  cooperation: 'NODUM atelier (architektonický návrh)',
-  year: '2019',
-  location: 'Česká republika, Praha',
+  introText: {
+    about:
+      'Café Re:public je zbrusu nová kavárna a bistro v těsné blízkosti Petřínské rozhledny. Na vzniku podniku jsme se podíleli od samého počátku (průzkum trhu, strategie, naming) a identitu kavárny tvořili po celou dobu v úzké spolupráci s architekty a investory.\n\nRučně kreslený logotyp vychází z moderního charakteru budovy, zároveň ale nese hravý dekor sousední secesní petřínské věže. Tento princip se propsal do vizuálního stylu celé kavárny. Z jednotlivých elementů loga jsme poskládali pestrou paletu avatarů různých kultur a jazyků a vytvořili tak grafické esperanto, kterým lze komunikovat s návštěvníky z celého světa.',
+    tags: [
+      {
+        header: 'role',
+        content: '#branding\n#strategie\n#interier\n#webdesign'
+      },
+      {
+        header: 'spolupráce',
+        content:
+          'NODUM\u00a0Atelier\u00a0(architektura), Lukáš\u00a0Legi\u00a0(foto)'
+      },
+      { header: 'realizace', content: 'Praha 2019' }
+    ]
+  },
   presentation: {
     0: [
       {

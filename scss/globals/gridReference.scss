@@ -1,7 +1,7 @@
 .grid__row__item--reference {
   display: flex;
   // margin: cols(2) auto;
-  margin: cols(1) 0 cols(1.5);
+  margin: cols(1) auto cols(1.5);
   align-items: center;
   justify-content: space-between;
   &__person {
@@ -45,7 +45,7 @@
   }
   @media screen and (max-width: 1366px) {
     &__quote {
-      width: cols(8);
+      // width: cols(8);
     }
   }
 
@@ -66,19 +66,32 @@
       width: cols(13);
       margin: auto;
       p {
+        font-size: 21px;
         // text-align: center;
         width: cols(12);
         margin-bottom: cols(2);
       }
     }
     &__person {
+      display: flex;
+      align-items: center;
       img {
-        width: cols(4);
-        height: cols(4);
+        width: cols(3);
+        height: cols(3);
+        margin-bottom: 0;
       }
       p {
-        font-size: 18px;
+        margin-left: 20px;
+        font-size: 14px;
         letter-spacing: 0.02em;
+        line-height: 1.6em;
+      }
+    }
+  }
+  @media screen and (max-width: 540px) {
+    &__quote {
+      p {
+        font-size: 16px;
         line-height: 1.6em;
       }
     }

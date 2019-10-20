@@ -41,8 +41,11 @@
     }
   }
   @media screen and (max-width: 768px) {
-    h1 {
-      font-size: cols(1.5);
+    &__content {
+      width: cols(13);
+      h1 {
+        font-size: cols(1.5);
+      }
     }
   }
   @media screen and (max-width: 768px) and (orientation: landscape) {

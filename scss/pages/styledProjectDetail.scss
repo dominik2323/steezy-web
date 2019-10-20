@@ -131,10 +131,17 @@
       width: cols(15);
       left: 0;
       right: 0;
-      height: 100px;
-      top: -100px;
+      height: 70px;
+      min-height: auto;
+      top: -70px;
       &__arrow {
         width: 50%;
+        &--left {
+          left: cols(0);
+        }
+        &--right {
+          right: cols(0);
+        }
       }
     }
   }

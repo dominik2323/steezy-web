@@ -108,15 +108,15 @@
       // padding: cols(2) 0;
       &__about {
         &__intro {
-          flex-direction: column-reverse;
+          flex-direction: column;
           align-items: flex-start;
           &__perex {
             width: cols(11);
-            margin-top: cols(2);
+            margin-top: cols(1.5);
+            margin-bottom: cols(1.5);
           }
           &__icon {
-            margin-left: 0;
-            width: cols(7);
+            display: none;
           }
         }
         &__bullets {
@@ -133,18 +133,17 @@
     }
   }
   @media screen and (max-width: 540px) {
-    margin: cols(4) 0;
+    margin: cols(2) 0;
     &__services-item {
       &:not(:last-child) {
-        margin-bottom: cols(4);
+        margin-bottom: cols(2);
+      }
+      .grid {
+        margin-bottom: cols(2);
       }
       &__about {
         &__intro {
           margin-bottom: cols(3);
-          &__icon {
-            width: cols(10);
-            margin: 0 auto cols(1);
-          }
           &__perex {
             width: cols(13);
           }

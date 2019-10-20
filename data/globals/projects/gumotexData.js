@@ -21,11 +21,16 @@ export default {
     img: 'IntroImage.png',
     videoVimeoId: ''
   },
-  about:
-    'Česká společnost Gumotex je světovým specialistou na vývoj a výrobu nafukovacích člunů. Při vývoji jejich nové lodě s označením Thaya použili několik patentovaných technologií, které umožnili lodi získat specifické vlastnosti a my dostali příležitost tyto technologie přiblížit světu.\n\nNejvětší výzvou bylo nasimulovat uspořádání materiálů uvnitř lodi. Mikrovlákna pod označením drop-stitch po nafouknutí vyztuží podlážku a ta je poté mnohem pevnější a stabilnější. Na tyto vlákna jsou pak vrstveny daší vrstvy materiálu, ze kterých je tvořena celá loď. Naším úkolem bylo tyto poměrně technické parametry odprezentovat zajímavou a pochopitelnou cestou a zároven představit hlavní benefity této lodi.',
-  cooperation: 'NODUM atelier (architektonický návrh)',
-  year: '2019',
-  location: 'Česká republika, Praha',
+  introText: {
+    about:
+      'Česká společnost Gumotex je světovým specialistou na vývoj a výrobu nafukovacích člunů. Při vývoji jejich nové lodě s označením Thaya použili několik patentovaných technologií, které umožnili lodi získat specifické vlastnosti a my dostali příležitost tyto technologie přiblížit světu.\n\nNejvětší výzvou bylo nasimulovat uspořádání materiálů uvnitř lodi. Mikrovlákna pod označením drop-stitch po nafouknutí vyztuží podlážku a ta je poté mnohem pevnější a stabilnější. Na tyto vlákna jsou pak vrstveny daší vrstvy materiálu, ze kterých je tvořena celá loď. Naším úkolem bylo tyto poměrně technické parametry odprezentovat zajímavou a pochopitelnou cestou a zároven představit hlavní benefity této lodi.',
+    tags: [
+      { header: 'role', content: '#kreativa\n#3dmodeling\n#3danimace' },
+      { header: 'realizace', content: '2018' },
+      { header: 'lokalita', content: 'Celosvětová kampaň' },
+      { header: 'agentura', content: 'Narrative Media' }
+    ]
+  },
   presentation: {
     0: [
       {

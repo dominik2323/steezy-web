@@ -32,7 +32,7 @@ export default {
     ],
     2: [
       {
-        id: 'infinit',
+        id: 'mico',
         type: 'reference',
         width: 'lg'
       }

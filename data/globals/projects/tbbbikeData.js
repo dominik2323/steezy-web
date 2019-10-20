@@ -21,11 +21,16 @@ export default {
     img: 'HeroImage.png',
     videoVimeoId: ''
   },
-  about:
-    'TBB-BIKE je největším distributorem BMX kol a komponentů v Čechách a na Slovensku s již více než 20 lety tradice. I přes dvě dekády svého působení je stále progresivní firmou, která posouvá hranice tohoto odvětví a výrazně přispívá k vytváření povědomí široké veřejnosti o tomto sportu.\n\nDlouhodobě pomáháme TBB-BIKE s jejich vizuální komunikací ve všech podobách. Ať už se jedná o branding, tiskové a online kampaně, dárkové předměty nebo třeba video materiál.\n\nSpolečnými silami jsme také spustili další projekt, kterým je lifestyle brand THEBIKEBROS. Pod tímto brandem TBB-BIKE produkuje kolekce oblečení s BMX tématikou a nepřímo tak podporje samotnou distribuci.',
-  cooperation: 'NODUM atelier (architektonický návrh)',
-  year: '2019',
-  location: 'Česká republika, Praha',
+  introText: {
+    about:
+      'TBB-BIKE je největším distributorem BMX kol a komponentů v Čechách a na Slovensku s již více než 20 lety tradice. I přes dvě dekády svého působení je stále progresivní firmou, která posouvá hranice tohoto odvětví a výrazně přispívá k vytváření povědomí široké veřejnosti o tomto sportu.\n\nDlouhodobě pomáháme TBB-BIKE s jejich vizuální komunikací ve všech podobách. Ať už se jedná o branding, tiskové a online kampaně, dárkové předměty nebo třeba video materiál.\n\nSpolečnými silami jsme také spustili další projekt, kterým je lifestyle brand THEBIKEBROS. Pod tímto brandem TBB-BIKE produkuje kolekce oblečení s BMX tématikou a nepřímo tak podporje samotnou distribuci.',
+    tags: [
+      { header: 'role', content: '#kreativa\n#branding\n#video' },
+      { header: 'realizace', content: '2018' },
+      { header: 'lokalita', content: 'Česká Republika, Slovensko' },
+      { header: 'foto', content: 'Milan Tykal' }
+    ]
+  },
   presentation: {
     0: [
       {

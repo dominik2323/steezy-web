@@ -185,7 +185,10 @@ const Project = () => {
               arrows: null
             }}
           </Hero>
-          <IntroText perex={project.about} tags={introTags} />
+          <IntroText
+            perex={project.introText.about}
+            tags={project.introText.tags}
+          />
           <Grid
             grid={projectWithReference}
             folder={`/project/${projectId}`}

@@ -21,11 +21,15 @@ export default {
     img: 'IntroImage.png',
     videoVimeoId: ''
   },
-  about:
-    'Společnost ABB je v současné době jednou z největších technologických firem na světě a zároveň jedním z lídrů na poli automatizace a robotiky.\n\nRobotika a průmysl 4.0 se stal hlavním bodem zájmu jejich veletržní expozice a naším úkolem bylo vytvořit pozvánku pro tuto událost, která tyto aspekty reflektuje.\n\nKombinace 3D animace s předtočenými reálnými záběry byla pro tento účel ideální volbou a umožnila nám vytvořit tuto originální pozvánku.',
-  cooperation: 'NODUM atelier (architektonický návrh)',
-  year: '2019',
-  location: 'Česká republika, Praha',
+  introText: {
+    about:
+      'Společnost ABB je v současné době jednou z největších technologických firem na světě a zároveň jedním z lídrů na poli automatizace a robotiky.\n\nRobotika a průmysl 4.0 se stal hlavním bodem zájmu jejich veletržní expozice a naším úkolem bylo vytvořit pozvánku pro tuto událost, která tyto aspekty reflektuje.\n\nKombinace 3D animace s předtočenými reálnými záběry byla pro tento účel ideální volbou a umožnila nám vytvořit tuto originální pozvánku.',
+    tags: [
+      { header: 'role', content: '#3D_animace\n#motion_design' },
+      { header: 'realizace', content: '2018' },
+      { header: 'lokalita', content: 'Česká Republika' }
+    ]
+  },
   presentation: {
     0: [
       {

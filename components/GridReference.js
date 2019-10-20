@@ -11,8 +11,10 @@ const GridReference = ({ quote, name, position, client, id, img }) => {
     >
       <div className={`grid__row__item--reference__person`}>
         <Img src={`/static/img/project/${id}/${img}`} alt={name} />
-        <p className={`red`}>{name}</p>
-        <p>{client}</p>
+        <div>
+          <p className={`red`}>{name}</p>
+          <p>{client}</p>
+        </div>
       </div>
       <div className={`grid__row__item--reference__quote`}>
         <p className={``}>{quote}</p>

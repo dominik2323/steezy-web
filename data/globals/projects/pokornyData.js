@@ -17,15 +17,20 @@ export default {
     posterSrc: 'HeroImage.png',
     videoSrc: ''
   },
+  introText: {
+    about:
+      'Rodinná brněnská firma Pokorný je společností s předním postavením na českém trhu s průmyslovými těsněními a dlouhodobou tradicí v tomto oboru. Jejich produkt PowerTorque má natolik specifické vlastnosti, že si zasloužil video, které tyto benefity odprezentuje.\n\nPro tento projekt jsme se rozhodli spojit několik přístupů, které nám umožnili vytvořit unikátní vizuální styl. Kombinace linkové ilustrace, možností 3D animace a single-shot záběru nám umožnila jednoduše proniknout z velkých celků až do mikrosvěta a zpět.',
+    tags: [
+      { header: 'role', content: '#kreativa\n#ilustrace\n#animace' },
+      { header: 'realizace', content: '2017' },
+      { header: 'lokalita', content: 'Česká Republika a zbytek světa' },
+      { header: 'agentura', content: 'Tvision' }
+    ]
+  },
   intro: {
     img: 'IntroImage.png',
     videoVimeoId: ''
   },
-  about:
-    'Rodinná brněnská firma Pokorný je společností s předním postavením na českém trhu s průmyslovými těsněními a dlouhodobou tradicí v tomto oboru. Jejich produkt PowerTorque má natolik specifické vlastnosti, že si zasloužil video, které tyto benefity odprezentuje.\n\nPro tento projekt jsme se rozhodli spojit několik přístupů, které nám umožnili vytvořit unikátní vizuální styl. Kombinace linkové ilustrace, možností 3D animace a single-shot záběru nám umožnila jednoduše proniknout z velkých celků až do mikrosvěta a zpět.',
-  cooperation: 'NODUM atelier (architektonický návrh)',
-  year: '2019',
-  location: 'Česká republika, Praha',
   presentation: {
     0: [
       {

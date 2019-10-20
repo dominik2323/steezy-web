@@ -21,11 +21,16 @@ export default {
     img: 'HeroImage.png',
     videoVimeoId: ''
   },
-  about:
-    'Málokdo zná příběh, který stojí za legendární irskou whiskey Tullamore D.E.W. Co stálo za jejím vznikem a co se skrývá v chuti jejich whiskey? Pro pražskou event agenturu Fox Hunter jsme připravili toto video, kde jsou odpovědi na všechny otázky týkající se tohoto likéru.\n\nZkombinovali jsme ilustraci a video a umožnili tak divákům načerpat informace, historická fakta a podívat se pod pokličku samotné výroby. V několika minutách tak má zákazník možnost pochopit filozofii značky.',
-  cooperation: 'NODUM atelier (architektonický návrh)',
-  year: '2019',
-  location: 'Česká republika, Praha',
+  introText: {
+    about:
+      'Málokdo zná příběh, který stojí za legendární irskou whiskey Tullamore D.E.W. Co stálo za jejím vznikem a co se skrývá v chuti jejich whiskey? Pro pražskou event agenturu Fox Hunter jsme připravili toto video, kde jsou odpovědi na všechny otázky týkající se tohoto likéru.\n\nZkombinovali jsme ilustraci a video a umožnili tak divákům načerpat informace, historická fakta a podívat se pod pokličku samotné výroby. V několika minutách tak má zákazník možnost pochopit filozofii značky.',
+    tags: [
+      { header: 'role', content: '#kreativa\n#animace' },
+      { header: 'realizace', content: '2017' },
+      { header: 'lokalita', content: 'Svět' },
+      { header: 'agentura', content: 'Fox Hunter' }
+    ]
+  },
   presentation: {
     0: [
       {
