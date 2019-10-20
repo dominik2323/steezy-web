@@ -30,7 +30,7 @@ export default {
     client: 'Eggo'
   },
   hero: {
-    posterSrc: 'HeroImage.png',
+    posterSrc: 'IntroImage.png',
     videoSrc: ''
   },
   intro: {
