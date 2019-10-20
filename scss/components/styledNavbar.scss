@@ -15,9 +15,9 @@
     &__brand {
       background: url('#{$prefix}/static/img/globals/steezy.svg');
       background-size: 100%;
-      width: 142px;
       flex-shrink: 0;
-      height: 27px;
+      width: 120px;
+      height: 23px;
       // background-color: $primary;
     }
     img {
@@ -31,10 +31,10 @@
       margin-left: auto;
       background: url('#{$prefix}/static/img/globals/burger.svg');
       background-size: 100%;
-      width: 35px;
       flex-shrink: 0;
       cursor: pointer;
-      height: 26px;
+      width: 31px;
+      height: 23px;
       // background-color: $primary;
     }
   }

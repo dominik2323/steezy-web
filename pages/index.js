@@ -135,6 +135,7 @@ export const transformGridReferencesIntoGrid = (gridRef, projects) => {
     } else if (type === `reference`) {
       return {
         name: fullProject.reference.name,
+        active: fullProject.reference.active,
         position: fullProject.reference.position,
         client: fullProject.reference.client,
         quote: fullProject.reference.quote,

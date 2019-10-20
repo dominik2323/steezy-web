@@ -5,25 +5,22 @@
   justify-content: space-between;
   p {
     width: cols(6);
-    // font-size: 30px;
-    // line-height: 1.6em;
-    // letter-spacing: 0.02em;
-    // font-weight: 500;
+    flex-shrink: 1;
+    margin-right: cols(0.5);
     .btn-ghost {
       margin-top: cols(0.5);
     }
   }
   ul {
-    margin-left: cols(1.5);
-    width: cols(2);
-    // min-width: cols(2);
+    width: auto;
+    flex-shrink: 1;
     li {
       display: flex;
       margin-bottom: 75px;
       span {
         color: $primary;
-        font-size: 24px;
-        font-weight: 400;
+        font-size: 16px;
+        font-weight: 500;
         margin-right: 50px;
       }
       div {
