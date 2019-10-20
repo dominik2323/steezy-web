@@ -25,7 +25,7 @@ export default {
     active: true,
     quote:
       'Spolupráce se Steezy takřka ve všech ohledech předčila naše očekávání. Patříme mezi velmi náročné klienty a proto nás těšilo, že nás studio chtělo opravdu pochopit a poznat do hloubky. Osobně mě spolupráce extrémně bavila a těšil jsem se na každou další schůzku. Vyzdvihnul bych zejména schopnost jasně vysvětlit a obhájit si své postoje a návrhy, zároveň s obrovskou otevřeností k připomínkám a zpětné vazbě.',
-    img: 'reference.png',
+    img: 'svacina.jpg',
     name: 'Roman Svačina',
     position: 'jednatel',
     client: 'Infinit wellness'

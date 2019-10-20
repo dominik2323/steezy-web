@@ -38,7 +38,8 @@ export default {
     ],
     1: [
       {
-        blockquote: 'Doplnit bro'
+        blockquote:
+          'Klient ocenil zejména naši schopnost rychle pochopit komplexní problém a přijít s elegantním a jednoduchým řešením.'
       }
     ],
     2: [

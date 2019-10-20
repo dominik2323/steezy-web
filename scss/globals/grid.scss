@@ -25,7 +25,7 @@
         margin: cols(-0.5) 0 0;
         flex-wrap: wrap;
         height: auto;
-        // justify-content: space-between;
+        justify-content: space-between;
       }
     }
   }
@@ -33,7 +33,9 @@
   @media screen and (max-width: 768px) {
     &__row {
       flex-wrap: wrap;
-      margin-bottom: cols(1);
+      &:not(:last-child) {
+        margin-bottom: cols(1);
+      }
       &__item {
         &:not(:last-child) {
           margin-right: 0;

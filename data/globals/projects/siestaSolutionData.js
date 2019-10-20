@@ -6,12 +6,13 @@ export default {
   tags: ['print', '3D'],
   filterTags: ['video-animations'],
   reference: {
-    active: false,
-    quote: '',
-    img: '',
-    name: '',
-    position: '',
-    client: ''
+    active: true,
+    quote:
+      'V Siesta Solution dodáváme realtivně komplikovanný a komplexní hotelový systém. Potřebovali jsme co nejrychleji, pochopitelně a jednoduše vysvětlit nejen poteciálním klientům ale i partnerům nebo poteciálním zaměstnancům co vlastně děláme, jak a proč. Explainer který pro nás STEEZY vyrobilo tuto potřebu zcela naplnil. Místo hodinovho vysvětlovaní stačí ukázat video a všechno je jasné. Kromě kvality videa můžu především doporučit profesionální přístup. Tým velice ryhle pochopil náš produkt i business model, navrhl story line tak, aby reflektovala naše potřeby, ale zároveň dával narativní smysl a zároveň dodal kompletní video v rekordním čase. Hodnotím 11 z 10 pixelů a přeji si, aby byl každý dodavatel takový profesionál.',
+    img: 'siesta_belec.jpg',
+    name: 'Mikoláš Belec',
+    position: 'CEO',
+    client: 'Siesta Solution'
   },
   hero: {
     posterSrc: 'HeroImage.png',

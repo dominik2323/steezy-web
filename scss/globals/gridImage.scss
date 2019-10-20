@@ -16,7 +16,7 @@
       flex-basis: unset !important;
       width: cols(8 / 3);
       height: cols(8 / 3);
-      margin: cols(0.5) auto 0 0;
+      margin: cols(0.5) 0 0 0;
       &:nth-child(3n) {
         margin-right: 0;
       }
@@ -27,21 +27,25 @@
 
   @media screen and (max-width: 1200px) {
     &.square {
+      margin: 0 cols(2);
       .grid__row__item--image {
-        flex-basis: cols(6.25) !important;
-        height: cols(6.25);
+        margin: 0;
+        margin-bottom: cols(1);
+        flex-basis: cols(5) !important;
+        // margin: cols(0.5) cols(0);
+        height: cols(5);
       }
     }
   }
 
   @media screen and (max-width: 768px) {
-    margin: 0 cols(1);
     &__row__item--image {
       height: cols(13);
     }
     &.square {
+      margin: 0 cols(1);
       .grid__row__item--image {
-        flex-basis: unset !important;
+        // flex-basis: unset !important;
         margin: cols(0.5) cols(0);
         flex-basis: cols(13) !important;
         height: cols(13);

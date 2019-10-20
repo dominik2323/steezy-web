@@ -6,12 +6,13 @@ export default {
   tags: ['print', '3D'],
   filterTags: ['branding', 'video-animations'],
   reference: {
-    active: false,
-    quote: '',
-    img: '',
-    name: '',
-    position: '',
-    client: ''
+    active: true,
+    quote:
+      'Se STEEZY spolupracuji řadu let na různých projektech z oblasti BMX. Ať už to byly video projekty, design či jiné práce vždy jsme našli shodu a projekt dotáhli ke spokojenosti obou stran. Protože někteří členové jejich týmu jsou sami také BMX jezdci, rozumí nejlépe mému zadání a dokáží do něj rychle proniknout. Díky své profesní odbornosti dokáží oponovat a přinést nový pohled. Za spolupráci jsem moc rád a Vážím si jí.',
+    img: 'tbbbike_rovny.jpg',
+    name: 'Alexandr Rovný',
+    position: 'majitel',
+    client: 'TBB-BIKE'
   },
   hero: {
     posterSrc: 'HeroImage.png',

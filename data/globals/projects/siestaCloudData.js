@@ -6,12 +6,13 @@ export default {
   tags: ['print', '3D'],
   filterTags: ['video-animations'],
   reference: {
-    active: false,
-    quote: '',
-    img: '',
-    name: '',
-    position: '',
-    client: ''
+    active: true,
+    quote:
+      'Náš produkt Siesta Cloud není jednoduchý, slouží pro několik různých cílových skupin najednou, které spolu spolupracují a vytvařejí tak digitální ekosystém v cestovním ruchu. Kromě klasického vysvětlení business modelu jsme chtěli, aby nás video pozicovalo jako vizionářský tech-savy projekt, který se snaží o revoluci ve svém oboru a to se povedlo. Video nám chválí čeští alienční partneří i potenciální investoři z USA. Vždycky když budeme potřebovat nějaké video půjdeme určitě znovu za STEEZY.',
+    img: 'siesta_belec.jpg',
+    name: 'Mikoláš Belec',
+    position: 'CEO',
+    client: 'Siesta Cloud'
   },
   hero: {
     posterSrc: 'HeroImage.png',
