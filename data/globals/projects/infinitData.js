@@ -6,12 +6,13 @@ export default {
   tags: ['branding', 'video', 'animace', 'webdesign', 'print', 'kampaň'],
   filterTags: ['branding', 'web-apps', 'video-animations'],
   reference: {
+    active: true,
     quote:
-      'Tam & zpět je unikát - od začátku až do konce. Logo je vlastnoruční práce studia, jeho autorské písmo, které vdechlo brandu jednoduchost, rafinovanovanost a nadčasovost. Jeho podpis se s námi nese již od počátku a já jsem mu za to dodnes vděčná.',
+      'Spolupráce se Steezy takřka ve všech ohledech předčila naše očekávání. Patříme mezi velmi náročné klienty a proto nás těšilo, že nás studio chtělo opravdu pochopit a poznat do hloubky. Osobně mě spolupráce extrémně bavila a těšil jsem se na každou další schůzku. Vyzdvihnul bych zejména schopnost jasně vysvětlit a obhájit si své postoje a návrhy, zároveň s obrovskou otevřeností k připomínkám a zpětné vazbě.',
     img: 'reference.png',
-    name: 'Jana Valíčková',
-    position: 'jednatelka',
-    client: 'Tam & Zpět'
+    name: 'Roman Svačina',
+    position: 'jednatel',
+    client: 'Infinit wellness'
   },
   hero: {
     posterSrc: 'HeroImage.png',

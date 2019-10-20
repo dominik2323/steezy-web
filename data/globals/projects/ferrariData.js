@@ -6,6 +6,7 @@ export default {
   tags: ['print', '3D'],
   filterTags: ['branding', 'web-apps'],
   reference: {
+    active: false,
     quote: '',
     img: '',
     name: '',

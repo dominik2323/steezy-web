@@ -1,7 +1,7 @@
 .grid__row__item--reference {
   display: flex;
   // margin: cols(2) auto;
-  margin: cols(1) cols(1.5);
+  margin: cols(1) cols(1.25);
   align-items: center;
   justify-content: space-between;
   &__person {
@@ -29,7 +29,7 @@
     }
     p {
       // font-size: 30px;
-      font-size: 22px;
+      font-size: 21px;
       letter-spacing: 0.02em;
       // line-height: 50px;
       line-height: 1.5em;

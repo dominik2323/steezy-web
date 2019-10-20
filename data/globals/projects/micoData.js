@@ -6,6 +6,7 @@ export default {
   tags: ['branding', 'video', 'veletrzni_stanek'],
   filterTags: ['branding', 'web-apps'],
   reference: {
+    active: true,
     quote:
       'Skupina MICo Group spolupracuje se studiem STEEZY více než rok a jsme velmi spokojeni nejen s výstupy Vaší práce, ale i se způsobem jednání, komunikací, flexibilitou a konstruktivním přístupem. Předpokládáme další spolupráci v následujících letech.',
     img: 'reference.png',

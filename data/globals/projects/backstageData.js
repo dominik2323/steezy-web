@@ -6,6 +6,7 @@ export default {
   tags: ['branding', 'interiér', 'video', 'brno'],
   filterTags: ['branding', 'video-animations'],
   reference: {
+    active: true,
     id: 'kriz',
     quote:
       'Studio Steezy odvedlo úžasný kus práce za velmi krátký časový úsek. Modrá barva jasně odlišuje salon od konkurence a tvoří příjemnou atmosféru interiéru. Klienti se často ptají, kdo byl autorem návrhu.',

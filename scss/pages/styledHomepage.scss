@@ -5,6 +5,14 @@
       flex-grow: 1 !important;
     }
   }
+  .intro-text {
+    ul li {
+      cursor: pointer;
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
   &__about {
     height: 100vh;
     max-height: 1080px;
@@ -16,12 +24,12 @@
     justify-content: center;
     align-content: center;
     flex-direction: column;
-    padding: 0 calc(100% / 15 * 2);
+    padding: 0 cols(3);
     margin-top: calc(100vw / 15);
     p {
-      font-size: 60px;
+      font-size: 55px;
       letter-spacing: 0.02em;
-      line-height: 1.4em;
+      line-height: 1.2em;
       color: $white;
       font-weight: 600;
       margin: 0 0 80px;

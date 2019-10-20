@@ -3,7 +3,24 @@
     height: auto;
   }
   &__next-projects {
+    &__header {
+      display: flex;
+      justify-content: space-between;
+      width: auto;
+      margin: 0 cols(3);
+      margin-bottom: cols(0.25);
+      h2 {
+        color: $light-gray;
+      }
+      p {
+        cursor: pointer;
+        &:hover {
+          opacity: 0.7;
+        }
+      }
+    }
     .grid {
+      margin-top: 0;
       margin-bottom: cols(1);
     }
   }
@@ -14,10 +31,10 @@
       align-items: flex-start;
       justify-content: center;
       height: cols(1);
-      max-height: 150px;
-      left: cols(1);
-      right: cols(1);
-      padding-left: cols(1);
+      // max-height: 150px;
+      left: cols(2.5);
+      right: cols(2.5);
+      padding-left: cols(0.5);
       h4 {
         color: $white;
         margin-bottom: 10px;
@@ -29,12 +46,12 @@
     }
   }
   &__arrows {
-    width: cols(15);
+    width: 100%;
     position: absolute;
-    left: cols(-1);
+    left: 0;
     right: 0;
     bottom: 0;
-    max-height: 150px;
+    // max-height: 150px;
     height: cols(1);
     min-height: 100px;
     display: flex;
@@ -44,6 +61,7 @@
       height: 100%;
       // min-height: 100px;
       width: cols(1);
+      position: absolute;
       display: flex;
       justify-content: center;
       cursor: pointer;
@@ -58,6 +76,7 @@
         // background-position: center;
       }
       &--left {
+        left: cols(-1);
         &:hover {
           opacity: 0.8;
         }
@@ -66,6 +85,7 @@
         }
       }
       &--right {
+        right: cols(-1);
         &:hover {
           opacity: 0.8;
         }
@@ -73,17 +93,6 @@
           transform: rotateZ(-180deg);
         }
       }
-    }
-  }
-  @media screen and (min-width: 1921px) {
-    &__hero {
-      &__footer {
-        left: cols(2);
-        right: cols(2);
-      }
-    }
-    &__arrows {
-      width: cols(13);
     }
   }
   @media screen and (max-width: 1200px) {

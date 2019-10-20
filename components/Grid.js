@@ -33,15 +33,17 @@ const Grid = ({ grid, folder, children, addClassName }) => {
                 );
               else if (Object.keys(item).includes('quote'))
                 return (
-                  <GridReference
-                    key={item.id}
-                    id={item.id}
-                    name={item.name}
-                    img={item.img}
-                    client={item.client}
-                    position={item.position}
-                    quote={item.quote}
-                  />
+                  item.active && (
+                    <GridReference
+                      key={item.id}
+                      id={item.id}
+                      name={item.name}
+                      img={item.img}
+                      client={item.client}
+                      position={item.position}
+                      quote={item.quote}
+                    />
+                  )
                 );
               else if (Object.keys(item).includes('lottieSrc'))
                 return (

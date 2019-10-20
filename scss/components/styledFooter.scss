@@ -17,6 +17,9 @@
         margin-bottom: 40px;
       }
       &__email {
+        h1 {
+          font-size: 45px;
+        }
         &:not(:last-child) {
           h1 {
             margin-bottom: cols(1);
@@ -89,6 +92,17 @@
         }
         &:hover {
           opacity: 0.7;
+        }
+      }
+    }
+  }
+  @media screen and (min-height: 1920px) {
+    &__content {
+      &__cta {
+        &__email {
+          h1 {
+            font-size: 60px;
+          }
         }
       }
     }

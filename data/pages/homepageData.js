@@ -13,35 +13,55 @@ export default {
   grid: {
     0: [
       {
-        id: 'dropDnd',
+        id: 'cafeRepublic',
         type: 'project',
         width: 'sm'
       },
       {
-        id: 'backstage',
+        id: 'siestaCloud',
         type: 'project',
         width: 'md'
       }
     ],
     1: [
       {
-        id: 'surgeryClinic',
+        id: 'infinit',
         type: 'project',
         width: 'lg'
       }
     ],
     2: [
       {
-        id: 'backstage',
+        id: 'infinit',
         type: 'reference',
         width: 'lg'
       }
     ],
     3: [
       {
-        id: 'cafeRepublic',
+        id: 'surgeryClinic',
         type: 'project',
         width: 'lg'
+      },
+      {
+        id: 'dropDnd',
+        type: 'project'
+      }
+    ],
+    4: [
+      {
+        id: 'abb',
+        type: 'project'
+      }
+    ],
+    5: [
+      {
+        id: 'backstage',
+        type: 'project'
+      },
+      {
+        id: 'sparco',
+        type: 'project'
       }
     ]
   },

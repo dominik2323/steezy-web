@@ -11,6 +11,7 @@ import Footer from '../../components/Footer';
 import Grid from '../../components/Grid';
 import ProjectSwitch from '../../components/ProjectSwitch';
 import useFixedNav from '../../hooks/useFixedNav';
+import { scrollTo } from '../../hooks/scrollTo';
 import Hero from '../../components/Hero';
 import Button from '../../components/Button';
 import IntroText from '../../components/IntroText';
@@ -191,6 +192,10 @@ const Project = () => {
             addClassName={`no-crop`}
           />
           <div className={`project__next-projects`}>
+            <div className={`project__next-projects__header`}>
+              <h2>Další projekty</h2>
+              <p onClick={() => scrollTo(`__next`)}>Nahoru</p>
+            </div>
             <Grid
               grid={
                 w <= 1200 ? [nextProjects()[0].slice(0, 2)] : nextProjects()

@@ -1,25 +1,4 @@
 .services {
-  /* .grid__row__item {
-    cursor: pointer;
-  } */
-  .hero-footer {
-    color: $white;
-    display: flex;
-    padding: 0 cols(1);
-    width: cols(13);
-    height: 120px;
-    align-items: center;
-    h3 {
-      cursor: pointer;
-      color: $light-gray;
-      &:hover {
-        opacity: 0.7;
-      }
-      &:not(:last-child) {
-        margin-right: cols(0.5);
-      }
-    }
-  }
   @media screen and (max-width: 1200px) {
     .filter-projects {
       display: none;

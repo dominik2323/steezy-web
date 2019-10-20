@@ -15,8 +15,8 @@
   }
   ul {
     margin-left: cols(1.5);
-    max-width: cols(3);
-    min-width: cols(2);
+    width: cols(2);
+    // min-width: cols(2);
     li {
       display: flex;
       margin-bottom: 75px;

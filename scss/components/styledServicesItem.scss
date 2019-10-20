@@ -1,12 +1,12 @@
 .services__content {
-  margin: cols(1) 0;
+  margin: cols(0) 0;
   &__services-item {
     padding: cols(1) 0;
     .btn-ghost {
       margin: auto;
     }
     &__about {
-      width: cols(11);
+      width: cols(9);
       margin: auto;
       &__intro {
         margin-bottom: cols(1);
@@ -31,8 +31,10 @@
       &__bullets {
         display: flex;
         justify-content: space-between;
+        margin: 0 cols(-0.25 / 2);
         li {
           width: cols(3);
+          padding: 0 cols(0.25 / 2);
           h2 {
             color: $white;
             margin-bottom: cols(0.25);

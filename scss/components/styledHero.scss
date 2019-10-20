@@ -8,13 +8,18 @@
   align-content: center;
   justify-content: center;
   &__content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
     &.video-is-playing {
       transform: translateX(-150%);
     }
-    width: cols(11);
+    width: cols(9);
     transition: transform 0.5s ease-in-out;
     h1 {
-      font-size: 80px;
+      width: 100%;
+      font-size: 70px;
       line-height: 1.2em;
       margin-bottom: cols(0.5);
     }

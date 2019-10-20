@@ -6,6 +6,7 @@ export default {
   tags: ['video', 'animace', 'dublin', 'sport'],
   filterTags: ['web-apps', 'video-animations'],
   reference: {
+    active: false,
     quote: '',
     img: '',
     name: '',

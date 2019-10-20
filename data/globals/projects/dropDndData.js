@@ -6,6 +6,7 @@ export default {
   tags: ['branding', 'aplikace', 'animace', 'dubai'],
   filterTags: ['branding', 'web-apps', 'video-animations'],
   reference: {
+    active: false,
     quote: '',
     img: 'reference.png',
     name: 'Tomas Doležal',

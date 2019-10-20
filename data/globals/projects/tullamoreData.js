@@ -6,6 +6,7 @@ export default {
   tags: ['print', '3D'],
   filterTags: ['video-animations'],
   reference: {
+    active: false,
     quote: '',
     img: '',
     name: '',

@@ -6,6 +6,7 @@ export default {
   tags: ['branding', 'kavárna', 'petřín'],
   filterTags: ['branding', 'web-apps'],
   reference: {
+    active: false,
     quote: '',
     img: '',
     name: '',

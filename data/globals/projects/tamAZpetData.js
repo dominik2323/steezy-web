@@ -6,6 +6,7 @@ export default {
   tags: ['branding', 'print'],
   filterTags: ['branding'],
   reference: {
+    active: true,
     quote:
       'Tam & zpět je unikát - od začátku až do konce. Logo je vlastnoruční práce studia, jeho autorské písmo, které vdechlo brandu jednoduchost, rafinovanovanost a nadčasovost. Jeho podpis se s námi nese již od počátku a já jsem mu za to dodnes vděčná.',
     img: 'reference.png',
