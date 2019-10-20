@@ -7,11 +7,11 @@ const GridImageHover = ({ projectId, name, client, tags }) => {
       <div className="grid__row__item--image__hover">
         <h2>{name}</h2>
         <h3>{client}</h3>
-        <ul>
+        {/*<ul>
           {tags.map(tag => (
             <li key={tag}>{`#${tag}`}</li>
           ))}
-        </ul>
+        </ul>*/}
       </div>
     </Link>
   );

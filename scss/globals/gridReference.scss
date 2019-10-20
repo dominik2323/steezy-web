@@ -1,7 +1,7 @@
 .grid__row__item--reference {
   display: flex;
   // margin: cols(2) auto;
-  margin: cols(1) cols(1.25);
+  margin: cols(1) 0 cols(1.5);
   align-items: center;
   justify-content: space-between;
   &__person {
@@ -16,9 +16,9 @@
     }
   }
   &__quote {
-    // width: cols(6);
     margin-left: cols(1);
     width: auto;
+    width: cols(5);
     &:before {
       // width: 38px;
       width: 33px;

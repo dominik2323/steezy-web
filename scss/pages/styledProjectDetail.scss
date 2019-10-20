@@ -3,14 +3,15 @@
     height: auto;
   }
   &__next-projects {
+    margin-top: cols(1);
     &__header {
       display: flex;
       justify-content: space-between;
       width: auto;
       margin: 0 cols(3);
-      margin-bottom: cols(0.25);
+      margin-bottom: cols(0.1);
       h2 {
-        color: $light-gray;
+        color: $white;
       }
       p {
         cursor: pointer;

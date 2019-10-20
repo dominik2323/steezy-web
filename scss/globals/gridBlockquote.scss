@@ -1,8 +1,8 @@
 .grid__row__item--blockquote {
-  margin: cols(1) auto;
+  margin: cols(1) 0;
   width: cols(6);
   h1 {
-    text-align: center;
+    text-align: left;
     color: $med-gray;
     font-size: 40px;
     line-height: 1.3em;

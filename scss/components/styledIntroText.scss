@@ -6,13 +6,14 @@
   p {
     width: cols(6);
     flex-shrink: 1;
-    margin-right: cols(0.5);
+    margin-right: cols(1);
     .btn-ghost {
       margin-top: cols(0.5);
     }
   }
   ul {
     width: auto;
+    max-width: cols(2.5);
     flex-shrink: 1;
     li {
       display: flex;
