@@ -13,11 +13,7 @@ const HeroBg = ({ playerRef, isVideoPlaying, videoSrc, posterSrc }) => {
       onClick={() => null}
     >
       {isVideoAvaible ? (
-        <video
-          src={process.env.PREFIX + videoSrc}
-          ref={playerRef}
-          poster={process.env.PREFIX + posterSrc}
-        />
+        <video src={videoSrc} ref={playerRef} poster={posterSrc} />
       ) : (
         <Img src={posterSrc} alt="smth" />
       )}

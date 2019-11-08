@@ -20,7 +20,7 @@ const Lottie = ({ src, setDimensions }) => {
         renderer: 'svg',
         loop: true,
         autoplay: true,
-        path: process.env.PREFIX + src,
+        path: src,
         rendererSettings: {
           preserveAspectRatio: 'xMidYMid slice'
         }

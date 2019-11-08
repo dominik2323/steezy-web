@@ -38,7 +38,7 @@
     &:before {
       content: '';
       display: block;
-      background-image: url('#{$prefix}/static/img/globals/quotes.svg');
+      background-image: url('/static/img/globals/quotes.svg');
       background-size: 100%;
       background-repeat: no-repeat;
     }

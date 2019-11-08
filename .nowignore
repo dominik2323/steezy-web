@@ -1,7 +1,6 @@
 config/
 node_modules/
 .next/
-static/
 .env
 .env.build
 *.log

@@ -12,7 +12,7 @@
     &:before {
       // padding: 25px 40px 25px 90px;
       margin-right: 20px;
-      background: url('#{$prefix}/static/img/globals/playBtn.svg');
+      background: url('/static/img/globals/playBtn.svg');
       background-size: 100%;
       mask-repeat: no-repeat;
       mask-position: center;
@@ -34,7 +34,7 @@
       &.play-icon {
         &:before {
           content: '';
-          background: url('#{$prefix}/static/img/globals/playBtn_hover.svg');
+          background: url('/static/img/globals/playBtn_hover.svg');
           background-size: 100%;
         }
       }
