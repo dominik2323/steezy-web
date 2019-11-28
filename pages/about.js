@@ -1,15 +1,15 @@
-import Head from 'next/head';
-import Navbar from '../components/Navbar';
-import Hero from '../components/Hero';
-import Button from '../components/Button';
-import Footer from '../components/Footer';
-import Grid from '../components/Grid';
-import HeroFooterLogotypes from '../components/HeroFooterLogotypes';
-import IntroText from '../components/IntroText';
-import Img from '../components/Img';
-import { scrollTo } from '../hooks/scrollTo';
+import Head from "next/head";
+import Navbar from "../components/Navbar";
+import Hero from "../components/Hero";
+import Button from "../components/Button";
+import Footer from "../components/Footer";
+import Grid from "../components/Grid";
+import HeroFooterLogotypes from "../components/HeroFooterLogotypes";
+import IntroText from "../components/IntroText";
+import Img from "../components/Img";
+import { scrollTo } from "../hooks/scrollTo";
 
-import { DataContext } from '../pages/_app';
+import { DataContext } from "../pages/_app";
 
 export default function About() {
   const { pages, globals } = React.useContext(DataContext);
@@ -21,14 +21,14 @@ export default function About() {
       </Head>
       <div className="about container-fluid">
         <Navbar />
-        <Hero posterSrc={`/static/img/about/HeroImage.png`} className={`about`}>
+        <Hero posterSrc={`/static/img/about/HeroImage.jpg`} className={`about`}>
           {{
             content: (
               <div className={`about__hero-content`}>
                 <h1>{about.hero.header}</h1>
                 <Button
                   label={about.hero.btn}
-                  handleClick={() => scrollTo('footer')}
+                  handleClick={() => scrollTo("footer")}
                 />
               </div>
             ),

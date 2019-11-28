@@ -1,22 +1,23 @@
-import React, { Fragment, useRef } from 'react';
-import Head from 'next/head';
+import React, { Fragment, useRef } from "react";
+import Head from "next/head";
 
-import { DataContext } from './_app';
-import Router from 'next/router';
+import { DataContext } from "./_app";
+import Router from "next/router";
 
-import Navbar from '../components/Navbar';
-import Hero from '../components/Hero';
-import Grid from '../components/Grid';
-import Footer from '../components/Footer';
-import HeroFooterLogotypes from '../components/HeroFooterLogotypes';
-import Button from '../components/Button';
-import IntroText from '../components/IntroText';
-import ServicesOverview from '../components/ServicesOverview';
-import ClientLogotypes from '../components/ClientLogotypes';
+import Navbar from "../components/Navbar";
+import Hero from "../components/Hero";
+import Grid from "../components/Grid";
+import Footer from "../components/Footer";
+import HeroFooterLogotypes from "../components/HeroFooterLogotypes";
+import Button from "../components/Button";
+import IntroText from "../components/IntroText";
+import ServicesOverview from "../components/ServicesOverview";
+import ClientLogotypes from "../components/ClientLogotypes";
+import ModalPlayer from "../components/ModalPlayer";
 
 const Homepage = () => {
   const playerRef = useRef(null);
-
+  const [showModal, toggleModal] = React.useState(false);
   const { pages, globals, components } = React.useContext(DataContext);
   const { hero, intro, about, grid: gridRef } = pages.homepage;
   const { content: servicesContent } = pages.services;
@@ -25,7 +26,7 @@ const Homepage = () => {
     ({ name, bullets, id }) => ({
       id: id,
       header: name,
-      bullet: bullets.map(({ header }) => `${header}\n`)
+      content: bullets.map(({ header }) => `${header}\n`)
     })
   );
 
@@ -33,18 +34,28 @@ const Homepage = () => {
     Object.values(gridRef),
     globals.projects
   );
+
   return (
     <React.Fragment>
       <Head>
         <title>{globals.webTitle}</title>
       </Head>
 
+      {showModal && (
+        <ModalPlayer
+          handleClose={() => {
+            toggleModal(false);
+            playerRef.current.play();
+          }}
+        />
+      )}
+
       <div className="homepage container-fluid">
         <Navbar />
 
         <Hero
-          posterSrc={`/static/img/homepage/hero_homepage.png`}
-          videoSrc={`/static/img/homepage/steezy_showreel.mp4`}
+          posterSrc={`/static/img/homepage/hero_homepage.jpg`}
+          videoSrc={`/static/img/homepage/homepage_loop.mp4`}
           playerRef={playerRef}
         >
           {{
@@ -56,7 +67,10 @@ const Homepage = () => {
                 <Button
                   label={components.button.playShowreel}
                   playIcon
-                  handleClick={() => playerRef.current.play()}
+                  handleClick={() => {
+                    toggleModal(showModal => !showModal);
+                    playerRef.current.pause();
+                  }}
                 />
               </Fragment>
             ),
@@ -69,13 +83,13 @@ const Homepage = () => {
           tags={transformServicesContent}
           numbered={true}
           handleClick={id => {
-            Router.push({ pathname: '/services', query: { section: id } });
+            Router.push({ pathname: "/services", query: { section: id } });
           }}
         >
           <Button
             label={components.button.howCanWeHelp}
             handleClick={async () => {
-              await Router.push({ pathname: '/services' });
+              await Router.push({ pathname: "/services" });
               window.scrollTo(0, 0);
             }}
           />
@@ -94,10 +108,10 @@ const Homepage = () => {
         <Button
           label={components.button.allProjects}
           handleClick={async () => {
-            await Router.push({ pathname: '/projects' });
+            await Router.push({ pathname: "/projects" });
             window.scrollTo(0, 0);
           }}
-          style={{ margin: 'auto' }}
+          style={{ margin: "auto" }}
         />
 
         <ClientLogotypes />
@@ -106,7 +120,7 @@ const Homepage = () => {
           <Button
             label={components.button.aboutStudio}
             handleClick={async () => {
-              await Router.push({ pathname: '/about' });
+              await Router.push({ pathname: "/about" });
               window.scrollTo(0, 0);
             }}
           />

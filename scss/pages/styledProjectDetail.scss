@@ -2,29 +2,6 @@
   .grid__row__item--image {
     height: auto;
   }
-  &__next-projects {
-    margin-top: cols(1);
-    &__header {
-      display: flex;
-      justify-content: space-between;
-      width: auto;
-      margin: 0 cols(3);
-      margin-bottom: cols(0.1);
-      h2 {
-        color: $white;
-      }
-      p {
-        cursor: pointer;
-        &:hover {
-          opacity: 0.7;
-        }
-      }
-    }
-    .grid {
-      margin-top: 0;
-      margin-bottom: cols(1);
-    }
-  }
   &__hero {
     &__footer {
       display: flex;
@@ -68,11 +45,11 @@
       cursor: pointer;
       align-items: center;
       &:before {
-        content: '';
+        content: "";
         display: block;
         width: 39px;
         height: 15px;
-        background-image: url('/static/img/globals/arrow_projects.svg');
+        background-image: url("/static/img/globals/arrow_projects.svg");
         background-repeat: no-repeat;
         // background-position: center;
       }

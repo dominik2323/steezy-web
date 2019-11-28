@@ -1,23 +1,24 @@
-import React from 'react';
-import { useRouter } from 'next/router';
-import posed, { PoseGroup } from 'react-pose';
-import Link from 'next/link';
-import Head from 'next/head';
+import React from "react";
+import { useRouter } from "next/router";
+import posed, { PoseGroup } from "react-pose";
+import Link from "next/link";
+import Head from "next/head";
 
-import { DataContext } from '../../pages/_app';
+import { DataContext } from "../../pages/_app";
 
-import Navbar from '../../components/Navbar';
-import Footer from '../../components/Footer';
-import Grid from '../../components/Grid';
-import ProjectSwitch from '../../components/ProjectSwitch';
-import useFixedNav from '../../hooks/useFixedNav';
-import { scrollTo } from '../../hooks/scrollTo';
-import Hero from '../../components/Hero';
-import Button from '../../components/Button';
-import IntroText from '../../components/IntroText';
-import NavbarFilter from '../../components/NavbarFilter';
-import { transformGridReferencesIntoGrid } from '../';
-import { useViewportSize } from '../../hooks/useViewportSize';
+import Navbar from "../../components/Navbar";
+import Footer from "../../components/Footer";
+import Grid from "../../components/Grid";
+import ProjectSwitch from "../../components/ProjectSwitch";
+import useFixedNav from "../../hooks/useFixedNav";
+import { scrollTo } from "../../hooks/scrollTo";
+import Hero from "../../components/Hero";
+import ProjectSelector from "../../components/ProjectSelector";
+import Button from "../../components/Button";
+import IntroText from "../../components/IntroText";
+import NavbarFilter from "../../components/NavbarFilter";
+import { transformGridReferencesIntoGrid } from "../";
+import { useViewportSize } from "../../hooks/useViewportSize";
 
 const transformIntroTags = (header, bullet) => [
   {
@@ -44,7 +45,7 @@ const PosedProject = posed.div({
     transition: { duration: 400 }
   },
   enter: {
-    x: '0vw',
+    x: "0vw",
     transition: { duration: 400 }
   },
   exit: {
@@ -56,7 +57,7 @@ const PosedProject = posed.div({
 const Project = () => {
   const router = useRouter();
   const { w } = useViewportSize();
-  const [direction, setDirection] = React.useState('');
+  const [direction, setDirection] = React.useState("");
   const { id: projectId } = router.query;
   const playerRef = React.useRef(null);
 
@@ -112,11 +113,13 @@ const Project = () => {
       nextProjectIndex = currentIndex + 1;
       prevProjectIndex = currentIndex - 1;
     }
+
     return {
       prevProjectId: projects[prevProjectIndex].id,
       nextProjectId: projects[nextProjectIndex].id
     };
   };
+
   const neighbourProjects = findNeighbourProjects();
   const isVideoAvaible = project.hero.videoSrc.length !== 0;
   const introTags = transformIntroTags(pages.projectDetail, project);
@@ -135,11 +138,7 @@ const Project = () => {
       <Head>
         <title>{`Studio STEZZY\u2002|\u2002${project.name}`}</title>
       </Head>
-      <Navbar>
-        {/* <Link href={`/projects`}>
-          <h3>{`Projekty\u2002>\u2002${project.name}`}</h3>
-        </Link>*/}
-      </Navbar>
+      <Navbar />
       <PoseGroup preEnterPose={`preEnter`} direction={direction}>
         <PosedProject key={projectId} className={`project`}>
           <Hero
@@ -153,36 +152,15 @@ const Project = () => {
                 <div className={`hero-footer project__hero__footer`}>
                   <h4>{project.name}</h4>
                   <h5>{project.client}</h5>
-                  <div className="project__arrows">
-                    <Link
-                      href={`/project/[id]`}
-                      as={`/project/${neighbourProjects.prevProjectId}`}
-                    >
-                      <div
-                        className="project__arrows__arrow project__arrows__arrow--left"
-                        onClick={() => setDirection(-1)}
-                      />
-                    </Link>
-                    <Link
-                      href={`/project/[id]`}
-                      as={`/project/${neighbourProjects.nextProjectId}`}
-                    >
-                      <div
-                        className="project__arrows__arrow project__arrows__arrow--right"
-                        onClick={() => setDirection(1)}
-                      />
-                    </Link>
-                  </div>
                 </div>
               ),
-              content: isVideoAvaible && (
+              content: false && (
                 <Button
                   label={button.playShowreel}
                   playIcon
                   handleClick={() => playerRef.current.play()}
                 />
-              ),
-              arrows: null
+              )
             }}
           </Hero>
           <IntroText
@@ -194,26 +172,43 @@ const Project = () => {
             folder={`/project/${projectId}`}
             addClassName={`no-crop`}
           />
-          <div className={`project__next-projects`}>
-            <div className={`project__next-projects__header`}>
-              <h2>Další projekty</h2>
-              <p onClick={() => scrollTo(`__next`)}>Nahoru</p>
-            </div>
-            <Grid
-              grid={
-                w <= 1200 ? [nextProjects()[0].slice(0, 2)] : nextProjects()
-              }
-              folder={`/project`}
-              addClassName={`square`}
-            />
-          </div>
+          <ProjectSelector />
           <Footer />
         </PosedProject>
       </PoseGroup>
     </React.Fragment>
   );
 };
+
 Project.getInitialProps = async () => {
   return {};
 };
+
 export default Project;
+
+/*
+
+NAV ARROWS
+
+<div className="project__arrows">
+  <Link
+    href={`/project/[id]`}
+    as={`/project/${neighbourProjects.prevProjectId}`}
+  >
+    <div
+      className="project__arrows__arrow project__arrows__arrow--left"
+      onClick={() => setDirection(-1)}
+    />
+  </Link>
+  <Link
+    href={`/project/[id]`}
+    as={`/project/${neighbourProjects.nextProjectId}`}
+  >
+    <div
+      className="project__arrows__arrow project__arrows__arrow--right"
+      onClick={() => setDirection(1)}
+    />
+  </Link>
+</div>
+
+*/

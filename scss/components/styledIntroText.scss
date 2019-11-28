@@ -83,11 +83,17 @@
     }
   }
   @media screen and (max-width: 768px) {
+    margin-top: cols(2);
+    margin-bottom: cols(2);
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: cols(2);
     p {
-      width: cols(11);
+      width: 100%;
       // font-size: 21px;
+      margin-right: 0;
       .btn-ghost {
-        margin: cols(2) auto 0;
+        margin: cols(2) 0 0;
       }
     }
     ul {

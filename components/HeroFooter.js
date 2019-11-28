@@ -1,12 +1,7 @@
-import React from 'react';
-import Img from './Img';
+import React from "react";
+import Img from "./Img";
 
-const HeroFooter = ({
-  children,
-  isVideoPlaying,
-  playerRef,
-  isVideoAvaible
-}) => {
+const HeroFooter = ({ children, playerRef, isVideoAvaible }) => {
   const [{ currentTime, duration, muted }, setPlayerState] = React.useState({
     currentTime: 0,
     duration: 1,
@@ -14,18 +9,18 @@ const HeroFooter = ({
   });
   const controls = [
     {
-      label: 'playPause.svg',
+      label: "playPause.svg",
       fn: () =>
         playerRef.current.paused
           ? playerRef.current.play()
           : playerRef.current.pause()
     },
     {
-      label: 'stop.svg',
+      label: "stop.svg",
       fn: () => (playerRef.current.currentTime = 0)
     },
     {
-      label: muted ? 'mute.svg' : 'unMute.svg',
+      label: muted ? "mute.svg" : "unMute.svg",
       fn: () => (playerRef.current.muted = !playerRef.current.muted)
     }
   ];
@@ -40,16 +35,16 @@ const HeroFooter = ({
 
   React.useEffect(() => {
     if (isVideoAvaible) {
-      playerRef.current.addEventListener('timeupdate', handlePlayerStateChange);
+      playerRef.current.addEventListener("timeupdate", handlePlayerStateChange);
       return () =>
         playerRef.current.removeEventListener(
-          'timeupdate',
+          "timeupdate",
           handlePlayerStateChange
         );
     }
   }, []);
 
-  return isVideoPlaying ? (
+  return /*isVideoPlaying*/ false ? (
     <div className={`hero-footer video-controls`}>
       <div
         className={`video-controls__progress`}

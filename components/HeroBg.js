@@ -1,19 +1,25 @@
-import React from 'react';
-import Img from './Img';
+import React from "react";
+import Img from "./Img";
 
-const HeroBg = ({ playerRef, isVideoPlaying, videoSrc, posterSrc }) => {
-  const isVideoAvaible = videoSrc.split('.').length === 2;
+const HeroBg = ({ playerRef, videoSrc, posterSrc }) => {
+  const isVideoAvaible = videoSrc.split(".").length === 2;
   return (
     <div
       className={`
             hero__bg 
-            ${isVideoPlaying ? `video-is-playing` : ``} 
-            ${isVideoAvaible ? `solid-overlay` : `gradient-overlay`}
+            ${/*isVideoPlaying*/ false ? `video-is-playing` : ``} 
+            ${/*isVideoAvaible*/ false ? `solid-overlay` : `gradient-overlay`}
           `}
-      onClick={() => null}
     >
       {isVideoAvaible ? (
-        <video src={videoSrc} ref={playerRef} poster={posterSrc} />
+        <video
+          src={videoSrc}
+          ref={playerRef}
+          loop={`true`}
+          poster={posterSrc}
+          autoPlay={`true`}
+          muted={`true`}
+        />
       ) : (
         <Img src={posterSrc} alt="smth" />
       )}

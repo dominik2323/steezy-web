@@ -1,0 +1,68 @@
+.modal-player {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 99;
+  background-color: dark-gray-opacity(0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: zoom-out;
+  &__close {
+    background-image: url("/static/img/globals/close.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    cursor: pointer;
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+  &__video-wrap {
+    width: cols(11);
+    position: relative;
+    &__loading {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: $dark-gray;
+    }
+    &__player {
+      position: relative;
+      padding-top: 56.2%;
+      iframe {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  @include tablet-por-down {
+    &__close {
+      top: 30px;
+      right: 30px;
+      // width: 30px;
+      // height: 30px;
+    }
+    &__video-wrap {
+      width: 100%;
+    }
+  }
+  @include phone-down {
+    &__close {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
