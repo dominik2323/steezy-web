@@ -23,7 +23,7 @@ const GridVideo = ({ videoVimeoId }) => {
       data-vimeo-id={videoVimeoId}
       style={{
         width: `100%`,
-        height: dim
+        height: dim,
       }}
     />
   );

@@ -5,10 +5,11 @@ const IntroText = ({
   tags,
   numbered = false,
   children,
-  handleClick = () => null
+  handleClick = () => null,
+  ...props
 }) => {
   return (
-    <div className="intro-text">
+    <div className="intro-text" {...props}>
       <p className={`big`}>
         {perex}
         {children}

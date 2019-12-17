@@ -62,12 +62,12 @@ export default {
         img: "century2103.jpg",
         alt: "dummy"
       }
-    ],
-    4: [
-      {
-        img: "century2104.jpg",
-        alt: "dummy"
-      }
     ]
+    // 4: [
+    //   {
+    //     img: "century2104.jpg",
+    //     alt: "dummy"
+    //   }
+    // ]
   }
 };

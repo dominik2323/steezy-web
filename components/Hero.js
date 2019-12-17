@@ -1,10 +1,10 @@
-import React, { Fragment, useRef, useEffect, useState } from "react";
+import React, { Fragment, useRef, useEffect, useState } from 'react';
 
-import "video-react/styles/scss/video-react.scss";
-import HeroFooter from "./HeroFooter";
-import Button from "./Button";
-import HeroBg from "./HeroBg";
-import { useViewportSize } from "../hooks/useViewportSize";
+import 'video-react/styles/scss/video-react.scss';
+import HeroFooter from './HeroFooter';
+import Button from './Button';
+import HeroBg from './HeroBg';
+import { useViewportSize } from '../hooks/useViewportSize';
 
 const Hero = ({
   className,
@@ -12,19 +12,15 @@ const Hero = ({
   playerRef,
   posterSrc,
   videoSrc = ``,
-  loopSrc = ``
+  loopSrc = ``,
 }) => {
-  // const [isVideoPaused, setIsVideoPaused] = useState(true);
   const { h } = useViewportSize();
-  // const toggleVideo = e => setIsVideoPaused(e.target.paused);
-  const isVideoAvaible = videoSrc.split(".").length === 2;
+  const isVideoAvaible = videoSrc.split('.').length === 2;
 
   useEffect(() => {
-    if (isVideoAvaible) {
+    if (isVideoAvaible && playerRef.current !== null) {
       const heroEl = document.getElementById(`hero_${videoSrc}`);
-
-      // playerRef.current.addEventListener('play', toggleVideo);
-      // playerRef.current.addEventListener('pause', toggleVideo);
+      console.log(playerRef.current);
 
       const observer = new IntersectionObserver(
         entries => {
@@ -37,15 +33,13 @@ const Hero = ({
           });
         },
         {
-          rootMargin: `0px 0px -${h}px 0px`
+          rootMargin: `0px 0px -${h}px 0px`,
         }
       );
 
       observer.observe(heroEl);
 
       return () => {
-        // playerRef.current.removeEventListener('play', toggleVideo);
-        // playerRef.current.removeEventListener('pause', toggleVideo);
         observer.unobserve(heroEl);
       };
     }
@@ -58,8 +52,7 @@ const Hero = ({
           <div
             className={`
             hero__content
-            ${/*!isVideoPaused*/ false ? `video-is-playing` : ``}`}
-          >
+            ${/*!isVideoPaused*/ false ? `video-is-playing` : ``}`}>
             {children.content}
           </div>
         )}
@@ -67,8 +60,7 @@ const Hero = ({
         <HeroFooter
           // isVideoPlaying={!isVideoPaused}
           playerRef={playerRef}
-          isVideoAvaible={isVideoAvaible}
-        >
+          isVideoAvaible={isVideoAvaible}>
           {children.footer}
         </HeroFooter>
         <HeroBg

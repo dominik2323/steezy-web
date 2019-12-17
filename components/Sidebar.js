@@ -4,6 +4,7 @@ import Link from './Link';
 import { DataContext } from '../pages/_app';
 import { scrollTo } from '../hooks/scrollTo';
 import Img from './Img';
+import LottieElement from './LottieElement';
 import Router, { useRouter } from 'next/router';
 
 const PosedSidebar = posed.div({
@@ -11,18 +12,18 @@ const PosedSidebar = posed.div({
     x: '0%',
     applyAtStart: { display: 'flex' },
     staggerChildren: 100,
-    transition: { duration: 300 }
+    transition: { duration: 300 },
   },
   hide: {
     x: '100%',
     applyAtEnd: { display: 'none' },
-    transition: { duration: 300 }
-  }
+    transition: { duration: 300 },
+  },
 });
 
 const PosedLink = posed.div({
   show: { opacity: 1, y: 0, delay: 100 },
-  hide: { opacity: 0, y: 50 }
+  hide: { opacity: 0, y: 50 },
 });
 
 const Sidebar = ({ showSidebar, toggleSidebar }) => {
@@ -35,13 +36,11 @@ const Sidebar = ({ showSidebar, toggleSidebar }) => {
     <PosedSidebar
       pose={showSidebar ? `show` : `hide`}
       className={`col-5 sidebar`}
-      style={{ display: 'none' }}
-    >
-      <Img
+      style={{ display: 'none' }}>
+      <LottieElement
         onClick={() => toggleSidebar(false)}
         className={`close-icon`}
-        src={`/static/img/globals/close.svg`}
-        alt="close icon"
+        src={`/static/img/globals/close.json`}
       />
       <nav>
         {navbar.pages.map(page => {
@@ -52,8 +51,7 @@ const Sidebar = ({ showSidebar, toggleSidebar }) => {
                   onClick={() => {
                     toggleSidebar(false);
                     scrollTo(page.url);
-                  }}
-                >
+                  }}>
                   {page.displayName}
                 </h1>
               </PosedLink>
@@ -67,8 +65,7 @@ const Sidebar = ({ showSidebar, toggleSidebar }) => {
                   onClick={() => {
                     toggleSidebar(false);
                     Router.push({ pathname: page.url });
-                  }}
-                >
+                  }}>
                   {page.displayName}
                 </h1>
               </Link>
@@ -76,7 +73,7 @@ const Sidebar = ({ showSidebar, toggleSidebar }) => {
           );
         })}
       </nav>
-      <div className="sidebar__social">
+      <div className='sidebar__social'>
         {globals.socials.map(icon => {
           return (
             <Link key={icon.id} path={icon.url}>

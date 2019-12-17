@@ -49,6 +49,10 @@ p {
 a {
   text-decoration: none;
   display: block;
+  color: $white;
+  &:hover {
+    opacity: 0.7;
+  }
   // cursor: none;
 }
 small {

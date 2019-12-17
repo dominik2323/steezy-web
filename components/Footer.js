@@ -1,19 +1,19 @@
-import React, { Fragment, useState } from 'react';
-import posed from 'react-pose';
-import { useRouter } from 'next/router';
+import React, { Fragment, useState } from "react";
+import posed from "react-pose";
+import { useRouter } from "next/router";
 
-import { DataContext } from '../pages/_app';
-import Link from './Link';
-import Img from './Img';
+import { DataContext } from "../pages/_app";
+import Link from "./Link";
+import Img from "./Img";
 
 const Copied = posed.div({
   in: {
     opacity: 1,
-    applyAtStart: { display: 'block' }
+    applyAtStart: { display: "block" }
   },
   out: {
     opacity: 0,
-    applyAtEnd: { display: 'none' }
+    applyAtEnd: { display: "none" }
   }
 });
 
@@ -23,18 +23,19 @@ const Footer = () => {
   const [{ id, x, y }, setAnimId] = useState(defaultAnimState);
   const router = useRouter();
   const { pathname } = router;
-  const { address, phone, ico, dic } = globals.contact;
+  const { address, phone, email, ico, dic } = globals.contact;
   const { footer, navbar } = components;
   const { socials } = globals;
+  const { workWithUs, copied } = footer;
 
   const copyToClipboard = (e, i) => {
-    let el = document.createElement('textarea');
+    let el = document.createElement("textarea");
     el.value = e.target.innerText;
-    el.setAttribute('readonly', '');
-    el.style = { position: 'absolute', left: '-9999px' };
+    el.setAttribute("readonly", "");
+    el.style = { position: "absolute", left: "-9999px" };
     document.body.appendChild(el);
     el.select();
-    document.execCommand('copy');
+    document.execCommand("copy");
     document.body.removeChild(el);
     handleAnim({ id: i, x: e.clientX + 30, y: e.clientY - 24 });
   };
@@ -48,26 +49,26 @@ const Footer = () => {
     <div className="footer" id={`footer`}>
       <div className="footer__content">
         <div className="footer__content__cta">
-          {footer.claims.map((item, i) => (
-            <Fragment key={i}>
-              <h5>{item.header}</h5>
-              <div className={`footer__content__cta__email`}>
-                <Copied
-                  className={`footer__content__cta__email__copied`}
-                  pose={i === id ? `in` : `out`}
-                  initialPose={`out`}
-                  style={{ top: y, left: x, display: 'none' }}
-                >
-                  <small>{footer.copied}</small>
-                </Copied>
-                <h1 onClick={e => copyToClipboard(e, i)}>{item.paragraph}</h1>
-              </div>
-            </Fragment>
-          ))}
+          <h5>{workWithUs}</h5>
+          <div className={`footer__content__cta__email`}>
+            <Copied
+              className={`footer__content__cta__email__copied`}
+              pose={0 === id ? `in` : `out`}
+              initialPose={`out`}
+              style={{ top: y, left: x, display: "none" }}
+            >
+              <small>{copied}</small>
+            </Copied>
+            <h1 onClick={e => copyToClipboard(e, 0)}>{email}</h1>
+          </div>
+          <div className={`footer__content__cta__email`}>
+            <h1>
+              <a href={`tel:${phone}`}>{`${phone}`}</a>
+            </h1>
+          </div>
         </div>
         <div className="footer__content__address">
           <h3>{`${address}`}</h3>
-          <h3>{`${phone}`}</h3>
           <h3>{`${ico}\n${dic}`}</h3>
         </div>
       </div>

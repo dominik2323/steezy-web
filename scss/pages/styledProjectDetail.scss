@@ -5,21 +5,30 @@
   &__hero {
     &__footer {
       display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      justify-content: center;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
       height: cols(1);
       // max-height: 150px;
       left: cols(2.5);
       right: cols(2.5);
-      padding-left: cols(0.5);
-      h4 {
-        color: $white;
-        margin-bottom: 10px;
+      padding: 0 cols(0.5);
+      &__content {
+        h4 {
+          color: $white;
+          margin-bottom: 10px;
+        }
+        h5 {
+          font-size: 16px;
+          letter-spacing: 0.02em;
+        }
       }
-      h5 {
-        font-size: 16px;
-        letter-spacing: 0.02em;
+      &__scroll {
+        width: 32px;
+        position: relative;
+        top: 5px;
+        height: auto;
+        cursor: pointer;
       }
     }
   }
@@ -45,11 +54,11 @@
       cursor: pointer;
       align-items: center;
       &:before {
-        content: "";
+        content: '';
         display: block;
         width: 39px;
         height: 15px;
-        background-image: url("/static/img/globals/arrow_projects.svg");
+        background-image: url('/static/img/globals/arrow_projects.svg');
         background-repeat: no-repeat;
         // background-position: center;
       }
@@ -101,7 +110,7 @@
       flex-direction: column;
       width: cols(15);
       left: 0;
-      padding: cols(1) cols(1) 0;
+      padding: cols(1);
     }
     &__arrows {
       // position: static;
@@ -120,6 +129,12 @@
           right: cols(0);
         }
       }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    &__hero__footer {
+      align-items: flex-start;
     }
   }
   @media screen and (max-width: 540px) {

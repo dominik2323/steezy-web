@@ -1,4 +1,7 @@
 .about {
+  &__hero-content {
+    width: 100%;
+  }
   .hero-footer {
     display: flex;
     justify-content: space-between;

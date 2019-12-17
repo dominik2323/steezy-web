@@ -1,7 +1,7 @@
 export default {
   pageName: "Studio",
   hero: {
-    header: "Jsme kreativní inženýři digitálního věku.",
+    header: "Jsme kreativní inženýři\ndigitálního věku.",
     subHeader: "",
     footer: {
       header: "jsme sociální případy"

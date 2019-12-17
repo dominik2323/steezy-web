@@ -11,6 +11,11 @@
       flex-grow: 1;
     }
   }
+  &.no-crop {
+    .grid__row__item--image {
+      height: auto;
+    }
+  }
   &.square {
     .grid__row__item--image {
       flex-basis: unset !important;

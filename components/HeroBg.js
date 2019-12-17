@@ -15,10 +15,10 @@ const HeroBg = ({ playerRef, videoSrc, posterSrc }) => {
         <video
           src={videoSrc}
           ref={playerRef}
-          loop={`true`}
+          loop={true}
           poster={posterSrc}
-          autoPlay={`true`}
-          muted={`true`}
+          autoPlay={true}
+          muted={true}
         />
       ) : (
         <Img src={posterSrc} alt="smth" />

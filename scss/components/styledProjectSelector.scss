@@ -1,0 +1,84 @@
+.project-selector {
+  margin: cols(0.5) cols(3);
+  > h2 {
+    color: $white;
+    margin-bottom: cols(0.5);
+  }
+  &__grid-wrap {
+    position: relative;
+    .grid {
+      overflow-x: hidden;
+      &.square {
+        margin-left: unset;
+        margin-right: unset;
+        justify-content: center;
+        .grid {
+          &__row {
+            justify-content: center;
+            // width: 100%;
+            margin-top: 0;
+            flex-shrink: 0;
+            flex-wrap: nowrap;
+            &__item--image {
+              margin-bottom: 0;
+              margin-top: 0;
+              &:not(:last-child) {
+                margin-right: cols(0.5);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__arrow {
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    top: calc(50% - 12px);
+    cursor: pointer;
+    &:hover {
+      opacity: 0.7;
+    }
+    &--left {
+      transform: rotate(-270deg);
+      left: calc(#{cols(-0.5)});
+    }
+    &--right {
+      transform: rotate(-90deg);
+      right: calc(#{cols(-0.5)});
+    }
+  }
+  @media screen and (max-width: 1200px) {
+    .grid.square .grid__row__item--image {
+      margin-bottom: 0;
+      flex-basis: cols(4.25) !important;
+      width: 100%;
+      height: cols(4);
+    }
+    &__arrow {
+      &--left {
+        left: calc(#{cols(-1)} + 32px);
+      }
+      &--right {
+        right: calc(#{cols(-1)} + 32px);
+      }
+    }
+  }
+  @media screen and (max-width: 900px) {
+    margin: cols(0.5) cols(2);
+    .grid.square .grid__row__item--image {
+      flex-basis: cols(11) !important;
+      height: cols(11);
+    }
+    &__arrow {
+      &--left {
+        left: calc(#{cols(-1.5)} + 32px);
+      }
+      &--right {
+        right: calc(#{cols(-1.5)} + 32px);
+      }
+    }
+  }
+}

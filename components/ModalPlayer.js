@@ -1,6 +1,6 @@
-import React from "react";
-import Player from "@vimeo/player";
-import HashLoader from "react-spinners/HashLoader";
+import React from 'react';
+import Player from '@vimeo/player';
+import LottieElement from './LottieElement';
 
 const ModalPlayer = ({ handleClose }) => {
   const ref = React.useRef(null);
@@ -8,7 +8,7 @@ const ModalPlayer = ({ handleClose }) => {
 
   React.useEffect(() => {
     const vimeoPlayer = new Player(ref.current);
-    vimeoPlayer.on("loaded", () => {
+    vimeoPlayer.on('loaded', () => {
       setLoading(false);
       vimeoPlayer.play();
     });
@@ -16,13 +16,15 @@ const ModalPlayer = ({ handleClose }) => {
 
   return (
     <div className={`modal-player`} onClick={() => handleClose()}>
-      <HashLoader
-        css={{ position: `absolute`, zIndex: 9 }}
-        sizeUnit={"px"}
-        size={70}
-        color={"#ff1c2b"}
-        loading={isLoading}
-      />
+      {isLoading && (
+        <LottieElement
+          className={`modal-player__loading`}
+          style={{ position: `absolute`, zIndex: 9 }}
+          src={`/static/img/globals/loading.json`}
+          autoplay={true}
+          noHover={true}
+        />
+      )}
       <div className={`modal-player__close`} onClick={() => handleClose()} />
       <div className={`modal-player__video-wrap`}>
         <div

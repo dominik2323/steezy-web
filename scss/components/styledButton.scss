@@ -24,6 +24,9 @@
       flex-shrink: 0;
     }
   }
+  &--small {
+    padding: 15px 35px;
+  }
   // transition: background-color 0.2 ease-in-out;
   &--red {
     border-color: $primary;
@@ -42,6 +45,9 @@
   }
   @media screen and (max-width: 1366px) {
     padding: 20px 35px;
+    &--small {
+      padding: 10px 25px;
+    }
     &.play-icon {
       padding: 20px 35px;
     }
@@ -53,6 +59,7 @@
   }
   @media screen and (max-width: 768px) {
     border: 1px solid;
+
     font-size: 11px;
     &.play-icon {
       &:before {

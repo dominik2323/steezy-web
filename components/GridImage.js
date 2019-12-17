@@ -3,15 +3,10 @@ import GridImageHover from './GridImageHover';
 import { useViewportSize } from '../hooks/useViewportSize';
 import Img from './Img';
 
-const ProjectGridImage = ({
-  img,
-  name,
-  client,
-  tags,
-  alt,
-  folder = ``,
-  id
-}) => {
+const ProjectGridImage = (
+  { img, name, client, tags, alt, folder = ``, id },
+  ref
+) => {
   const imgRef = React.useRef(null);
   const [aspect, setAspect] = React.useState(`unset`);
 
@@ -41,6 +36,7 @@ const ProjectGridImage = ({
           ${hasHover ? `grid__row__item--has-hover` : ``} 
           `}
       style={{ flexBasis: aspect }}
+      ref={ref}
     >
       {hasHover && (
         <GridImageHover
@@ -60,4 +56,4 @@ const ProjectGridImage = ({
   );
 };
 
-export default ProjectGridImage;
+export default React.forwardRef(ProjectGridImage);

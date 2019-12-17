@@ -1,44 +1,44 @@
-import React from "react";
-import Img from "./Img";
+import React from 'react';
+import Img from './Img';
 
 const HeroFooter = ({ children, playerRef, isVideoAvaible }) => {
   const [{ currentTime, duration, muted }, setPlayerState] = React.useState({
     currentTime: 0,
     duration: 1,
-    muted: false
+    muted: false,
   });
   const controls = [
     {
-      label: "playPause.svg",
+      label: 'playPause.svg',
       fn: () =>
         playerRef.current.paused
           ? playerRef.current.play()
-          : playerRef.current.pause()
+          : playerRef.current.pause(),
     },
     {
-      label: "stop.svg",
-      fn: () => (playerRef.current.currentTime = 0)
+      label: 'stop.svg',
+      fn: () => (playerRef.current.currentTime = 0),
     },
     {
-      label: muted ? "mute.svg" : "unMute.svg",
-      fn: () => (playerRef.current.muted = !playerRef.current.muted)
-    }
+      label: muted ? 'mute.svg' : 'unMute.svg',
+      fn: () => (playerRef.current.muted = !playerRef.current.muted),
+    },
   ];
 
   const handlePlayerStateChange = e => {
     setPlayerState({
       currentTime: e.target.currentTime,
       duration: e.target.duration,
-      muted: e.target.muted
+      muted: e.target.muted,
     });
   };
 
   React.useEffect(() => {
-    if (isVideoAvaible) {
-      playerRef.current.addEventListener("timeupdate", handlePlayerStateChange);
+    if (isVideoAvaible && playerRef.current !== null) {
+      playerRef.current.addEventListener('timeupdate', handlePlayerStateChange);
       return () =>
         playerRef.current.removeEventListener(
-          "timeupdate",
+          'timeupdate',
           handlePlayerStateChange
         );
     }
@@ -49,7 +49,7 @@ const HeroFooter = ({ children, playerRef, isVideoAvaible }) => {
       <div
         className={`video-controls__progress`}
         style={{
-          right: `${100 - currentTime / (duration / 100)}%`
+          right: `${100 - currentTime / (duration / 100)}%`,
         }}
       />
       {controls.map(({ fn, label }, i) => (

@@ -18,11 +18,13 @@ import siestaCloud from './projects/siestaCloudData';
 import siestaSolution from './projects/siestaSolutionData';
 import sparco from './projects/sparcoData';
 import tullamore from './projects/tullamoreData';
+import isobar from './projects/isobarData';
 import tbbbike from './projects/tbbbikeData';
 
 export default [
   pivon,
   infinit,
+  isobar,
   abb,
   cafeRepublic,
   eggo,
@@ -40,5 +42,5 @@ export default [
   siestaSolution,
   tullamore,
   pokorny,
-  tbbbike
+  tbbbike,
 ];
