@@ -25,7 +25,13 @@ const ModalPlayer = ({ handleClose }) => {
           noHover={true}
         />
       )}
-      <div className={`modal-player__close`} onClick={() => handleClose()} />
+      <LottieElement
+        className={`modal-player__close`}
+        onClick={() => handleClose()}
+        autoPlay={false}
+        noHover={false}
+        src={`/static/img/globals/close.json`}
+      />
       <div className={`modal-player__video-wrap`}>
         <div
           className={`modal-player__video-wrap__player`}

@@ -24,7 +24,7 @@ export default {
     client: 'MICo Group',
   },
   hero: {
-    posterSrc: 'HeroImage.jpg',
+    posterSrc: 'PosterImage.jpg',
     videoSrc: 'mico_loop.mp4',
   },
   intro: {

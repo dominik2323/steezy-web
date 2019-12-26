@@ -1,19 +1,19 @@
-import React, { Fragment, useRef } from "react";
-import Head from "next/head";
+import React, { Fragment, useRef } from 'react';
+import Head from 'next/head';
 
-import { DataContext } from "./_app";
-import Router from "next/router";
+import { DataContext } from './_app';
+import Router from 'next/router';
 
-import Navbar from "../components/Navbar";
-import Hero from "../components/Hero";
-import Grid from "../components/Grid";
-import Footer from "../components/Footer";
-import HeroFooterLogotypes from "../components/HeroFooterLogotypes";
-import Button from "../components/Button";
-import IntroText from "../components/IntroText";
-import ServicesOverview from "../components/ServicesOverview";
-import ClientLogotypes from "../components/ClientLogotypes";
-import ModalPlayer from "../components/ModalPlayer";
+import Navbar from '../components/Navbar';
+import Hero from '../components/Hero';
+import Grid from '../components/Grid';
+import Footer from '../components/Footer';
+import HeroFooterLogotypes from '../components/HeroFooterLogotypes';
+import Button from '../components/Button';
+import IntroText from '../components/IntroText';
+import ServicesOverview from '../components/ServicesOverview';
+import ClientLogotypes from '../components/ClientLogotypes';
+import ModalPlayer from '../components/ModalPlayer';
 
 const Homepage = () => {
   const playerRef = useRef(null);
@@ -26,7 +26,7 @@ const Homepage = () => {
     ({ name, bullets, id }) => ({
       id: id,
       header: name,
-      content: bullets.map(({ header }) => `${header}\n`)
+      content: bullets.map(({ header }) => `${header}\n`),
     })
   );
 
@@ -50,23 +50,23 @@ const Homepage = () => {
         />
       )}
 
-      <div className="homepage container-fluid">
+      <div className='homepage container-fluid'>
         <Navbar />
 
         <Hero
-          posterSrc={`/static/img/homepage/hero_homepage.jpg`}
-          videoSrc={`/static/img/homepage/homepage_loop.mp4`}
-          playerRef={playerRef}
-        >
+          posterSrc={`/static/img/homepage/${hero.posterSrc}`}
+          videoSrc={`/static/img/homepage/${hero.loopSrc}`}
+          playerRef={playerRef}>
           {{
             content: (
               <Fragment>
-                <h1 className="homepage__hero__content__header">
+                <h1 className='homepage__hero__content__header'>
                   {hero.header}
                 </h1>
                 <Button
                   label={components.button.playShowreel}
                   playIcon
+                  className={`btn--filled`}
                   handleClick={() => {
                     toggleModal(showModal => !showModal);
                     playerRef.current.pause();
@@ -74,7 +74,7 @@ const Homepage = () => {
                 />
               </Fragment>
             ),
-            footer: <HeroFooterLogotypes />
+            footer: <HeroFooterLogotypes />,
           }}
         </Hero>
 
@@ -83,13 +83,12 @@ const Homepage = () => {
           tags={transformServicesContent}
           numbered={true}
           handleClick={id => {
-            Router.push({ pathname: "/services", query: { section: id } });
-          }}
-        >
+            Router.push({ pathname: '/services', query: { section: id } });
+          }}>
           <Button
             label={components.button.howCanWeHelp}
             handleClick={async () => {
-              await Router.push({ pathname: "/services" });
+              await Router.push({ pathname: '/services' });
               window.scrollTo(0, 0);
             }}
           />
@@ -103,24 +102,24 @@ const Homepage = () => {
         <Grid
           grid={transformedGridData}
           folder={`/project`}
-          addClassName={`no-crop`}
         />
         <Button
           label={components.button.allProjects}
           handleClick={async () => {
-            await Router.push({ pathname: "/projects" });
+            await Router.push({ pathname: '/projects' });
             window.scrollTo(0, 0);
           }}
-          style={{ margin: "auto" }}
+          style={{ margin: 'auto' }}
         />
 
         <ClientLogotypes />
-        <div className="homepage__about">
+        <div className='homepage__about'>
           <p>{about.paragraph}</p>
           <Button
             label={components.button.aboutStudio}
+            className={`btn--filled`}
             handleClick={async () => {
-              await Router.push({ pathname: "/about" });
+              await Router.push({ pathname: '/about' });
               window.scrollTo(0, 0);
             }}
           />
@@ -144,7 +143,7 @@ export const transformGridReferencesIntoGrid = (gridRef, projects) => {
         name: fullProject.name,
         client: fullProject.client,
         tags: fullProject.tags,
-        id: id
+        id: id,
       };
     } else if (type === `reference`) {
       return {
@@ -154,12 +153,12 @@ export const transformGridReferencesIntoGrid = (gridRef, projects) => {
         client: fullProject.reference.client,
         quote: fullProject.reference.quote,
         img: fullProject.reference.img,
-        id: id
+        id: id,
       };
     } else if (type === `video`) {
       return {
         videoVimeoId: fullProject.intro.videoVimeoId,
-        id: id
+        id: id,
       };
     }
   };

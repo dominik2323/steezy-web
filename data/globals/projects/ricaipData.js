@@ -14,7 +14,7 @@ export default {
     client: '',
   },
   hero: {
-    posterSrc: 'HeroImage.jpg',
+    posterSrc: 'PosterImage.jpg',
     videoSrc: 'ricaip_loop.mp4',
   },
   intro: {

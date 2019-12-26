@@ -31,7 +31,7 @@ export default {
     client: 'Infinit wellness',
   },
   hero: {
-    posterSrc: 'HeroImage.jpg',
+    posterSrc: 'PosterImage.jpg',
     videoSrc: 'infinit_loop_V2.mp4',
   },
   intro: {

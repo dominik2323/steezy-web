@@ -2,7 +2,8 @@
   display: flex;
   flex-wrap: wrap;
   // margin: 0 cols(1);
-  margin: 0 cols(3);
+  width: cols(15);
+  padding: 0 cols(3);
   &__row {
     display: flex;
     flex-basis: 100%;
@@ -25,13 +26,13 @@
         margin: cols(-0.5) 0 0;
         flex-wrap: wrap;
         height: auto;
-        justify-content: space-between;
+        // justify-content: space-between;
       }
     }
   }
 
   @media screen and (max-width: 768px) {
-    margin: 0 cols(1);
+    padding: 0 cols(1);
     &__row {
       flex-wrap: wrap;
       &:not(:last-child) {

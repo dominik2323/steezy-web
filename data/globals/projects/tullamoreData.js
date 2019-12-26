@@ -14,7 +14,7 @@ export default {
     client: '',
   },
   hero: {
-    posterSrc: 'HeroImage.jpg',
+    posterSrc: 'gumotex_loop.mp4',
     videoSrc: 'tullamore_loop.mp4',
   },
   intro: {

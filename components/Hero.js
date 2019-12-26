@@ -25,9 +25,9 @@ const Hero = ({
       const observer = new IntersectionObserver(
         entries => {
           entries.forEach(entry => {
-            if (!entry.isIntersecting && !playerRef.current.paused) {
+            if (!entry.isIntersecting) {
               playerRef.current.pause();
-            } else if (entry.isIntersecting && playerRef.current.paused) {
+            } else if (entry.isIntersecting) {
               playerRef.current.play();
             }
           });
@@ -43,7 +43,7 @@ const Hero = ({
         observer.unobserve(heroEl);
       };
     }
-  }, []);
+  }, [videoSrc]);
 
   return (
     <Fragment>

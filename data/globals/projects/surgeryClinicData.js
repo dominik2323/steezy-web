@@ -15,7 +15,7 @@ export default {
     client: 'Turingsense',
   },
   hero: {
-    posterSrc: 'HeroImage.jpg',
+    posterSrc: 'PosterImage.jpg',
     videoSrc: 'VU_commercial_loop.mp4',
   },
   intro: {

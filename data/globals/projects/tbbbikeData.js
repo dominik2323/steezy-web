@@ -15,7 +15,7 @@ export default {
     client: 'TBB-BIKE',
   },
   hero: {
-    posterSrc: 'HeroImage.jpg',
+    posterSrc: 'PosterImage.jpg',
     videoSrc: 'tbbbike_loop.mp4',
   },
   intro: {

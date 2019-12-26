@@ -1,4 +1,4 @@
-.btn-ghost {
+.btn {
   background-color: transparent;
   border: 2px solid;
   padding: 25px 40px 25px 40px;
@@ -7,13 +7,15 @@
   display: flex;
   align-items: center;
   cursor: pointer;
+  transition: all 0.2s;
   &.play-icon {
-    padding: 20px 40px;
+    padding: 15px 30px;
     &:before {
       // padding: 25px 40px 25px 90px;
       margin-right: 20px;
       background: url('/static/img/globals/playBtn.svg');
-      background-size: 100%;
+      background-size: cover;
+      // background-size: 100%;
       mask-repeat: no-repeat;
       mask-position: center;
       content: '';
@@ -38,7 +40,26 @@
         &:before {
           content: '';
           background: url('/static/img/globals/playBtn_hover.svg');
-          background-size: 100%;
+        }
+      }
+    }
+  }
+  &--filled {
+    background-color: $primary;
+    color: $white;
+    &.play-icon {
+      &:before {
+        background: url('/static/img/globals/playBtn_hover.svg');
+        background-size: cover;
+      }
+    }
+    &:hover {
+      background-color: $primary-hover;
+      border-color: $primary-hover;
+      &.play-icon {
+        &:before {
+          background: url('/static/img/globals/playBtn_hover.svg');
+          background-size: cover;
         }
       }
     }

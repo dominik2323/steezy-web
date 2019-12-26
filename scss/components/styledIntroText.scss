@@ -7,7 +7,7 @@
     width: cols(6);
     flex-shrink: 1;
     margin-right: cols(1);
-    .btn-ghost {
+    .btn {
       margin-top: cols(0.5);
     }
   }
@@ -61,7 +61,7 @@
     flex-direction: column;
     p {
       width: 80%;
-      .btn-ghost {
+      .btn {
         margin: cols(1) 0 0;
       }
     }
@@ -94,13 +94,13 @@
     }
   }
   @media screen and (max-width: 768px) {
-    padding: cols(1) cols(2) cols(2) cols(1);
+    padding: cols(2) cols(2) cols(2) cols(1);
     p {
       width: 100%;
       // font-size: 21px;
       margin-right: 0;
-      .btn-ghost {
-        margin: cols(2) 0 0;
+      .btn {
+        margin: cols(2) 0 cols(1);
       }
     }
     ul {

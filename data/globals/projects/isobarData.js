@@ -20,7 +20,7 @@ export default {
     videoSrc: '',
   },
   intro: {
-    img: 'isobar00.jpg',
+    img: 'HeroImage.jpg',
     videoVimeoId: '215836460',
   },
   introText: {
@@ -118,46 +118,46 @@ export default {
     12: [
       {
         img: 'isobar14.jpg',
-            alt: 'dummy',
-          },
-          {
-            img: 'isobar15.jpg',
-            alt: 'dummy',
-          },
-        ],
-        13: [
-          {
-            img: 'isobar16.jpg',
-            alt: 'dummy',
-          },
-        ],
-        14: [
-          {
-            img: 'isobar17.jpg',
-                alt: 'dummy',
-              },
-              {
-                img: 'isobar18.jpg',
-                alt: 'dummy',
-              },
-            ],
-            15: [
-              {
-                blockquote:
-                  'Pojízdné skříně s úložnými prostory pro zaměstance jsme nechali vyrobit na míru z přírodní MDF a pomalovat autorskými ilustracemi v barvách a motivech Isobar.',
-              },
-            ],
-            16: [
-              {
-                img: 'isobar19.jpg',
-                alt: 'dummy',
-              },
-            ],
-            17: [
-              {
-                img: 'isobar20.jpg',
-                alt: 'dummy',
-              },
-            ],
+        alt: 'dummy',
       },
+      {
+        img: 'isobar15.jpg',
+        alt: 'dummy',
+      },
+    ],
+    13: [
+      {
+        img: 'isobar16.jpg',
+        alt: 'dummy',
+      },
+    ],
+    14: [
+      {
+        img: 'isobar17.jpg',
+        alt: 'dummy',
+      },
+      {
+        img: 'isobar18.jpg',
+        alt: 'dummy',
+      },
+    ],
+    15: [
+      {
+        blockquote:
+          'Pojízdné skříně s úložnými prostory pro zaměstance jsme nechali vyrobit na míru z přírodní MDF a pomalovat autorskými ilustracemi v barvách a motivech Isobar.',
+      },
+    ],
+    16: [
+      {
+        img: 'isobar19.jpg',
+        alt: 'dummy',
+      },
+    ],
+    17: [
+      {
+        img: 'isobar20.jpg',
+        alt: 'dummy',
+      },
+    ],
+  },
 };

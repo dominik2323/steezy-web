@@ -1,0 +1,13 @@
+.test {
+  .margin-size {
+    margin: 0 25vw;
+    height: 100px;
+    background-color: $primary;
+  }
+  .width-size {
+    width: 50vw;
+    height: 100px;
+    margin: auto;
+    background-color: $primary;
+  }
+}

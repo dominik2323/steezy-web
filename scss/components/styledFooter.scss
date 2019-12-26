@@ -16,7 +16,7 @@
         color: $white;
         margin-bottom: 40px;
       }
-      &__email {
+      &__item {
         h1 {
           font-size: 45px;
         }
@@ -99,7 +99,7 @@
   @media screen and (min-height: 1920px) {
     &__content {
       &__cta {
-        &__email {
+        &__item {
           h1 {
             font-size: 60px;
           }
@@ -131,6 +131,11 @@
   @media screen and (max-width: 768px) {
     &__content {
       &__cta {
+        &__item {
+          h1 {
+            margin-bottom: 0;
+          }
+        }
       }
       &__address {
         margin-top: cols(2);
@@ -144,24 +149,25 @@
       flex-direction: column;
       &__socials {
         margin-top: 30px;
+        justify-content: flex-start;
       }
     }
   }
   @media screen and (max-width: 540px) {
-    padding: cols(3) cols(2) cols(2);
+    padding: cols(3) cols(1) cols(2);
     &__content {
       &__cta {
         h5 {
           font-size: 12px;
           letter-spacing: 0.05em;
         }
-        &__email {
+        &__item {
           h1 {
             font-size: 24px;
           }
           &:not(:last-child) {
             h1 {
-              margin-bottom: cols(2);
+              margin-bottom: 10px;
             }
           }
         }
@@ -170,7 +176,7 @@
         margin-top: cols(3);
         h3 {
           font-size: 14px;
-          line-height: 1.4em;
+          line-height: 2em;
           letter-spacing: 0.05em;
         }
       }
@@ -185,12 +191,12 @@
           }
           h5 {
             margin-bottom: 10px;
+            letter-spacing: 0.05em;
           }
         }
       }
       &__socials {
         width: 100%;
-        justify-content: space-between;
       }
     }
   }

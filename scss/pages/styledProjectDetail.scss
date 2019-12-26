@@ -10,9 +10,9 @@
       justify-content: space-between;
       height: cols(1);
       // max-height: 150px;
-      left: cols(2.5);
-      right: cols(2.5);
-      padding: 0 cols(0.5);
+      left: cols(2);
+      right: cols(2);
+      padding: 0 cols(1);
       &__content {
         h4 {
           color: $white;
@@ -110,7 +110,10 @@
       flex-direction: column;
       width: cols(15);
       left: 0;
-      padding: cols(1);
+      padding: cols(2) cols(1) 0;
+      &__scroll {
+        display: none;
+      }
     }
     &__arrows {
       // position: static;

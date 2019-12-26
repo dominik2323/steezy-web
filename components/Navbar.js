@@ -12,12 +12,8 @@ const Navbar = React.forwardRef(({ children, hasBg }, ref) => {
   const [showSidebar, toggleSidebar] = useState(false);
   // const { activeTag, invertNavbar } = useSelector(x => x);
   return (
-    <div
-      ref={ref}
-      className={`topbar topbar--fixed justify-content-center ${
-        hasBg ? `has-bg` : ``
-      }`}>
-      <div className={`topbar__navbar col-11`}>
+    <div ref={ref} className={`topbar topbar--fixed ${hasBg ? `has-bg` : ``}`}>
+      <div className={`topbar__navbar`}>
         <Link path='/'>
           <div className={`topbar__navbar__brand`} />
         </Link>

@@ -15,7 +15,7 @@ const ServicesItem = ({
   grid,
   projects,
   id,
-  btn
+  btn,
 }) => {
   const transformGrid = transformGridReferencesIntoGrid(
     Object.values(grid),
@@ -27,15 +27,13 @@ const ServicesItem = ({
       <div className={`services__content__services-item__about`}>
         <div className={`services__content__services-item__about__intro`}>
           <div
-            className={`services__content__services-item__about__intro__perex`}
-          >
+            className={`services__content__services-item__about__intro__perex`}>
             <h1>{name}</h1>
             <p className={`big`}>{perex}</p>
           </div>
           <div
-            className={`services__content__services-item__about__intro__icon`}
-          >
-            <Lottie src={`/static/img/services/${img}`} />
+            className={`services__content__services-item__about__intro__icon`}>
+            <Lottie src={`/static/img/services/${img}`} renderer={`svg`} />
             {/*<Img src={`/static/img/services/${img}`} alt="" />*/}
           </div>
         </div>
@@ -51,12 +49,12 @@ const ServicesItem = ({
           ))}
         </ul>
       </div>
-      <Grid grid={transformGrid} folder={`/project`} addClassName={`no-crop`} />
+      <Grid grid={transformGrid} folder={`/project`} />
       <Button
         handleClick={async () => {
           await Router.push({
             pathname: '/projects',
-            query: { filterQuery: id }
+            query: { filterQuery: id },
           });
           window.scrollTo(0, 0);
         }}

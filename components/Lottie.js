@@ -1,7 +1,7 @@
 import React from 'react';
 import lottie from 'lottie-web';
 
-const Lottie = ({ src, setDimensions }) => {
+const Lottie = ({ src, setDimensions, renderer = `canvas` }) => {
   // const [aspect, setDimensions] = React.useState(1);
   const lottieRef = React.useRef(null);
 
@@ -17,13 +17,13 @@ const Lottie = ({ src, setDimensions }) => {
     function initLottie() {
       const anim = lottie.loadAnimation({
         container: lottieRef.current,
-        renderer: 'svg',
+        renderer: renderer,
         loop: true,
         autoplay: true,
         path: src,
         rendererSettings: {
-          preserveAspectRatio: 'xMidYMid slice'
-        }
+          preserveAspectRatio: 'xMidYMid meet',
+        },
       });
 
       anim.addEventListener('data_ready', handleDataReady);

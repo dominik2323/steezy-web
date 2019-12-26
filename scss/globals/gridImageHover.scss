@@ -38,6 +38,9 @@
           }
         }
       }
+      ~ img {
+        transition: opacity 0.2s;
+      }
       button {
         align-self: flex-start;
       }

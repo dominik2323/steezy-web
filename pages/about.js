@@ -19,9 +19,11 @@ export default function About() {
       <Head>
         <title>{`${globals.webTitle}\u2002/\u2002${about.pageName}`}</title>
       </Head>
-      <div className="about container-fluid">
+      <div className='about container-fluid'>
         <Navbar />
-        <Hero posterSrc={`/static/img/about/HeroImage.jpg`} className={`about`}>
+        <Hero
+          posterSrc={`/static/img/about/${about.hero.img}`}
+          className={`about`}>
           {{
             content: (
               <div className={`about__hero-content`}>

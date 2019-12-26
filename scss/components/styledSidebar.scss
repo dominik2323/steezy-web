@@ -2,7 +2,8 @@
   width: cols(6);
   z-index: 2;
   position: fixed !important;
-  height: 100vh;
+  height: 100%;
+  min-height: 80vh;
   background-color: $primary;
   top: 0;
   right: 0;
@@ -12,8 +13,8 @@
   align-items: flex-end;
   padding-right: cols(2);
   .close-icon {
-    width: auto;
-    height: auto;
+    width: 40px;
+    height: 40px;
     cursor: pointer;
     justify-self: flex-start;
     position: absolute;
@@ -92,9 +93,9 @@
     width: cols(9);
   }
   @media screen and (max-width: 768px) {
-    img.close-icon {
-      width: 19px;
-      height: 19px;
+    .close-icon {
+      width: 25px;
+      height: 25px;
     }
     width: 100%;
   }

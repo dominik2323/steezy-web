@@ -16,7 +16,7 @@ export default {
     client: 'Backstage Hair Salon',
   },
   hero: {
-    posterSrc: 'HeroImage.jpg',
+    posterSrc: 'PosterImage.jpg',
     videoSrc: 'backstage_loop.mp4',
   },
   intro: {

@@ -1,20 +1,17 @@
 import React from 'react';
 
 const Button = ({
-  handleClick,
+  handleClick = () => null,
   label,
   className = '',
   playIcon = false,
-  style
+  style,
 }) => {
   return (
     <button
-      className={`btn-ghost btn-ghost--red ${className} ${
-        playIcon ? `play-icon` : ``
-      }`}
+      className={`btn btn--red ${className} ${playIcon ? `play-icon` : ``}`}
       style={style}
-      onClick={() => handleClick()}
-    >
+      onClick={() => handleClick()}>
       {label}
     </button>
   );

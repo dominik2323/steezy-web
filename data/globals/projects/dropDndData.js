@@ -20,7 +20,7 @@ export default {
   },
   intro: {
     img: 'HeroImage.jpg',
-    videoVimeoId: '215836460',
+    videoVimeoId: '367558240',
   },
   introText: {
     about:
@@ -113,6 +113,6 @@ export default {
         alt: 'dummy',
       },
     ],
-    12: [{ videoVimeoId: '366974485' }],
+    12: [{ videoVimeoId: '367558240' }],
   },
 };

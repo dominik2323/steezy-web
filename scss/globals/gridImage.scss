@@ -19,9 +19,9 @@
   &.square {
     .grid__row__item--image {
       flex-basis: unset !important;
-      width: cols(8 / 3);
-      height: cols(8 / 3);
-      margin: cols(0.5) 0 0 0;
+      width: cols(8/3);
+      height: cols(8/3);
+      margin: cols(0.5) cols(0.5) 0 0;
       &:nth-child(3n) {
         margin-right: 0;
       }
@@ -48,7 +48,7 @@
       height: cols(13);
     }
     &.square {
-      margin: 0 cols(1);
+      margin: 0 cols(0);
       .grid__row__item--image {
         // flex-basis: unset !important;
         margin: cols(0.5) cols(0);
