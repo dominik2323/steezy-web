@@ -17,7 +17,7 @@
     height: 100vh;
     max-height: 1080px;
     width: 100vw;
-    background-image: url('/static/img/homepage/aboutSection.jpg');
+    background-image: url('/static/img/about/HeroImage.png');
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
@@ -26,6 +26,22 @@
     flex-direction: column;
     padding: 0 cols(3);
     margin-top: calc(100vw / 15);
+    position: relative;
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: dark-gray-opacity(0.7);
+    }
+    p,
+    button {
+      position: relative;
+      z-index: 1;
+    }
     p {
       font-size: 55px;
       letter-spacing: 0.02em;

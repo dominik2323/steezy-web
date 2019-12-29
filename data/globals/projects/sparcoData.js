@@ -27,7 +27,7 @@ export default {
     tags: [
       { header: 'role', content: '#kreativa\n#3dmodelování\n#3danimace' },
       { header: 'realizace', content: '2019' },
-      { header: 'lokalita', content: 'Česká Republika, Svět' },
+      { header: 'lokalita', content: 'Celosvětová kampaň' },
     ],
   },
   presentation: {

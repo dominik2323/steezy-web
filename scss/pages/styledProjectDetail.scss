@@ -110,10 +110,13 @@
       flex-direction: column;
       width: cols(15);
       left: 0;
-      padding: cols(2) cols(1) 0;
+      padding: cols(1) cols(1) cols(1);
       &__scroll {
         display: none;
       }
+    }
+    .intro-text {
+      padding-top: cols(1);
     }
     &__arrows {
       // position: static;

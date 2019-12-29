@@ -8,7 +8,7 @@ export default {
   },
   intro: {
     perex:
-      'Máte skvělou službu či produkt, ale nikdo o\u00a0vás neslyšel? Jste na špici\u00a0v oboru, ale nedaří se vám nalákat nové zákazníky či zaměstnance? Máte pocit, že jste lepší než vaše konkurence, ale zdaleka neprodáváte tolik? Nebo máte zatím jen geniální nápad a\u00a0nevíte, kde začít?\n\nPomůžeme nastavit vaši komunikaci tak, aby odpovídala vašemu záměru. Jste zkušenými matadory v\u00a0oboru anebo se teprve chystáte dobít svou pozici na trhu? Výrazná a\u00a0přitom srozumitelná prezentace je v\u00a0dnešní informacemi zahlcené době základním faktorem úspěchu.',
+      'Máte skvělou službu či produkt, ale nikdo o\u00a0vás neslyšel? Jste na špici\u00a0v oboru, ale nedaří se vám nalákat nové zákazníky či zaměstnance? Máte pocit, že jste lepší než vaše konkurence, ale zdaleka neprodáváte tolik? Nebo máte zatím jen geniální nápad a\u00a0nevíte, kde začít?\n\nPomůžeme nastavit vaši komunikaci tak, aby odpovídala vašemu záměru. Jste zkušenými matadory v\u00a0oboru anebo se teprve chystáte dobýt svou pozici na trhu? Výrazná a\u00a0přitom srozumitelná prezentace je v\u00a0dnešní informacemi zahlcené době základním faktorem úspěchu.',
   },
   grid: {
     0: [
@@ -67,6 +67,6 @@ export default {
   },
   about: {
     paragraph:
-      'Jsme kreativní studio zaměřené na\u00a0komplexní řešení vizuální komunikace.',
+      'Pomáháme s prezentací klientům\u00a0u\u00a0nás\u00a0i\u00a0ve\u00a0světě.',
   },
 };

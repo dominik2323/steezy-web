@@ -19,7 +19,7 @@ export default {
     videoSrc: '',
   },
   intro: {
-    img: 'HeroImage.jpg',
+    img: 'dropDnd06.jpg',
     videoVimeoId: '367558240',
   },
   introText: {

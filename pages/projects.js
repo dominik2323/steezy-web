@@ -32,8 +32,8 @@ const Projects = () => {
           img: `${curr.id}/${curr.intro.img}`,
           alt: curr.name,
           client: curr.client,
-          tags: curr.tags
-        }
+          tags: curr.tags,
+        },
       ];
     }
     return acc;
@@ -46,7 +46,7 @@ const Projects = () => {
       <Header>
         <title>{`${globals.webTitle}\u2002/\u2002${pages.projects.pageName}`}</title>
       </Header>
-      <Navbar>
+      <Navbar showBgFrom={() => 0}>
         {w > 1200 && (
           <NavbarFilter
             list={pages.projects.filterTags}

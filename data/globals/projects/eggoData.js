@@ -120,14 +120,14 @@ export default {
       { img: 'eggo16.jpg', alt: 'dummy' },
     ],
     14: [
+      { img: 'eggo17.jpg', alt: 'dummy' },
+      { img: 'eggo18.jpg', alt: 'dummy' },
+    ],
+    15: [
       {
         blockquote:
           'Pro Eggo jsme kromě vizuální identity navrhovali také stylizaci samotného trucku. Truck jsme modelovali ve 3D a výsledný vzhled klukům prezentovali ve virtuální realitě, kde si mohli mj. ověřit, jak málo místa ve skutečnosti uvnitř auta bude.',
       },
-    ],
-    15: [
-      { img: 'eggo17.jpg', alt: 'dummy' },
-      { img: 'eggo18.jpg', alt: 'dummy' },
     ],
     16: [
       { img: 'eggo19.jpg', alt: 'dummy' },

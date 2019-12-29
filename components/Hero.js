@@ -1,4 +1,5 @@
 import React, { Fragment, useRef, useEffect, useState } from 'react';
+import Div100vh from 'react-div-100vh';
 
 import 'video-react/styles/scss/video-react.scss';
 import HeroFooter from './HeroFooter';
@@ -20,7 +21,6 @@ const Hero = ({
   useEffect(() => {
     if (isVideoAvaible && playerRef.current !== null) {
       const heroEl = document.getElementById(`hero_${videoSrc}`);
-      console.log(playerRef.current);
 
       const observer = new IntersectionObserver(
         entries => {
@@ -46,7 +46,7 @@ const Hero = ({
   }, [videoSrc]);
 
   return (
-    <Fragment>
+    <Div100vh style={{ height: `100rvh` }}>
       <div className={`hero ${className}__hero`} id={`hero_${videoSrc}`}>
         {children.content && (
           <div
@@ -71,7 +71,7 @@ const Hero = ({
           loopSrc={loopSrc}
         />
       </div>
-    </Fragment>
+    </Div100vh>
   );
 };
 

@@ -24,14 +24,14 @@ export default {
   },
   introText: {
     about:
-      'V\u00a0roce 2017 spojil Turingsense, start-up ze Sillicon valley, síly s\u00a0přední evropskou sportovní klinikou Sport Surgery Clinic Dublin, aby vznikl projekt VUTM.\n\nTato unikátní IoT technologie umožňuje dokonale zachytit pohyb sportovce pomocí pohybových senzorů umístěných ve speciálním oblečení. Získaná data jsou pak okamžitě porovnány s\u00a0lékařskou databází na dublinské sportovní klinice a\u00a0výsledky zobrazeny v\u00a0aplikaci na tabletu.\n\nNa základě této revoluční metodiky tak mohou fyzioterapeutické týmy vyhodnotit zdravotní stav špičkových sportovců a\u00a0předcházet zraněním, aniž by museli cestovat do speciálních pohybových laboratoři v Irsku. Naše studio mělo na starosti release kampaň produktu a\u00a0jeho uvedení na trh v Barceloně.',
+      'V\u00a0roce 2017 spojil Turingsense, start-up ze Sillicon valley, síly s\u00a0přední evropskou sportovní klinikou Sport Surgery Clinic Dublin, aby vznikl projekt VU™.\n\nTato unikátní IoT technologie umožňuje dokonale zachytit pohyb sportovce pomocí pohybových senzorů umístěných ve speciálním oblečení. Získaná data jsou pak okamžitě porovnány s\u00a0lékařskou databází na dublinské sportovní klinice a\u00a0výsledky zobrazeny v\u00a0aplikaci na tabletu.\n\nNa základě této revoluční metodiky tak mohou fyzioterapeutické týmy vyhodnotit zdravotní stav špičkových sportovců a\u00a0předcházet zraněním, aniž by museli cestovat do speciálních pohybových laboratoři v Irsku. Naše studio mělo na starosti release kampaň produktu a\u00a0jeho uvedení na trh v Barceloně.',
     tags: [
       { header: 'role', content: '#video\n#animace\n#webdesign\n#aplikace' },
       {
         header: 'realizace',
         content: 'Dublin, Irsko\nSan Francisco, USA\n2017',
       },
-      { header: 'foto', content: 'Jaroslav Sijka' },
+      { header: 'spolupráce', content: 'Jaroslav Sijka (foto)' },
     ],
   },
   presentation: {
@@ -85,7 +85,7 @@ export default {
     7: [
       {
         blockquote:
-          'V rámci kampaně jsme navrhli interface aplikace VUTM a\u00a0jednoduchý prezentační web, který stylově a\u00a0s\u00a0lehkostí shrnuje benefity produktu.',
+          'V rámci kampaně jsme navrhli interface aplikace VU™ a\u00a0jednoduchý prezentační web, který stylově a\u00a0s\u00a0lehkostí shrnuje benefity produktu.',
       },
     ],
     8: [

@@ -29,7 +29,7 @@ export default {
       { header: 'role', content: '#kreativa\n#branding\n#video' },
       { header: 'realizace', content: '2018' },
       { header: 'lokalita', content: 'Česká Republika, Slovensko' },
-      { header: 'foto', content: 'Milan Tykal' },
+      { header: 'spoluráce', content: 'Milan Tykal (foto)' },
     ],
   },
   presentation: {

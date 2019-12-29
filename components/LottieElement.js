@@ -8,6 +8,7 @@ const LottieElement = ({
   loop = true,
   autoplay = false,
   noHover = false,
+  preserveAspectRatio = 'xMidYMid slice',
   ...props
 }) => {
   const ref = React.useRef(null);
@@ -29,7 +30,7 @@ const LottieElement = ({
       autoplay: autoplay,
       path: src,
       rendererSettings: {
-        preserveAspectRatio: 'xMidYMid slice',
+        preserveAspectRatio: preserveAspectRatio,
       },
     });
   }, []);

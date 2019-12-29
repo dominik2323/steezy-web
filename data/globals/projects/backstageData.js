@@ -20,7 +20,7 @@ export default {
     videoSrc: 'backstage_loop.mp4',
   },
   intro: {
-    img: 'backstage00.jpg',
+    img: 'IntroImage.png',
     videoVimeoId: '215836460',
   },
   introText: {

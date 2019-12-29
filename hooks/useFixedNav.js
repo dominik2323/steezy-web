@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-export default function useFixedNav() {
+export default function useFixedNav(showBgFrom = () => window.innerHeight) {
   const [showNav, toggleNav] = useState(true);
   const [hasBg, setBg] = useState(false);
 
@@ -8,7 +8,7 @@ export default function useFixedNav() {
   const handleScroll = e => {
     if (window.scrollY < prevScrollPos || prevScrollPos < 0) {
       // * U P  –  S H O W
-      setBg(window.scrollY > window.innerHeight ? true : false);
+      setBg(window.scrollY > showBgFrom() ? true : false);
       toggleNav(true);
     } else {
       // * D O W N  –  H I D E

@@ -12,8 +12,9 @@ import { scrollTo } from '../hooks/scrollTo';
 import { DataContext } from '../pages/_app';
 
 export default function About() {
-  const { pages, globals } = React.useContext(DataContext);
+  const { pages, globals, components } = React.useContext(DataContext);
   const { about } = pages;
+  const { button } = components;
   return (
     <React.Fragment>
       <Head>
@@ -28,6 +29,11 @@ export default function About() {
             content: (
               <div className={`about__hero-content`}>
                 <h1>{about.hero.header}</h1>
+                <Button
+                  label={button.moreAboutUs}
+                  className={`btn--filled`}
+                  handleClick={() => scrollTo('about-intro-text')}
+                />
               </div>
             ),
             footer: (
@@ -44,7 +50,11 @@ export default function About() {
             ),
           }}
         </Hero>
-        <IntroText perex={about.introText.about} tags={about.introText.tags} />
+        <IntroText
+          perex={about.introText.about}
+          tags={about.introText.tags}
+          id={`about-intro-text`}
+        />
         <Grid
           grid={Object.values(about.grid)}
           folder={`/about`}

@@ -1,34 +1,36 @@
-import React from "react";
+import React from 'react';
+import { withAnim } from '../hocs/withAnim';
 
-const IntroText = ({
-  perex,
-  tags,
-  numbered = false,
-  children,
-  handleClick = () => null,
-  ...props
-}) => {
-  return (
-    <div className="intro-text" {...props}>
-      <p className={`big`}>
-        {perex}
-        {children}
-      </p>
-      {tags && (
-        <ul>
-          {tags.map(({ header, content, id }, i) => (
-            <li key={header} onClick={() => handleClick(id)}>
-              {numbered && <span>{`0${i + 1}`}</span>}
-              <div>
-                <h5>{header.toUpperCase()}</h5>
-                <small>{content}</small>
-              </div>
-            </li>
-          ))}
-        </ul>
-      )}
-    </div>
-  );
-};
+const IntroText = (
+  {
+    perex,
+    tags,
+    numbered = false,
+    children,
+    handleClick = () => null,
+    ...props
+  },
+  ref
+) => (
+  <div ref={ref} className='intro-text' {...props}>
+    <p className={`big`}>
+      {perex}
+      {children}
+    </p>
+    {tags && (
+      <ul>
+        {tags.map(({ header, content, id }, i) => (
+          <li key={header} onClick={() => handleClick(id)}>
+            {numbered && <span>{`0${i + 1}`}</span>}
+            <div>
+              <h5>{header.toUpperCase()}</h5>
+              <small>{content}</small>
+            </div>
+          </li>
+        ))}
+      </ul>
+    )}
+  </div>
+);
 
-export default IntroText;
+export default withAnim(React.forwardRef(IntroText));

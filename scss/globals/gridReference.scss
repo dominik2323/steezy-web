@@ -112,5 +112,14 @@
         line-height: 1.6em;
       }
     }
+    &__person {
+      img {
+        width: 80px;
+        height: 80px;
+      }
+      p {
+        margin-left: cols(1);
+      }
+    }
   }
 }

@@ -23,7 +23,6 @@ export default {
     tags: [
       { header: 'role', content: '#print\n#3D' },
       { header: 'realizace', content: 'Brno, 2019' },
-      { header: 'foto', content: 'Tomáš Carda' },
     ],
   },
   intro: {

@@ -36,8 +36,8 @@ const PosedNavbar = posed(Navbar)({
   navOut: { opacity: 0, y: -100, transition: { duration: 700 } },
 });
 
-export default ({ children }) => {
-  const { showNav, hasBg } = useFixedNav();
+export default ({ children, showBgFrom }) => {
+  const { showNav, hasBg } = useFixedNav(showBgFrom);
   return (
     <PoseGroup preEnterPose={`navPre`} enterPose={`navIn`} exitPose={`navOut`}>
       {showNav && (

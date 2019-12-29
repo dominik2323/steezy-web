@@ -17,7 +17,7 @@ export default {
       {
         header: 'spolupráce',
         content:
-          'MAAD studio (interiérový design), Matěj Gryc (pivo), Ron Winkler (foto, gastro)',
+          'MAAD studio (interiér), Oldřich Hrb a\u00a0Ron Winkler (foto)',
       },
     ],
   },
@@ -163,13 +163,13 @@ export default {
       },
     ],
     23: [
-      { img: 'pivon26.jpg', alt: 'dummy' },
-      { img: 'pivon27.jpg', alt: 'dummy' },
+      { img: 'pivon28.jpg', alt: 'dummy' },
+      { img: 'pivon29.jpg', alt: 'dummy' },
     ],
 
     24: [
-      { img: 'pivon28.jpg', alt: 'dummy' },
-      { img: 'pivon29.jpg', alt: 'dummy' },
+      { img: 'pivon30.jpg', alt: 'dummy' },
+      { img: 'pivon31.jpg', alt: 'dummy' },
     ],
   },
 };

@@ -1,11 +1,11 @@
 export default {
   pageName: 'Studio',
   hero: {
-    header: 'Jsme kreativní inženýři\ndigitálního věku.',
+    header: 'Zabýváme se komplexním řešením vizuální komunikace.',
     subHeader: '',
-    img: 'HeroImage.jpeg',
+    img: 'HeroImage.jpg',
     footer: {
-      header: 'jsme sociální případy',
+      header: 'Na čem právě pracujeme? Sledujte nás:',
     },
     btn: 'MÁM ZÁJEM O MÍSTO',
   },

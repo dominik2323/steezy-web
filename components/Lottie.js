@@ -1,7 +1,7 @@
 import React from 'react';
 import lottie from 'lottie-web';
 
-const Lottie = ({ src, setDimensions, renderer = `canvas` }) => {
+const Lottie = ({ src, setDimensions, renderer = `svg` }) => {
   // const [aspect, setDimensions] = React.useState(1);
   const lottieRef = React.useRef(null);
 

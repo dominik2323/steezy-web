@@ -79,13 +79,14 @@ const ProjectSelector = () => {
 
   return (
     <div className={`project-selector`} {...bind()}>
-      <h2>Další projekty</h2>
+      <h4>Další projekty</h4>
       <div className={`project-selector__grid-wrap`}>
         <Grid grid={[data]} folder={`/project`} addClassName={`square`} />
         <LottieElement
           className={`project-selector__arrow project-selector__arrow--right`}
           onClick={() => shiftIndex(`INC`)}
           src={`/static/img/globals/scroll.json`}
+          preserveAspectRatio={`xMidYMid meet`}
           autoplay={true}
           noHover={true}
         />
@@ -93,6 +94,7 @@ const ProjectSelector = () => {
           className={`project-selector__arrow project-selector__arrow--left`}
           onClick={() => shiftIndex(`DEC`)}
           src={`/static/img/globals/scroll.json`}
+          preserveAspectRatio={`xMidYMid meet`}
           autoplay={true}
           noHover={true}
         />

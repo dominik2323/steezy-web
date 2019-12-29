@@ -54,7 +54,20 @@ const Project = () => {
 
   const transformGridIntoArr = Object.values(project.presentation);
   const projectWithReference = transformGridIntoArr.concat([
-    [Object.assign({}, project.reference, { landscape: true, id: projectId })],
+    [
+      Object.assign(
+        {},
+        {
+          active: project.reference.active,
+          client: project.reference.position,
+          img: project.reference.img,
+          name: project.reference.name,
+          position: project.reference.client,
+          quote: project.reference.quote,
+        },
+        { landscape: true, id: projectId }
+      ),
+    ],
   ]);
 
   if (project === undefined) {
@@ -62,7 +75,7 @@ const Project = () => {
   }
 
   return (
-    <React.Fragment>
+    <div className={`project`}>
       <Head>
         <title>{`Studio STEEZY\u2002|\u2002${project.name}`}</title>
       </Head>
@@ -111,7 +124,7 @@ const Project = () => {
       />
       <ProjectSelector key={`selector-${projectId}`} />
       <Footer />
-    </React.Fragment>
+    </div>
   );
 };
 
