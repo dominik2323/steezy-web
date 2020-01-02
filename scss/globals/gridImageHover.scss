@@ -44,7 +44,7 @@
       button {
         align-self: flex-start;
       }
-      @media screen and (max-width: 768px) {
+      @include phone-down {
         padding: cols(1.5);
         ul {
           display: none;

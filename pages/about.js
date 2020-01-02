@@ -8,6 +8,7 @@ import HeroFooterLogotypes from '../components/HeroFooterLogotypes';
 import IntroText from '../components/IntroText';
 import Img from '../components/Img';
 import { scrollTo } from '../hooks/scrollTo';
+import { useViewportSize } from '../hooks/useViewportSize';
 
 import { DataContext } from '../pages/_app';
 
@@ -15,6 +16,8 @@ export default function About() {
   const { pages, globals, components } = React.useContext(DataContext);
   const { about } = pages;
   const { button } = components;
+  const { w } = useViewportSize();
+
   return (
     <React.Fragment>
       <Head>
@@ -24,7 +27,9 @@ export default function About() {
         <Navbar />
         <Hero
           posterSrc={`/static/img/about/${about.hero.img}`}
-          className={`about`}>
+          className={`about`}
+          key={`${w}about`}
+          heroHeight={w < 600 && w !== 0 ? `80rvh` : `100rvh`}>
           {{
             content: (
               <div className={`about__hero-content`}>

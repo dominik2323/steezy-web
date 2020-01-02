@@ -68,7 +68,8 @@ const Footer = () => {
         </div>
         <div className='footer__content__address'>
           <h3>{`${address}`}</h3>
-          <h3>{`${ico}\n${dic}`}</h3>
+          <h3>{ico}</h3>
+          <h3>{dic}</h3>
         </div>
       </div>
       <div className='footer__navbar'>

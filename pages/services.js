@@ -17,7 +17,7 @@ const Services = () => {
   const { globals, pages, components } = React.useContext(DataContext);
   const [activeSection, setActiveSection] = React.useState([]);
   const router = useRouter();
-  const { h } = useViewportSize();
+  const { w, h } = useViewportSize();
 
   const { ourServices } = components.button;
   const { hero, content, pageName } = pages.services;
@@ -43,7 +43,7 @@ const Services = () => {
     content.forEach(({ id }) => observer.observe(document.getElementById(id)));
 
     return () => observer.disconnect();
-  }, [h]);
+  }, []);
 
   return (
     <React.Fragment>
@@ -58,7 +58,10 @@ const Services = () => {
             activeTag={activeSection}
           />
         </Navbar>
-        <Hero posterSrc={`/static/img/services/${hero.posterSrc}`}>
+        <Hero
+          posterSrc={`/static/img/services/${hero.posterSrc}`}
+          key={`${w}services`}
+          heroHeight={w < 600 && w !== 0 ? `80rvh` : `100rvh`}>
           {{
             content: (
               <React.Fragment>

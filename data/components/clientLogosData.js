@@ -2,19 +2,19 @@ export default {
     header: 'TVOŘÍME PRO TYTO ZNAČKY',
     logos: [
         'honeywell.svg',
+        'notino.svg',
         'muni.svg',
-        'skoda.svg',
-        'pilsner.svg',
+        'sparco.svg',
         'abb.svg',
         'vut.svg',
         'monster.svg',
         'tullamore.svg',
-        'mcdonald.svg',
+        'mcdonalds.svg',
         'garret.svg',
-        'notino.svg',
+        'skoda.svg',
         'cvut.svg',
         'infinit.svg',
         'isobar.svg',
-        'sykora.svg'
+        'kornfeil.svg'
     ]
 };

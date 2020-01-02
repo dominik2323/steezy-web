@@ -14,6 +14,7 @@ const Lottie = ({ src, setDimensions, renderer = `svg` }) => {
   };
 
   React.useEffect(() => {
+    // lottie.setLocationHref(window.location.href);
     function initLottie() {
       const anim = lottie.loadAnimation({
         container: lottieRef.current,
@@ -22,7 +23,7 @@ const Lottie = ({ src, setDimensions, renderer = `svg` }) => {
         autoplay: true,
         path: src,
         rendererSettings: {
-          preserveAspectRatio: 'xMidYMid meet',
+          preserveAspectRatio: 'xMidYMid slice',
         },
       });
 

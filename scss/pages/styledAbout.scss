@@ -10,6 +10,9 @@
     right: cols(2);
     height: cols(1);
     padding: 0 cols(1);
+    h5 {
+      flex-grow: 1;
+    }
     > div {
       display: flex;
       align-items: center;
@@ -30,12 +33,18 @@
   .grid {
     margin-bottom: cols(1);
   }
-  @media screen and (max-width: 768px) {
+  @include tablet-lan-down {
+    .hero-footer {
+      left: cols(1);
+      right: cols(1);
+    }
+  }
+  @include phone-down {
     .grid {
       margin-bottom: cols(2);
     }
   }
-  @media screen and (max-width: 540px) {
+  @include phone-sm-down {
     .grid {
       margin-bottom: cols(3);
     }

@@ -73,12 +73,12 @@
       padding: 20px 35px;
     }
   }
-  @media screen and (max-width: 992px) {
+  @include tablet-lan-down {
     &.play-icon {
       padding: 15px 25px;
     }
   }
-  @media screen and (max-width: 768px) {
+  @include phone-down {
     border: 1px solid;
 
     font-size: 11px;

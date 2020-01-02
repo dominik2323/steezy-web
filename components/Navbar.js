@@ -31,7 +31,7 @@ const Navbar = React.forwardRef(({ children, hasBg }, ref) => {
 });
 
 const PosedNavbar = posed(Navbar)({
-  navPre: { opacity: 1, y: -100 },
+  navPre: { opacity: 1, y: -100, transition: { duration: 300 } },
   navIn: { opacity: 1, y: 0, transition: { duration: 300 } },
   navOut: { opacity: 0, y: -100, transition: { duration: 700 } },
 });

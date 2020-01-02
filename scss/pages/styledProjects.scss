@@ -7,10 +7,10 @@
   @media screen and (min-width: 1921px) {
     margin-top: cols(1);
   }
-  @media screen and (max-width: 768px) {
+  @include phone-down {
     margin-top: cols(2.5);
   }
-  @media screen and (max-width: 540px) {
+  @include phone-sm-down {
     margin-top: cols(4);
   }
 }

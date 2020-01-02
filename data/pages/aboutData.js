@@ -1,11 +1,11 @@
 export default {
   pageName: 'Studio',
   hero: {
-    header: 'Zabýváme se komplexním řešením vizuální komunikace.',
+    header: 'Zabýváme se komplexním\nřešením vizuální komunikace.',
     subHeader: '',
     img: 'HeroImage.jpg',
     footer: {
-      header: 'Na čem právě pracujeme? Sledujte nás:',
+      header: 'Na čem právě pracujeme?\nSledujte nás:',
     },
     btn: 'MÁM ZÁJEM O MÍSTO',
   },

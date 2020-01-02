@@ -1,5 +1,5 @@
 .services {
-  @media screen and (max-width: 1200px) {
+  @include tablet-lan-down {
     .filter-projects {
       display: none;
     }

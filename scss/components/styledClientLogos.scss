@@ -14,17 +14,30 @@
       align-items: center;
       justify-content: center;
       margin: cols(0.25) 0;
-      padding: 0 cols(0.5);
+      padding: 0 cols(0.4);
       img {
         width: 100%;
         height: auto;
       }
     }
   }
-  @media screen and (min-width: 1920px) {
+  @include big-desktop-up {
     width: cols(9);
   }
-  @media screen and (max-width: 768px) {
+  @include tablet-lan-down {
+    width: cols(11);
+  }
+  @include tablet-por-down {
+    width: cols(11);
+    &__list {
+      &__item {
+        width: calc(100% / 3);
+        margin: cols(0.75) 0;
+        padding: 0 cols(0.85);
+      }
+    }
+  }
+  @include phone-down {
     margin: cols(4) auto;
     width: cols(13);
     h5 {

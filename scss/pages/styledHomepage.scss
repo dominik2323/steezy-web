@@ -20,6 +20,7 @@
     background-image: url('/static/img/about/HeroImage.png');
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
     display: flex;
     justify-content: center;
     align-content: center;
@@ -54,31 +55,35 @@
       align-self: flex-start;
     }
   }
-  @media screen and (min-width: 1920px) {
+  @include big-desktop-up {
     &__about {
       p {
         max-width: cols(8);
       }
     }
   }
-  @media screen and (max-width: 1200px) {
+  @include tablet-lan-down {
     &__about {
-      height: cols(15);
+      height: 100vh;
+      padding: 0 cols(2);
       p {
         font-size: 40px;
+        margin-bottom: cols(0.5);
       }
     }
   }
-  @media screen and (max-width: 768px) {
+  @include phone-down {
     &__about {
       padding: cols(3) cols(1);
       height: auto;
       p {
         font-size: 30px;
+        margin-bottom: cols(2);
+        white-space: normal;
       }
     }
   }
-  @media screen and (max-width: 540px) {
+  @include phone-sm-down {
     &__about {
       padding: cols(5) cols(1);
     }

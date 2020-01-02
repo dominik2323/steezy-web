@@ -32,7 +32,12 @@
       }
     }
   }
-  @media screen and (max-width: 992px) {
+  @include tablet-lan-down {
+    &__content {
+      width: cols(13);
+    }
+  }
+  @include tablet-por-down {
     &__content {
       h1 {
         font-size: 50px;
@@ -41,7 +46,7 @@
       }
     }
   }
-  @media screen and (max-width: 768px) {
+  @include phone-down {
     &__content {
       width: cols(13);
       h1 {

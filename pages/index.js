@@ -11,9 +11,9 @@ import Footer from '../components/Footer';
 import HeroFooterLogotypes from '../components/HeroFooterLogotypes';
 import Button from '../components/Button';
 import IntroText from '../components/IntroText';
-import ServicesOverview from '../components/ServicesOverview';
 import ClientLogotypes from '../components/ClientLogotypes';
 import ModalPlayer from '../components/ModalPlayer';
+import { useViewportSize } from '../hooks/useViewportSize';
 
 const Homepage = () => {
   const playerRef = useRef(null);
@@ -21,6 +21,7 @@ const Homepage = () => {
   const { pages, globals, components } = React.useContext(DataContext);
   const { hero, intro, about, grid: gridRef } = pages.homepage;
   const { content: servicesContent } = pages.services;
+  const { w } = useViewportSize();
 
   const transformServicesContent = servicesContent.map(
     ({ name, bullets, id }) => ({
@@ -56,7 +57,9 @@ const Homepage = () => {
         <Hero
           posterSrc={`/static/img/homepage/${hero.posterSrc}`}
           videoSrc={`/static/img/homepage/${hero.loopSrc}`}
-          playerRef={playerRef}>
+          playerRef={playerRef}
+          key={`${w}homepage`}
+          heroHeight={w < 600 && w !== 0 ? `80rvh` : `100rvh`}>
           {{
             content: (
               <Fragment>
@@ -94,15 +97,7 @@ const Homepage = () => {
           />
         </IntroText>
 
-        {/* <ServicesOverview
-          services={globals.services}
-          className={`homepage__services-overview`}
-        />*/}
-
-        <Grid
-          grid={transformedGridData}
-          folder={`/project`}
-        />
+        <Grid grid={transformedGridData} folder={`/project`} />
         <Button
           label={components.button.allProjects}
           handleClick={async () => {

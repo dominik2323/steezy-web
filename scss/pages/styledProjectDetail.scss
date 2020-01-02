@@ -82,12 +82,12 @@
       }
     }
   }
-  @media screen and (max-width: 1200px) {
+  @include tablet-lan-down {
     &__hero__footer {
-      left: cols(1.5);
-      right: cols(1.5);
+      left: cols(1);
+      right: cols(1);
       height: auto;
-      padding: 30px cols(1.5);
+      padding: 30px cols(1);
     }
     &__arrows {
       height: 100%;
@@ -98,13 +98,16 @@
       }
     }
   }
-  @media screen and (max-width: 992px) {
+  @include tablet-por-down {
     &__hero__footer {
+      &__scroll {
+        width: 28px;
+      }
     }
     &__arrows {
     }
   }
-  @media screen and (max-width: 768px) {
+  @include phone-down {
     &__hero__footer {
       display: flex !important;
       flex-direction: column;
@@ -138,12 +141,12 @@
     }
   }
 
-  @media screen and (max-width: 768px) {
+  @include phone-down {
     &__hero__footer {
       align-items: flex-start;
     }
   }
-  @media screen and (max-width: 540px) {
+  @include phone-sm-down {
     &__hero__footer {
       // height: cols(3);
     }

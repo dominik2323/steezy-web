@@ -67,6 +67,6 @@ export default {
   },
   about: {
     paragraph:
-      'Pomáháme s prezentací klientům\u00a0u\u00a0nás\u00a0i\u00a0ve\u00a0světě.',
+      'Pomáháme s\u00a0prezentací\nklientům\u00a0u\u00a0nás i\u00a0ve\u00a0světě.',
   },
 };

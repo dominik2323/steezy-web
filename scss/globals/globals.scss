@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "eina", "Arial";
+  font-family: 'eina', 'Arial';
 }
 
 body {
@@ -44,7 +44,7 @@ img {
 }
 
 #__next {
-  overflow-x: hidden;
+  overflow: hidden;
   position: relative;
   // top: 0;
   // left: 0;
@@ -56,6 +56,11 @@ img {
   @return 100vw / 15 * $cols;
 }
 
+@mixin phone-sm-down {
+  @media (max-width: 540px) {
+    @content;
+  }
+}
 @mixin phone-down {
   @media (max-width: 600px) {
     @content;

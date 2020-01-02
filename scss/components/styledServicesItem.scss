@@ -49,7 +49,7 @@
             font-size: 18px;
             font-weight: 600;
             letter-spacing: 0.02em;
-            line-height: 30px;
+            line-height: 1.5em;
             color: $med-gray;
           }
         }
@@ -67,7 +67,7 @@
       }
     }
   }
-  @media screen and (max-width: 1200px) {
+  @include tablet-lan-down {
     &__services-item {
       &__about {
         width: cols(13);
@@ -87,7 +87,7 @@
       }
     }
   }
-  @media screen and (max-width: 992px) {
+  @include tablet-por-down {
     &__services-item {
       &__about {
         &__intro {
@@ -103,16 +103,16 @@
       }
     }
   }
-  @media screen and (max-width: 768px) {
+  @include phone-down {
     &__services-item {
-      // padding: cols(2) 0;
+      padding-top: cols(1);
       &__about {
         &__intro {
           flex-direction: column;
           align-items: flex-start;
           &__perex {
             width: cols(11);
-            margin-top: cols(1.5);
+            margin-top: cols(0);
             margin-bottom: cols(1.5);
           }
           &__icon {
@@ -132,9 +132,10 @@
       }
     }
   }
-  @media screen and (max-width: 540px) {
-    margin: cols(2) 0;
+  @include phone-sm-down {
+    // margin: cols(2) 0;
     &__services-item {
+      padding-top: cols(2);
       &:not(:last-child) {
         margin-bottom: cols(2);
       }

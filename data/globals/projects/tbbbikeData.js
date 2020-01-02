@@ -35,56 +35,86 @@ export default {
   presentation: {
     0: [
       {
-        videoVimeoId: '367319004',
+        img: '01.jpg',
+        alt: 'logotyp TBB',
+      },
+      {
+        img: '02.jpg',
+        alt: 'značka TBB',
       },
     ],
     1: [
+      {
+        videoVimeoId: '367319004',
+      },
+    ],
+    2: [
       {
         blockquote:
           'BMX je mladým a neustále se vyvíjejícím sportem. Tyto atributy se prolínají i do stylu komunikace se zákazníky. Vše musí působit dynamicky, energicky a mladistvě.',
       },
     ],
-    2: [
-      {
-        img: 'tbbbike00.jpg',
-        alt: 'dummy',
-      },
-      {
-        img: 'tbbbike01.jpg',
-        alt: 'dummy',
-      },
-    ],
     3: [
       {
-        img: 'tbbbike02.jpg',
+        img: '03.jpg',
         alt: 'dummy',
       },
       {
-        img: 'tbbbike03.jpg',
+        img: '04.jpg',
         alt: 'dummy',
-      },
-    ],
-    3: [
-      {
-        blockquote:
-          'Společně s TBB-BIKE postupně vytváříme nové kolekce oblečení THEBIKEBROS s snažíme se reagovat na aktuální fashion trendy v tomto odvětví.',
       },
     ],
     4: [
       {
-        img: 'tbbbike04.jpg',
+        img: '05.jpg',
+        alt: 'dummy',
+      },
+      {
+        img: '06.jpg',
         alt: 'dummy',
       },
     ],
     5: [
       {
-        img: 'tbbbike05.jpg',
+        img: '07.jpg',
+        alt: 'dummy',
+      },
+      {
+        img: '08.jpg',
         alt: 'dummy',
       },
     ],
     6: [
       {
-        img: 'tbbbike06.jpg',
+        img: '09.jpg',
+        alt: 'dummy',
+      },
+      {
+        img: '10.jpg',
+        alt: 'dummy',
+      },
+    ],
+    7: [
+      {
+        blockquote:
+          'Společně s TBB-BIKE postupně vytváříme nové kolekce oblečení THEBIKEBROS s snažíme se reagovat na aktuální fashion trendy v tomto odvětví.',
+      },
+    ],
+    8: [
+      {
+        img: '11.jpg',
+        alt: 'dummy',
+      },
+    ],
+    9: [
+      {
+        img: '12.jpg',
+        alt: 'dummy',
+      },
+    ],
+    10: [
+      {
+        img: '13.jpg',
         alt: 'dummy',
       },
     ],

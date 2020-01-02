@@ -62,10 +62,12 @@
       right: calc(#{cols(-0.5)});
     }
   }
-  @media screen and (max-width: 1200px) {
+  @include tablet-lan-down {
+    padding-left: cols(1);
+    padding-right: cols(1);
     .grid.square .grid__row__item--image {
       margin-bottom: 0;
-      flex-basis: cols(4.25) !important;
+      flex-basis: cols(4) !important;
       width: 100%;
       height: cols(4);
     }
@@ -78,11 +80,14 @@
       }
     }
   }
-  @media screen and (max-width: 900px) {
+  @include tablet-por-down {
     padding: cols(1);
     .grid.square .grid__row__item--image {
-      flex-basis: cols(13) !important;
-      height: cols(13);
+      flex-basis: cols(6.25) !important;
+      height: cols(6.25);
+      &:last-child {
+        margin-right: 0;
+      }
     }
     &__arrow {
       position: relative;
@@ -107,5 +112,15 @@
         }
       }
     }
+  }
+  @include phone-down {
+    .grid.square .grid__row{
+      margin-left: 0;
+    &__item--image {
+            flex-basis: cols(13) !important;
+      height: cols(13);
+      
+
+    }}
   }
 }

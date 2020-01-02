@@ -31,8 +31,15 @@
     }
   }
 
-  @media screen and (max-width: 768px) {
+  @include tablet-lan-down {
     padding: 0 cols(1);
+    &.square {
+      padding: 0;
+      width: auto;
+    }
+  }
+
+  @include phone-down {
     &__row {
       flex-wrap: wrap;
       &:not(:last-child) {
@@ -48,7 +55,7 @@
     &.square {
       .grid {
         &__row {
-          margin: cols(-0.5) 0;
+          margin: cols(-0.5) 0 0 cols(1);
         }
       }
     }

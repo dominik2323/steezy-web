@@ -1,18 +1,15 @@
 import React from 'react';
-import { withAnim } from '../hocs/withAnim';
+import WithAnim from './WithAnim';
 
-const IntroText = (
-  {
-    perex,
-    tags,
-    numbered = false,
-    children,
-    handleClick = () => null,
-    ...props
-  },
-  ref
-) => (
-  <div ref={ref} className='intro-text' {...props}>
+const IntroText = ({
+  perex,
+  tags,
+  numbered = false,
+  children,
+  handleClick = () => null,
+  ...props
+}) => (
+  <WithAnim className='intro-text' {...props}>
     <p className={`big`}>
       {perex}
       {children}
@@ -30,7 +27,7 @@ const IntroText = (
         ))}
       </ul>
     )}
-  </div>
+  </WithAnim>
 );
 
-export default withAnim(React.forwardRef(IntroText));
+export default IntroText;

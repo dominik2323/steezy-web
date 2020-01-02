@@ -60,9 +60,9 @@ const ProjectSelector = () => {
 
   React.useEffect(() => {
     let offset = [];
-    if (w <= 900 || w > 1200) {
+    if (w <= 600 || w > 900) {
       offset = [3, 3];
-    } else if (w <= 1200) {
+    } else if (w <= 900) {
       offset = [3, 4];
     }
     const startIndex = fitIndex(currIndex - offset[0]);
@@ -81,7 +81,12 @@ const ProjectSelector = () => {
     <div className={`project-selector`} {...bind()}>
       <h4>Další projekty</h4>
       <div className={`project-selector__grid-wrap`}>
-        <Grid grid={[data]} folder={`/project`} addClassName={`square`} />
+        <Grid
+          grid={[data]}
+          folder={`/project`}
+          addClassName={`square`}
+          disableAnim={true}
+        />
         <LottieElement
           className={`project-selector__arrow project-selector__arrow--right`}
           onClick={() => shiftIndex(`INC`)}

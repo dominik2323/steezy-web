@@ -49,9 +49,7 @@
     }
   }
 
-  @media screen and (max-width: 1200px) {
-    margin-left: unset;
-    margin-right: unset;
+  @include tablet-lan-down {
     &__quote {
       width: cols(6);
       p {
@@ -64,7 +62,9 @@
     }
   }
 
-  @media screen and (max-width: 992px) {
+  @include tablet-por-down {
+    margin-left: unset;
+    margin-right: unset;
     flex-direction: column-reverse;
     align-items: flex-start;
     margin: cols(2) auto;
@@ -94,7 +94,7 @@
       }
     }
   }
-  @media screen and (max-width: 768px) {
+  @include phone-down {
     margin-left: unset;
     margin-right: unset;
     &__person {
@@ -104,7 +104,7 @@
       }
     }
   }
-  @media screen and (max-width: 540px) {
+  @include phone-sm-down {
     &__quote {
       width: cols(13);
       p {

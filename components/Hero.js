@@ -14,6 +14,7 @@ const Hero = ({
   posterSrc,
   videoSrc = ``,
   loopSrc = ``,
+  heroHeight = `100rvh`,
 }) => {
   const { h } = useViewportSize();
   const isVideoAvaible = videoSrc.split('.').length === 2;
@@ -46,7 +47,7 @@ const Hero = ({
   }, [videoSrc]);
 
   return (
-    <Div100vh style={{ height: `100rvh` }}>
+    <Div100vh style={{ height: heroHeight }}>
       <div className={`hero ${className}__hero`} id={`hero_${videoSrc}`}>
         {children.content && (
           <div

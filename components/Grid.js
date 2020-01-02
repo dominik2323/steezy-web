@@ -7,6 +7,7 @@ import GridReference from './GridReference';
 import GridImage from './GridImage';
 import GridLottie from './GridLottie';
 import ErrorMsg from './ErrorMsg';
+import WithAnim from './WithAnim';
 
 const PosedImages = posed(GridImage)({
   flip: {
@@ -20,16 +21,16 @@ const PosedImages = posed(GridImage)({
   },
 });
 
-const Grid = ({ grid, folder, children, addClassName }) => {
+const Grid = ({ grid, folder, children, addClassName, disableAnim }, ref) => {
   if (!grid || grid.length === 0) {
     return <ErrorMsg header={`Žádné projekty neodpovídají výběru`} />;
   }
   const gridImgRef = React.useRef(null);
   return (
-    <div className={`grid ${addClassName}`}>
+    <div className={`grid ${addClassName}`} ref={ref}>
       {grid.map((row, i) => {
         return (
-          <div className="grid__row" key={i}>
+          <WithAnim className='grid__row' key={i} disable={disableAnim}>
             <PoseGroup>
               {row.map((item, i) => {
                 if (Object.keys(item).includes('blockquote'))
@@ -85,11 +86,11 @@ const Grid = ({ grid, folder, children, addClassName }) => {
                   );
               })}
             </PoseGroup>
-          </div>
+          </WithAnim>
         );
       })}
     </div>
   );
 };
 
-export default Grid;
+export default React.forwardRef(Grid);

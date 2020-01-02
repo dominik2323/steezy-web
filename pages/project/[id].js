@@ -9,16 +9,12 @@ import { DataContext } from '../../pages/_app';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 import Grid from '../../components/Grid';
-import ProjectSwitch from '../../components/ProjectSwitch';
-import useFixedNav from '../../hooks/useFixedNav';
 import { scrollTo } from '../../hooks/scrollTo';
 import Hero from '../../components/Hero';
 import ProjectSelector from '../../components/ProjectSelector';
 import Button from '../../components/Button';
 import IntroText from '../../components/IntroText';
-import NavbarFilter from '../../components/NavbarFilter';
 import LottieElement from '../../components/LottieElement';
-import { transformGridReferencesIntoGrid } from '../';
 
 const transformIntroTags = (header, bullet) => [
   {
@@ -41,15 +37,15 @@ const transformIntroTags = (header, bullet) => [
 
 const Project = () => {
   const router = useRouter();
-  const { id: projectId } = router.query;
+  const { asPath } = router;
+  const projectId = asPath.split('/').pop();
   const playerRef = React.useRef(null);
 
   const { globals, components, pages } = React.useContext(DataContext);
   const { projects } = globals;
   const { button, projectDetail } = components;
-
   const project = projects.find(x => x.id === projectId);
-  const isVideoAvaible = project.hero.videoSrc.length !== 0;
+  // const isVideoAvaible = project.hero.videoSrc.length !== 0;
   const introTags = transformIntroTags(pages.projectDetail, project);
 
   const transformGridIntoArr = Object.values(project.presentation);
@@ -128,9 +124,9 @@ const Project = () => {
   );
 };
 
-Project.getInitialProps = async () => {
-  return {};
-};
+// Project.getInitialProps = async () => {
+//   return {};
+// };
 
 export default Project;
 

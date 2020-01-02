@@ -6,7 +6,12 @@ import NavbarFilter from '../components/NavbarFilter';
 import { useRouter } from 'next/router';
 import { DataContext } from '../pages/_app';
 import { useViewportSize } from '../hooks/useViewportSize';
+import posed, { PoseGroup } from 'react-pose';
 
+const PosedGrid = posed(Grid)({
+  enter: { opacity: 1 },
+  exit: { opacity: 0 },
+});
 const Projects = () => {
   const { globals, pages } = React.useContext(DataContext);
   const { projects } = globals;
@@ -55,21 +60,26 @@ const Projects = () => {
           />
         )}
       </Navbar>
-      {w <= 1200 && (
+
+      {/* width must wait for the DOM to load and in the meatime its value is 0 */}
+
+      {w <= 1200 && w !== 0 && (
         <NavbarFilter
           list={pages.projects.filterTags}
           selectFilter={selectFilter}
           activeTag={filter}
         />
       )}
-      {
-        <Grid
+      <PoseGroup>
+        <PosedGrid
           grid={gridArray}
+          key={filter}
           folder={`/project`}
           noCrop={false}
           addClassName={`square`}
+          disableAnim={true}
         />
-      }
+      </PoseGroup>
       <Footer />
     </div>
   );

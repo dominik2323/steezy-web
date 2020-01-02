@@ -2,10 +2,9 @@ import React from 'react';
 import Grid from './Grid';
 import { transformGridReferencesIntoGrid } from '../pages';
 import Button from './Button';
-import { DataContext } from '../pages/_app';
 import Router from 'next/router';
-import Img from './Img';
 import Lottie from './Lottie';
+import WithAnim from './WithAnim';
 
 const ServicesItem = ({
   name,
@@ -21,11 +20,10 @@ const ServicesItem = ({
     Object.values(grid),
     projects
   );
-  const { components } = React.useContext(DataContext);
   return (
     <div id={id} className={`services__content__services-item`}>
       <div className={`services__content__services-item__about`}>
-        <div className={`services__content__services-item__about__intro`}>
+        <WithAnim className={`services__content__services-item__about__intro`}>
           <div
             className={`services__content__services-item__about__intro__perex`}>
             <h1>{name}</h1>
@@ -36,18 +34,20 @@ const ServicesItem = ({
             <Lottie src={`/static/img/services/${img}`} renderer={`svg`} />
             {/*<Img src={`/static/img/services/${img}`} alt="" />*/}
           </div>
-        </div>
-        <ul className={`services__content__services-item__about__bullets`}>
-          {bullets.map(({ header, perex }, i) => (
-            <li key={i}>
-              <h2>
-                <span>{`0${i + 1}`}</span>
-                {header}
-              </h2>
-              <p>{perex}</p>
-            </li>
-          ))}
-        </ul>
+        </WithAnim>
+        <WithAnim>
+          <ul className={`services__content__services-item__about__bullets`}>
+            {bullets.map(({ header, perex }, i) => (
+              <li key={i}>
+                <h2>
+                  <span>{`0${i + 1}`}</span>
+                  {header}
+                </h2>
+                <p>{perex}</p>
+              </li>
+            ))}
+          </ul>
+        </WithAnim>
       </div>
       <Grid grid={transformGrid} folder={`/project`} />
       <Button

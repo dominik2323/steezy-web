@@ -52,12 +52,12 @@
       }
     }
   }
-  @media screen and (max-width: 1200px) {
+  @include tablet-lan-down {
     &__navbar {
-      width: cols(11);
+      width: cols(13);
     }
   }
-  @media screen and (max-width: 768px) {
+  @include phone-down {
     &__navbar {
       width: cols(13);
       &__brand {

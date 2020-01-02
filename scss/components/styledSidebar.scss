@@ -81,7 +81,7 @@
   }
   @media screen and (max-width: 1366px) {
   }
-  @media screen and (max-width: 1200px) {
+  @include tablet-lan-down {
     padding-right: cols(1);
     nav {
       h1 {
@@ -89,17 +89,17 @@
       }
     }
   }
-  @media screen and (max-width: 992px) {
+  @include tablet-por-down {
     width: cols(9);
   }
-  @media screen and (max-width: 768px) {
+  @include phone-down {
     .close-icon {
       width: 25px;
       height: 25px;
     }
     width: 100%;
   }
-  @media screen and (max-width: 768px) {
+  @include phone-down {
     nav {
       h1 {
         font-size: 30px;

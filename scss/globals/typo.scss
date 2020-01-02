@@ -4,7 +4,7 @@ ul {
 
 h1 {
   font-size: 55px;
-  letter-spacing: 0.02em;
+  // letter-spacing: 0.02em;
   line-height: 1.2em;
   color: $white;
 }
@@ -59,7 +59,7 @@ small {
   font-size: 18px;
   letter-spacing: 0.02em;
   font-weight: 500;
-  line-height: 30px;
+  line-height: 1.5em;
   color: $light-gray;
 }
 
@@ -88,14 +88,17 @@ small {
     }
   }
 }
-@media screen and (max-width: 1200px) {
+@include tablet-lan-down {
+  h2 {
+    font-size: 21px;
+  }
   p {
     &.big {
       font-size: 21px;
     }
   }
 }
-@media screen and (max-width: 540px) {
+@include phone-sm-down {
   h1 {
     font-size: 30px;
   }
