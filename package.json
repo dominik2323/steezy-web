@@ -19,7 +19,7 @@
     "file-loader": "^4.2.0",
     "firebase": "^7.2.0",
     "lottie-web": "^5.5.9",
-    "next": "^9.0.3",
+    "next": "^9.3.2",
     "next-videos": "^1.1.0",
     "node-sass": "^4.12.0",
     "react": "^16.8.6",
