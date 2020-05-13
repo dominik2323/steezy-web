@@ -55,7 +55,7 @@ export default {
         alt: 'dummy',
       },
       {
-        img: 'eggo01.jpg',
+        lottieSrc: 'eggo_lottie/data.json',
         alt: 'dummy',
       },
     ],

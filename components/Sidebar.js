@@ -78,9 +78,9 @@ const Sidebar = ({ showSidebar, toggleSidebar }) => {
         <div className='sidebar__social'>
           {globals.socials.map(icon => {
             return (
-              <Link key={icon.id} path={icon.url}>
+              <a key={icon.id} target={`_blank`} href={icon.url}>
                 <Img src={`/static/img/globals/${icon.img}`} alt={icon.id} />
-              </Link>
+              </a>
             );
           })}
         </div>

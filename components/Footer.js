@@ -6,21 +6,21 @@ import { DataContext } from '../pages/_app';
 import Link from './Link';
 import Img from './Img';
 
-const Copied = posed.div({
-  in: {
-    opacity: 1,
-    applyAtStart: { display: 'block' },
-  },
-  out: {
-    opacity: 0,
-    applyAtEnd: { display: 'none' },
-  },
-});
+// const Copied = posed.div({
+//   in: {
+//     opacity: 1,
+//     applyAtStart: { display: 'block' },
+//   },
+//   out: {
+//     opacity: 0,
+//     applyAtEnd: { display: 'none' },
+//   },
+// });
 
 const Footer = () => {
   const { globals, components } = React.useContext(DataContext);
-  const defaultAnimState = { id: -1, x: 30, y: 50 };
-  const [{ id, x, y }, setAnimId] = useState(defaultAnimState);
+  // const defaultAnimState = { id: -1, x: 30, y: 50 };
+  // const [{ id, x, y }, setAnimId] = useState(defaultAnimState);
   const router = useRouter();
   const { pathname } = router;
   const { address, phone, email, ico, dic } = globals.contact;
@@ -28,22 +28,22 @@ const Footer = () => {
   const { socials } = globals;
   const { workWithUs, copied } = footer;
 
-  const copyToClipboard = (e, i) => {
-    let el = document.createElement('textarea');
-    el.value = e.target.innerText;
-    el.setAttribute('readonly', '');
-    el.style = { position: 'absolute', left: '-9999px' };
-    document.body.appendChild(el);
-    el.select();
-    document.execCommand('copy');
-    document.body.removeChild(el);
-    handleAnim({ id: i, x: e.clientX + 30, y: e.clientY - 24 });
-  };
+  // const copyToClipboard = (e, i) => {
+  //   let el = document.createElement('textarea');
+  //   el.value = e.target.innerText;
+  //   el.setAttribute('readonly', '');
+  //   el.style = { position: 'absolute', left: '-9999px' };
+  //   document.body.appendChild(el);
+  //   el.select();
+  //   document.execCommand('copy');
+  //   document.body.removeChild(el);
+  //   handleAnim({ id: i, x: e.clientX + 30, y: e.clientY - 24 });
+  // };
 
-  const handleAnim = ({ id, x, y }) => {
-    setAnimId({ id: id, x: x, y: y });
-    setTimeout(() => setAnimId({ id: -1, x: x, y: y }), 750);
-  };
+  // const handleAnim = ({ id, x, y }) => {
+  //   setAnimId({ id: id, x: x, y: y });
+  //   setTimeout(() => setAnimId({ id: -1, x: x, y: y }), 750);
+  // };
 
   return (
     <div className='footer' id={`footer`}>
@@ -51,14 +51,21 @@ const Footer = () => {
         <div className='footer__content__cta'>
           <h5>{workWithUs}</h5>
           <div className={`footer__content__cta__item`}>
-            <Copied
+            {/* <Copied
               className={`footer__content__cta__email__copied`}
               pose={0 === id ? `in` : `out`}
               initialPose={`out`}
-              style={{ top: y, left: x, display: 'none' }}>
+              style={{
+                top: y,
+                left: x,
+                display: 'none',
+                position: `absolute`,
+              }}>
               <small>{copied}</small>
-            </Copied>
-            <h1 onClick={e => copyToClipboard(e, 0)}>{email}</h1>
+            </Copied> */}
+            <h1>
+              <a href={`mailto:${email}`}>{email}</a>
+            </h1>
           </div>
           <div className={`footer__content__cta__item`}>
             <h1>
@@ -86,9 +93,9 @@ const Footer = () => {
         </div>
         <div className='footer__navbar__socials'>
           {socials.map(social => (
-            <Link key={social.id} href={social.url}>
+            <a target={`_blank`} key={social.id} href={social.url}>
               <Img src={`/static/img/globals/${social.img}`} alt={social.id} />
-            </Link>
+            </a>
           ))}
         </div>
       </div>

@@ -53,7 +53,7 @@ export default {
     ],
     2: [
       {
-        img: 'dropDnd04.jpg',
+        lottieSrc: 'avatar_lottie/data.json',
         alt: 'dummy',
       },
       {
@@ -79,7 +79,7 @@ export default {
         alt: 'dummy',
       },
       {
-        img: 'dropDnd08.jpg',
+        lottieSrc: 'app_lottie/data.json',
         alt: 'dummy',
       },
     ],
@@ -103,7 +103,7 @@ export default {
     ],
     9: [
       {
-        img: 'dropDnd10.jpg',
+        lottieSrc: 'banner_lottie/data.json',
         alt: 'dummy',
       },
     ],

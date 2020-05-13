@@ -1,9 +1,7 @@
-import React, { Fragment, useRef, useEffect, useState } from 'react';
+import React from 'react';
 import Div100vh from 'react-div-100vh';
 
 import 'video-react/styles/scss/video-react.scss';
-import HeroFooter from './HeroFooter';
-import Button from './Button';
 import HeroBg from './HeroBg';
 import { useViewportSize } from '../hooks/useViewportSize';
 
@@ -19,8 +17,8 @@ const Hero = ({
   const { h } = useViewportSize();
   const isVideoAvaible = videoSrc.split('.').length === 2;
 
-  useEffect(() => {
-    if (isVideoAvaible && playerRef.current !== null) {
+  React.useEffect(() => {
+    if (isVideoAvaible) {
       const heroEl = document.getElementById(`hero_${videoSrc}`);
 
       const observer = new IntersectionObserver(
@@ -34,7 +32,7 @@ const Hero = ({
           });
         },
         {
-          rootMargin: `0px 0px -${h}px 0px`,
+          rootMargin: `0px 0px -${0}px 0px`,
         }
       );
 
@@ -58,12 +56,7 @@ const Hero = ({
           </div>
         )}
 
-        <HeroFooter
-          // isVideoPlaying={!isVideoPaused}
-          playerRef={playerRef}
-          isVideoAvaible={isVideoAvaible}>
-          {children.footer}
-        </HeroFooter>
+        {children.footer}
         <HeroBg
           videoSrc={videoSrc}
           posterSrc={posterSrc}

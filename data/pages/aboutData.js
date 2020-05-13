@@ -5,20 +5,21 @@ export default {
     subHeader: '',
     img: 'HeroImage.jpg',
     footer: {
-      header: 'Na čem právě pracujeme?\nSledujte nás:',
+      header: 'Sledujte nás',
     },
     btn: 'MÁM ZÁJEM O MÍSTO',
   },
   introText: {
     about:
-      'Steezy je kreativní studio zaměřené na komplexní řešení vizuální komunikace v\u00a0komerční i\u00a0veřejné sféře. Tvoříme různorodý tým profesionálů se specializí v\u00a0klasických i\u00a0digitálních tvůrčích oborech. Pod jednou střechou sedí rozmanitý tým grafiků, produktových designérů, copywriterů, motion designérů a\u00a0video producentů, kteří se navzajém inspirují, motivují a\u00a0učí jeden od druhého.\n\nPracujeme pro tuzemské i\u00a0zahraniční klienty, nadnárodní společnosti, veřejné instituce, neziskovky i\u00a0ambiciózní start-upy. Naše práce a\u00a0rukopis jsou různorodé –\u00a0stejně jako naši zákazníci.\n\nNejsme umělci, jsme designéři. Zaměřujeme se proto výhradně na analýzu a\u00a0řešení konkrétních problémů v\u00a0komunikaci klienta s\u00a0jeho cílovou skupinou; nikoli na prosazování vlastních vizí. Naši tvorbu chápeme jako službu, jak v\u00a0dnešním informacemi zahlceném světě co nejpřímočařeji doručit vaši message k\u00a0těm správným očím a\u00a0uším, aniž bychom vytvářeli další vizuální smog ve veřejném prostoru. ',
+      'Steezy je designérské studio zaměřené na komplexní řešení vizuální komunikace v komerční i veřejné sféře.\n\nPropojujeme tradiční výtvarné postupy s nejnovějšími technologiemi a neustále hledáme nové vyjadřovací prostředky.\n\nDíky zkušenostem napříč obory dokážeme lépe pochopit a řešit komplexní projekty, které kladou vysoké požadavky na odbornou způsobilost a chápání zadání v širších souvislostech.\n\nVěnujeme maximum energie i času, abychom poznali klienta do hloubky a nabídli mu optimální mix služeb. Respekt k uměleckému řemeslu a kultivace veřejného prostoru přitom zůstávají důležitým aspektem naší tvorby.',
     tags: [
-      { header: 'JAKUB MACA', content: 'Branding/jednatel' },
-      { header: 'TOMÁŠ CARDA', content: 'Motion design/jednatel' },
-      { header: 'JAKUB LAŠŠO', content: 'Videoprodukce' },
-      { header: 'DOMINIK TOMČÍK', content: 'Branding/produktový design' },
-      { header: 'JIŘÍ BENÁČEK', content: 'Video/VR' },
-      { header: 'FILIP VALACHOVIČ', content: 'Stážista' },
+      { header: 'JAKUB MACA / JEDNATEL', content: 'Branding / UI & UX' },
+      { header: 'TOMÁŠ CARDA / JEDNATEL', content: 'Motion design / Video' },
+      { header: 'DOMINIK TOMČÍK', content: 'Produktový design / UI & UX' },
+      { header: 'STANISLAV HRUBAN', content: 'Projektový manager' },
+      { header: 'JAKUB LAŠŠO', content: 'Video' },
+      { header: 'JIŘÍ BENÁČEK', content: 'Virtuální realita' },
+      { header: 'FILIP VALACHOVIČ', content: 'Motion design / Video' },
     ],
   },
   grid: {
@@ -54,7 +55,7 @@ export default {
     9: [
       {
         blockquote:
-          'Zaujalo vás naše naše kreativní prostředí a rádi byste se přidali do našeho týmu? Dejte nám o sobě vědět.',
+          'Zaujalo vás naše prostředí a rádi byste se přidali do našeho týmu? Dejte nám o sobě vědět.',
       },
     ],
   },

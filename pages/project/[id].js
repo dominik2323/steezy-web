@@ -15,6 +15,7 @@ import ProjectSelector from '../../components/ProjectSelector';
 import Button from '../../components/Button';
 import IntroText from '../../components/IntroText';
 import LottieElement from '../../components/LottieElement';
+import Error from '../_error';
 
 const transformIntroTags = (header, bullet) => [
   {
@@ -37,8 +38,7 @@ const transformIntroTags = (header, bullet) => [
 
 const Project = () => {
   const router = useRouter();
-  const { asPath } = router;
-  const projectId = asPath.split('/').pop();
+  const { id: projectId } = router.query;
   const playerRef = React.useRef(null);
 
   const { globals, components, pages } = React.useContext(DataContext);
@@ -46,6 +46,9 @@ const Project = () => {
   const { button, projectDetail } = components;
   const project = projects.find(x => x.id === projectId);
   // const isVideoAvaible = project.hero.videoSrc.length !== 0;
+  if (project === undefined) {
+    return <Error message={`Projekt nebyl nalezen ...`} />;
+  }
   const introTags = transformIntroTags(pages.projectDetail, project);
 
   const transformGridIntoArr = Object.values(project.presentation);
@@ -65,10 +68,6 @@ const Project = () => {
       ),
     ],
   ]);
-
-  if (project === undefined) {
-    return <h1>project not found</h1>;
-  }
 
   return (
     <div className={`project`}>
@@ -124,9 +123,9 @@ const Project = () => {
   );
 };
 
-// Project.getInitialProps = async () => {
-//   return {};
-// };
+Project.getInitialProps = async ({ query }) => {
+  return {};
+};
 
 export default Project;
 

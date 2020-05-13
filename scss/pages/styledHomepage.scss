@@ -13,6 +13,21 @@
       }
     }
   }
+  &__hero {
+    &__content {
+      &__tags {
+        color: $white;
+        margin-bottom: cols(0.3);
+        span {
+          font-weight: 500;
+          letter-spacing: 0.02em;
+          &:not(:last-child) {
+            margin-right: 30px;
+          }
+        }
+      }
+    }
+  }
   &__about {
     height: 100vh;
     max-height: 1080px;
@@ -84,6 +99,13 @@
     }
   }
   @include phone-sm-down {
+    &__hero {
+      &__content {
+        &__tags {
+          display: none;
+        }
+      }
+    }
     &__about {
       padding: cols(5) cols(1);
     }

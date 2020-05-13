@@ -1,4 +1,4 @@
 export default {
   header: 'TVOŘÍME PRO TYTO ZNAČKY:',
-  list: ['honeywell.svg', 'muni.svg', 'skoda.svg', 'abb.svg']
+  list: ['honeywell_fit.svg', 'muni_fit.svg', 'skoda_fit.svg', 'abb_fit.svg'],
 };

@@ -12,23 +12,23 @@ export default {
   socials: [
     {
       id: 'facebook',
-      url: '',
+      url: 'https://www.facebook.com/letsgetsteezy',
       img: 'fcb.svg',
     },
     {
       id: 'instagram',
-      url: '',
+      url: 'https://www.instagram.com/steezy.studio/',
       img: 'insta.svg',
     },
     {
       id: 'vimeo',
-      url: '',
+      url: 'https://vimeo.com/steezystudio',
       img: 'vimeo.svg',
     },
     {
-      id: 'linkedin',
-      url: '',
-      img: 'linkedin.svg',
+      id: 'behance',
+      url: 'https://www.behance.net/steezystudio',
+      img: 'behance.svg',
     },
   ],
 };

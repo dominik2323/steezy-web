@@ -1,5 +1,5 @@
 import React, { Fragment, useRef } from 'react';
-import Head from 'next/head';
+import Header from '../components/Header';
 
 import { DataContext } from './_app';
 import Router from 'next/router';
@@ -14,8 +14,9 @@ import IntroText from '../components/IntroText';
 import ClientLogotypes from '../components/ClientLogotypes';
 import ModalPlayer from '../components/ModalPlayer';
 import { useViewportSize } from '../hooks/useViewportSize';
+import { logEvent } from '../lib/ga';
 
-const Homepage = () => {
+const Homepage = (...props) => {
   const playerRef = useRef(null);
   const [showModal, toggleModal] = React.useState(false);
   const { pages, globals, components } = React.useContext(DataContext);
@@ -38,9 +39,9 @@ const Homepage = () => {
 
   return (
     <React.Fragment>
-      <Head>
+      <Header>
         <title>{globals.webTitle}</title>
-      </Head>
+      </Header>
 
       {showModal && (
         <ModalPlayer
@@ -58,11 +59,16 @@ const Homepage = () => {
           posterSrc={`/static/img/homepage/${hero.posterSrc}`}
           videoSrc={`/static/img/homepage/${hero.loopSrc}`}
           playerRef={playerRef}
-          key={`${w}homepage`}
-          heroHeight={w < 600 && w !== 0 ? `80rvh` : `100rvh`}>
+          heroHeight={`100rvh`}
+        >
           {{
             content: (
               <Fragment>
+                <div className={`homepage__hero__content__tags`}>
+                  {hero.tags.map(tag => (
+                    <span key={tag}>{tag}</span>
+                  ))}
+                </div>
                 <h1 className='homepage__hero__content__header'>
                   {hero.header}
                 </h1>
@@ -73,6 +79,10 @@ const Homepage = () => {
                   handleClick={() => {
                     toggleModal(showModal => !showModal);
                     playerRef.current.pause();
+                    logEvent({
+                      category: `navigation`,
+                      action: `play showreel`,
+                    });
                   }}
                 />
               </Fragment>
@@ -87,7 +97,8 @@ const Homepage = () => {
           numbered={true}
           handleClick={id => {
             Router.push({ pathname: '/services', query: { section: id } });
-          }}>
+          }}
+        >
           <Button
             label={components.button.howCanWeHelp}
             handleClick={async () => {

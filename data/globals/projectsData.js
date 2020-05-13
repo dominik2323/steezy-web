@@ -22,13 +22,13 @@ import isobar from './projects/isobarData';
 import tbbbike from './projects/tbbbikeData';
 
 export default [
-  pivon,
   infinit,
   isobar,
   abb,
   cafeRepublic,
   eggo,
   siestaCloud,
+  pivon,
   dropDnd,
   backstage,
   sparco,

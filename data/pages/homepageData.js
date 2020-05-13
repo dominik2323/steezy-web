@@ -1,14 +1,15 @@
 export default {
   pageName: 'Homepage',
   hero: {
-    header: 'Ukazujeme světu,\njak jste skvělí',
+    header: 'Ukazujeme světu,\nv čem jste jedineční.',
+    tags: ['#branding', '#video', '#animace', '#webdesign'],
     subHeader: '',
     posterSrc: 'PosterImage.jpg',
     loopSrc: 'homepage_loop.mp4',
   },
   intro: {
     perex:
-      'Máte skvělou službu či produkt, ale nikdo o\u00a0vás neslyšel? Jste na špici\u00a0v oboru, ale nedaří se vám nalákat nové zákazníky či zaměstnance? Máte pocit, že jste lepší než vaše konkurence, ale zdaleka neprodáváte tolik? Nebo máte zatím jen geniální nápad a\u00a0nevíte, kde začít?\n\nPomůžeme nastavit vaši komunikaci tak, aby odpovídala vašemu záměru. Jste zkušenými matadory v\u00a0oboru anebo se teprve chystáte dobýt svou pozici na trhu? Výrazná a\u00a0přitom srozumitelná prezentace je v\u00a0dnešní informacemi zahlcené době základním faktorem úspěchu.',
+      'Výrazná a přitom srozumitelná prezentace je základním faktorem úspěchu. Získat si pozornost přitom v dnešní době vyžaduje větší míru kreativity a širší záběr než kdy dříve.\n\nSteezy je designérské studio zaměřené na komplexní řešení vizuální komunikace. Stavíme na důkladné analýze vašeho problému a přemýšlíme v kontextu doby i tržního prostředí. Propojujeme nejmodernější technologii se znalostmi v oboru a s citem pro detail. Vynakládáme maximální úsilí k pochopení vašeho byznysu, abychom vždy mluvili jazykem srozumitelným pro vaši cílovou skupinu.\n\nVěnujte se tomu, v čem jste nejlepší. Jak to ukázat světu už nechte na nás.',
   },
   grid: {
     0: [

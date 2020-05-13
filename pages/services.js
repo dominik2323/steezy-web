@@ -61,7 +61,7 @@ const Services = () => {
         <Hero
           posterSrc={`/static/img/services/${hero.posterSrc}`}
           key={`${w}services`}
-          heroHeight={w < 600 && w !== 0 ? `80rvh` : `100rvh`}>
+          heroHeight={`100rvh`}>
           {{
             content: (
               <React.Fragment>

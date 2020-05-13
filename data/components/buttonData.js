@@ -8,4 +8,5 @@ export default {
   howCanWeHelp: 'JAK VÁM MŮŽEME POMOCI?',
   moreAboutUs: 'VÍCE O NÁS',
   ourServices: 'NAŠE SLUŽBY',
+  continue: 'POKRAČOVAT',
 };

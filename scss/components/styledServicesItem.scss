@@ -106,6 +106,7 @@
   @include phone-down {
     &__services-item {
       padding-top: cols(1);
+      padding-bottom: cols(2);
       &__about {
         &__intro {
           flex-direction: column;
@@ -136,6 +137,7 @@
     // margin: cols(2) 0;
     &__services-item {
       padding-top: cols(2);
+      // padding-bottom: cols(4);
       &:not(:last-child) {
         margin-bottom: cols(2);
       }
