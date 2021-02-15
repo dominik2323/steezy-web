@@ -1,17 +1,20 @@
 import React from 'react';
-import { DataContext } from '../pages/_app';
+import { DataContext } from '../lib/dataContext';
 
-const NavbarFilter = ({ list, selectFilter, activeTag = `` }) => {
-  // const { globals } = React.useContext(DataContext);
-  // const tagsWithDefaultOpt = globals.tags.concat('všechno').reverse();
-  // console.log(list);
+const NavbarFilter = ({
+  defaultFilter,
+  list,
+  selectFilter,
+  activeTag = ``,
+}) => {
+  const filters = defaultFilter ? [defaultFilter, ...list] : list;
   return (
     <ul className={`filter-projects`}>
-      {list.map(({ displayName, id }) => (
+      {filters.map(({ displayName, uid }) => (
         <li
-          key={id}
-          className={activeTag === id ? `active` : ``}
-          onClick={() => selectFilter(id)}
+          key={uid}
+          className={activeTag === uid ? `active` : ``}
+          onClick={() => selectFilter(uid)}
         >
           {displayName}
         </li>

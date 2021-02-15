@@ -15,15 +15,15 @@ const Hero = ({
   heroHeight = `100rvh`,
 }) => {
   const { h } = useViewportSize();
-  const isVideoAvaible = videoSrc.split('.').length === 2;
+  const isVideoAvaible = !!videoSrc;
 
   React.useEffect(() => {
     if (isVideoAvaible) {
       const heroEl = document.getElementById(`hero_${videoSrc}`);
 
       const observer = new IntersectionObserver(
-        entries => {
-          entries.forEach(entry => {
+        (entries) => {
+          entries.forEach((entry) => {
             if (!entry.isIntersecting) {
               playerRef.current.pause();
             } else if (entry.isIntersecting) {
@@ -51,7 +51,8 @@ const Hero = ({
           <div
             className={`
             hero__content
-            ${/*!isVideoPaused*/ false ? `video-is-playing` : ``}`}>
+            ${/*!isVideoPaused*/ false ? `video-is-playing` : ``}`}
+          >
             {children.content}
           </div>
         )}

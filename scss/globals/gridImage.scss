@@ -21,10 +21,11 @@
       flex-basis: unset !important;
       width: cols(8/3);
       height: cols(8/3);
-      margin: cols(0.5) cols(0.5) 0 0;
-      &:nth-child(3n) {
-        margin-right: 0;
-      }
+      margin: cols(0.5) cols(0.25);
+      // margin-right: cols(0.5);
+      // &:nth-child(2n) {
+      //   margin-right: 0;
+      // }
       flex-grow: 0;
       flex-shrink: 0;
     }
@@ -39,10 +40,10 @@
     }
 
     &.square {
-      margin: 0 cols(1);
+      margin: 0 cols(0.75);
       .grid__row__item--image {
-        flex-basis: cols(4) !important;
-        height: cols(4);
+        width: cols(12/3);
+        height: cols(12/3);
       }
     }
   }
@@ -50,14 +51,8 @@
   @include tablet-por-down {
     &.square {
       .grid__row__item--image {
-        flex-basis: cols(6.25) !important;
-        height: cols(6.25);
-        &:nth-child(3n) {
-          margin-right: cols(0.5);
-        }
-        &:nth-child(2n) {
-          margin-right: 0;
-        }
+        height: cols(6);
+        width: cols(6);
       }
     }
   }
@@ -69,10 +64,10 @@
     &.square {
       margin: 0 cols(0);
       .grid__row__item--image {
-        // flex-basis: unset !important;
-        margin: cols(0.5) cols(0);
-        flex-basis: cols(13) !important;
+        margin: 0;
+        margin: cols(0.25) cols(1);
         height: cols(13);
+        width: cols(13);
       }
     }
   }

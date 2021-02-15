@@ -7,3 +7,4 @@ static/
 .env
 .env.build
 *.log
+.vercel

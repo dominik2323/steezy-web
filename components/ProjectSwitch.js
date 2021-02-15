@@ -1,13 +1,13 @@
 import React from 'react';
 import Link from 'next/link';
-import { DataContext } from '../pages/_app';
+import { DataContext } from '../lib/dataContext';
 import Img from './Img';
 
 const ProjectSwitch = ({ neighbourProjects }) => {
   const { nextProjectId, prevProjectId } = neighbourProjects;
   const { globals } = React.useContext(DataContext);
-  const selectProject = projectId =>
-    globals.projects.find(project => project.id === projectId);
+  const selectProject = (projectId) =>
+    globals.projects.find((project) => project.id === projectId);
 
   const nextProject = selectProject(nextProjectId);
   const prevProject = selectProject(prevProjectId);

@@ -2,7 +2,7 @@ import React, { Fragment, useState } from 'react';
 import posed from 'react-pose';
 import { useRouter } from 'next/router';
 
-import { DataContext } from '../pages/_app';
+import { DataContext } from '../lib/dataContext';
 import Link from './Link';
 import Img from './Img';
 
@@ -81,7 +81,7 @@ const Footer = () => {
       </div>
       <div className='footer__navbar'>
         <div className='footer__navbar__menu'>
-          {navbar.pages.map(page =>
+          {navbar.pages.map((page) =>
             page.url === `footer` ? null : (
               <Link key={page.displayName} path={`${page.url}`}>
                 <h5 className={pathname === page.url ? `active` : ``}>
@@ -92,7 +92,7 @@ const Footer = () => {
           )}
         </div>
         <div className='footer__navbar__socials'>
-          {socials.map(social => (
+          {socials.map((social) => (
             <a target={`_blank`} key={social.id} href={social.url}>
               <Img src={`/static/img/globals/${social.img}`} alt={social.id} />
             </a>

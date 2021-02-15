@@ -4,7 +4,7 @@ const withCSS = require('@zeit/next-css');
 module.exports = withCSS(
   withSass({
     env: { ROOT: __dirname },
-    webpack: function(cfg, { isServer }) {
+    webpack: function (cfg, { isServer }) {
       const originalEntry = cfg.entry;
       cfg.entry = async () => {
         const entries = await originalEntry();

@@ -1,7 +1,7 @@
-import React from 'react';
 import lottie from 'lottie-web';
+import React from 'react';
 
-const Lottie = ({ src, setDimensions, renderer = `svg` }) => {
+const Lottie = ({ src = ``, data = null, setDimensions, renderer = `svg` }) => {
   // const [aspect, setDimensions] = React.useState(1);
   const lottieRef = React.useRef(null);
 
@@ -21,6 +21,7 @@ const Lottie = ({ src, setDimensions, renderer = `svg` }) => {
         renderer: renderer,
         loop: true,
         autoplay: true,
+        animationData: data,
         path: src,
         rendererSettings: {
           preserveAspectRatio: 'xMidYMid slice',

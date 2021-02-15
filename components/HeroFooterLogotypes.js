@@ -1,5 +1,5 @@
 import React from 'react';
-import { DataContext } from '../pages/_app';
+import { DataContext } from '../lib/dataContext';
 import Img from './Img';
 
 const HeroFooterLogotypes = () => {
@@ -8,9 +8,9 @@ const HeroFooterLogotypes = () => {
   return (
     <div className={`hero-footer hero-footer-logotypes`}>
       <h5>{heroFooterLogotypes.header}</h5>
-      <div className="hero-footer-logotypes__list">
+      <div className='hero-footer-logotypes__list'>
         {heroFooterLogotypes.list.map((logo, i) => (
-          <Img key={i} src={`/static/img/globals/${logo}`} alt="" />
+          <Img key={i} src={`/static/img/globals/${logo}`} alt='' />
         ))}
       </div>
     </div>

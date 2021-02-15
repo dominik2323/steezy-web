@@ -5,27 +5,29 @@ import { useGesture } from 'react-use-gesture';
 import Grid from './Grid';
 import LottieElement from './LottieElement';
 
-import { DataContext } from '../pages/_app';
+import { DataContext } from '../lib/dataContext';
 import { useViewportSize } from '../hooks/useViewportSize';
 
 const ProjectSelector = () => {
-  const { globals, components, pages } = React.useContext(DataContext);
-  const { projects } = globals;
+  const { globals, components, pages, projects } = React.useContext(
+    DataContext
+  );
+  // const { projects } = globals;
   const { query } = useRouter();
   const { w } = useViewportSize();
-  const { id: activeProjectId } = query;
+  const { id: uidQuery } = query;
 
   const bind = useGesture({
-    onDragEnd: e =>
+    onDragEnd: (e) =>
       e.movement[0] !== 0 && shiftIndex(e.movement[0] > 0 ? `DEC` : `INC`),
   });
 
   const activeProjectIndex = projects.findIndex(
-    project => project.id === activeProjectId
+    ({ node }) => node._meta.uid === uidQuery
   );
 
   const projectsWithoutActive = projects.filter(
-    project => project.id !== activeProjectId
+    ({ node }) => node._meta.uid !== uidQuery
   );
 
   const maxIndex = projectsWithoutActive.length - 1;
@@ -35,20 +37,20 @@ const ProjectSelector = () => {
 
   const getInterval = (startIndex, endIndex) => {
     if (startIndex > endIndex) {
-      return index => index >= startIndex || index <= endIndex;
+      return (index) => index >= startIndex || index <= endIndex;
     }
-    return index => index >= startIndex && index <= endIndex;
+    return (index) => index >= startIndex && index <= endIndex;
   };
 
-  const shiftIndex = dir => {
+  const shiftIndex = (dir) => {
     if (dir === `INC`) {
-      setCurrIndex(index => fitIndex(index + 1));
+      setCurrIndex((index) => fitIndex(index + 1));
     } else {
-      setCurrIndex(index => fitIndex(index - 1));
+      setCurrIndex((index) => fitIndex(index - 1));
     }
   };
 
-  const fitIndex = i => {
+  const fitIndex = (i) => {
     if (i > maxIndex) {
       return i - maxIndex - 1;
     } else if (i < 0) {
@@ -60,33 +62,40 @@ const ProjectSelector = () => {
 
   React.useEffect(() => {
     let offset = [];
+
     if (w <= 600 || w > 900) {
       offset = [3, 3];
     } else if (w <= 900) {
       offset = [3, 4];
     }
+
     const startIndex = fitIndex(currIndex - offset[0]);
     const endIndex = fitIndex(currIndex + offset[1]);
     const isInsideInterval = getInterval(startIndex, endIndex);
+
     const filter = projectsWithoutActive.reduce((acc, curr, i, arr) => {
       if (isInsideInterval(fitIndex(i + startIndex))) {
         return [...acc, arr[fitIndex(i + startIndex)]];
       }
       return acc;
     }, []);
-    setData(filter.map(project => transformGridItem(project)));
+
+    setData(
+      filter.map(({ node: project }) => ({
+        fields: [
+          {
+            project: project,
+          },
+        ],
+      }))
+    );
   }, [currIndex, w]);
 
   return (
     <div className={`project-selector`} {...bind()}>
       <h4>Další projekty</h4>
       <div className={`project-selector__grid-wrap`}>
-        <Grid
-          grid={[data]}
-          folder={`/project`}
-          addClassName={`square`}
-          disableAnim={true}
-        />
+        <Grid grid={data} addClassName={`square`} disableAnim={true} />
         <LottieElement
           className={`project-selector__arrow project-selector__arrow--right`}
           onClick={() => shiftIndex(`INC`)}
@@ -109,14 +118,3 @@ const ProjectSelector = () => {
 };
 
 export default ProjectSelector;
-
-const transformGridItem = ({ id, intro, name, client, tags }) => {
-  return {
-    img: `${id}/${intro.img}`,
-    alt: name,
-    name: name,
-    client: client,
-    tags: tags,
-    id: id,
-  };
-};

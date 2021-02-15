@@ -1,5 +1,5 @@
 import React from 'react';
-import { DataContext } from '../pages/_app';
+import { DataContext } from '../lib/dataContext';
 import Img from './Img';
 import { useViewportSize } from '../hooks/useViewportSize';
 

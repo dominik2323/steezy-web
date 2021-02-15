@@ -10,11 +10,12 @@ const AnimatedComponent = posed.div({
 
 function WithAnim({ disable = false, ...rest }) {
   const { w } = useViewportSize();
-  // const withoutPhone = w <= 768 && w !== 0;
+
   const { ref, visible } = useElVisibility({
     runOnce: true,
     disable: disable,
   });
+
   return (
     <AnimatedComponent
       pose={visible || disable ? `enter` : `exit`}

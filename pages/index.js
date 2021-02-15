@@ -1,7 +1,7 @@
 import React, { Fragment, useRef } from 'react';
 import Header from '../components/Header';
 
-import { DataContext } from './_app';
+import { DataContext } from '../lib/dataContext';
 import Router from 'next/router';
 
 import Navbar from '../components/Navbar';
@@ -15,30 +15,17 @@ import ClientLogotypes from '../components/ClientLogotypes';
 import ModalPlayer from '../components/ModalPlayer';
 import { useViewportSize } from '../hooks/useViewportSize';
 import { logEvent } from '../lib/ga';
+import { getHomapage } from '../lib/fetchData';
+import data from '../data';
+import { RichText } from 'prismic-dom';
 
-const Homepage = (...props) => {
+const Homepage = ({ homepage }) => {
   const playerRef = useRef(null);
   const [showModal, toggleModal] = React.useState(false);
-  const { pages, globals, components } = React.useContext(DataContext);
-  const { hero, intro, about, grid: gridRef } = pages.homepage;
-  const { content: servicesContent } = pages.services;
-  const { w } = useViewportSize();
-
-  const transformServicesContent = servicesContent.map(
-    ({ name, bullets, id }) => ({
-      id: id,
-      header: name,
-      content: bullets.map(({ header }) => `${header}\n`),
-    })
-  );
-
-  const transformedGridData = transformGridReferencesIntoGrid(
-    Object.values(gridRef),
-    globals.projects
-  );
+  const { globals, components } = data;
 
   return (
-    <React.Fragment>
+    <DataContext.Provider value={{ ...data, homepage }}>
       <Header>
         <title>{globals.webTitle}</title>
       </Header>
@@ -56,8 +43,8 @@ const Homepage = (...props) => {
         <Navbar />
 
         <Hero
-          posterSrc={`/static/img/homepage/${hero.posterSrc}`}
-          videoSrc={`/static/img/homepage/${hero.loopSrc}`}
+          posterSrc={homepage.hero_poster.url}
+          videoSrc={homepage.hero_loop.url}
           playerRef={playerRef}
           heroHeight={`100rvh`}
         >
@@ -65,19 +52,19 @@ const Homepage = (...props) => {
             content: (
               <Fragment>
                 <div className={`homepage__hero__content__tags`}>
-                  {hero.tags.map(tag => (
+                  {homepage.hero_tags.map(({ tag }) => (
                     <span key={tag}>{tag}</span>
                   ))}
                 </div>
                 <h1 className='homepage__hero__content__header'>
-                  {hero.header}
+                  {homepage.hero_header}
                 </h1>
                 <Button
                   label={components.button.playShowreel}
                   playIcon
                   className={`btn--filled`}
                   handleClick={() => {
-                    toggleModal(showModal => !showModal);
+                    toggleModal((showModal) => !showModal);
                     playerRef.current.pause();
                     logEvent({
                       category: `navigation`,
@@ -92,10 +79,14 @@ const Homepage = (...props) => {
         </Hero>
 
         <IntroText
-          perex={intro.perex}
-          tags={transformServicesContent}
+          perex={homepage.perex}
+          tags={homepage.services.map(({ service }) => ({
+            id: service._meta.id,
+            header: service.service_name,
+            content: service.bullets.map(({ header }) => `${header}\n`),
+          }))}
           numbered={true}
-          handleClick={id => {
+          handleClick={(id) => {
             Router.push({ pathname: '/services', query: { section: id } });
           }}
         >
@@ -108,7 +99,7 @@ const Homepage = (...props) => {
           />
         </IntroText>
 
-        <Grid grid={transformedGridData} folder={`/project`} />
+        <Grid grid={homepage.body} />
         <Button
           label={components.button.allProjects}
           handleClick={async () => {
@@ -119,8 +110,11 @@ const Homepage = (...props) => {
         />
 
         <ClientLogotypes />
-        <div className='homepage__about'>
-          <p>{about.paragraph}</p>
+        <div
+          className='homepage__about'
+          style={{ backgroundImage: `url(${homepage.about_studio_img.url})` }}
+        >
+          <p>{RichText.asText(homepage.about_studio)}</p>
           <Button
             label={components.button.aboutStudio}
             className={`btn--filled`}
@@ -133,15 +127,21 @@ const Homepage = (...props) => {
 
         <Footer />
       </div>
-    </React.Fragment>
+    </DataContext.Provider>
   );
 };
+
+export async function getServerSideProps({ previewData }) {
+  const homepage = await getHomapage('cs-cz', previewData);
+
+  return { props: { homepage: homepage } };
+}
 
 export default Homepage;
 
 export const transformGridReferencesIntoGrid = (gridRef, projects) => {
   const findData = ({ id, type }) => {
-    const fullProject = projects.find(project => project.id === id);
+    const fullProject = projects.find((project) => project.id === id);
     if (type === `project`) {
       return {
         img: `${id}/${fullProject.intro.img}`,
@@ -169,9 +169,9 @@ export const transformGridReferencesIntoGrid = (gridRef, projects) => {
     }
   };
 
-  const handleRow = row =>
+  const handleRow = (row) =>
     row.map(({ id, type }) => findData({ id: id, type: type }));
 
-  const grid = gridRef.map(row => handleRow(row));
+  const grid = gridRef.map((row) => handleRow(row));
   return grid;
 };

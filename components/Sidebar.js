@@ -1,7 +1,7 @@
 import React from 'react';
 import posed from 'react-pose';
 import Link from './Link';
-import { DataContext } from '../pages/_app';
+import { DataContext } from '../lib/dataContext';
 import { scrollTo } from '../hooks/scrollTo';
 import Img from './Img';
 import LottieElement from './LottieElement';
@@ -38,14 +38,15 @@ const Sidebar = ({ showSidebar, toggleSidebar }) => {
       <PosedSidebar
         pose={showSidebar ? `show` : `hide`}
         className={`col-5 sidebar`}
-        style={{ display: 'none' }}>
+        style={{ display: 'none' }}
+      >
         <LottieElement
           onClick={() => toggleSidebar(false)}
           className={`close-icon`}
           src={`/static/img/globals/close.json`}
         />
         <nav>
-          {navbar.pages.map(page => {
+          {navbar.pages.map((page) => {
             if (page.url === 'footer') {
               return (
                 <PosedLink key={page.displayName}>
@@ -53,7 +54,8 @@ const Sidebar = ({ showSidebar, toggleSidebar }) => {
                     onClick={() => {
                       toggleSidebar(false);
                       scrollTo(page.url);
-                    }}>
+                    }}
+                  >
                     {page.displayName}
                   </h1>
                 </PosedLink>
@@ -67,7 +69,8 @@ const Sidebar = ({ showSidebar, toggleSidebar }) => {
                     onClick={() => {
                       toggleSidebar(false);
                       Router.push({ pathname: page.url });
-                    }}>
+                    }}
+                  >
                     {page.displayName}
                   </h1>
                 </Link>
@@ -76,7 +79,7 @@ const Sidebar = ({ showSidebar, toggleSidebar }) => {
           })}
         </nav>
         <div className='sidebar__social'>
-          {globals.socials.map(icon => {
+          {globals.socials.map((icon) => {
             return (
               <a key={icon.id} target={`_blank`} href={icon.url}>
                 <Img src={`/static/img/globals/${icon.img}`} alt={icon.id} />
