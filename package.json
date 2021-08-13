@@ -21,7 +21,7 @@
     "firebase": "^7.2.0",
     "intersection-observer": "^0.7.0",
     "lottie-web": "^5.5.9",
-    "next": "^9.0.3",
+    "next": "^11.1.0",
     "next-videos": "^1.1.0",
     "node-sass": "^4.12.0",
     "nyan-cat-festival": "^1.0.3",
