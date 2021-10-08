@@ -1,12 +1,14 @@
-import Header from '../components/Header';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
-import Grid from '../components/Grid';
-import NavbarFilter from '../components/NavbarFilter';
-import { useRouter } from 'next/router';
-import { DataContext } from '../pages/_app';
-import { useViewportSize } from '../hooks/useViewportSize';
-import posed, { PoseGroup } from 'react-pose';
+import React from "react";
+
+import Header from "../components/Header";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import Grid from "../components/Grid";
+import NavbarFilter from "../components/NavbarFilter";
+import { useRouter } from "next/router";
+import { DataContext } from "../pages/_app";
+import { useViewportSize } from "../hooks/useViewportSize";
+import posed, { PoseGroup } from "react-pose";
 
 const PosedGrid = posed(Grid)({
   enter: { opacity: 1 },
@@ -21,7 +23,7 @@ const Projects = () => {
   const [filter, setFilter] = React.useState(
     filterQuery ? filterQuery : pages.projects.filterTags[0].id
   );
-  const selectFilter = tag => setFilter(tag);
+  const selectFilter = (tag) => setFilter(tag);
 
   const gridData = projects.reduce((acc, curr) => {
     const filterProject =

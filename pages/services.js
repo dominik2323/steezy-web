@@ -1,17 +1,19 @@
-import { DataContext } from '../pages/_app';
-import { scrollTo } from '../hooks/scrollTo';
-import { useViewportSize } from '../hooks/useViewportSize';
-import { useRouter } from 'next/router';
+import React from "react";
 
-import Navbar from '../components/Navbar';
-import Header from '../components/Header';
-import Hero from '../components/Hero';
-import IntroText from '../components/IntroText';
-import HeroFooterLogotypes from '../components/HeroFooterLogotypes';
-import ServicesItem from '../components/ServicesItem';
-import Footer from '../components/Footer';
-import NavbarFilter from '../components/NavbarFilter';
-import Button from '../components/Button';
+import { DataContext } from "../pages/_app";
+import { scrollTo } from "../hooks/scrollTo";
+import { useViewportSize } from "../hooks/useViewportSize";
+import { useRouter } from "next/router";
+
+import Navbar from "../components/Navbar";
+import Header from "../components/Header";
+import Hero from "../components/Hero";
+import IntroText from "../components/IntroText";
+import HeroFooterLogotypes from "../components/HeroFooterLogotypes";
+import ServicesItem from "../components/ServicesItem";
+import Footer from "../components/Footer";
+import NavbarFilter from "../components/NavbarFilter";
+import Button from "../components/Button";
 
 const Services = () => {
   const { globals, pages, components } = React.useContext(DataContext);
@@ -26,7 +28,7 @@ const Services = () => {
   React.useEffect(() => {
     section && scrollTo(section);
 
-    const handleIntersection = entries => {
+    const handleIntersection = (entries) => {
       entries.forEach(({ target, isIntersecting }) => {
         if (isIntersecting) {
           setActiveSection(target.id);
@@ -50,18 +52,19 @@ const Services = () => {
       <Header>
         <title>{`${globals.webTitle}\u2002/\u2002${pageName}`}</title>
       </Header>
-      <div className='services'>
+      <div className="services">
         <Navbar>
           <NavbarFilter
-            list={content.map(x => ({ id: x.id, displayName: x.name }))}
-            selectFilter={id => scrollTo(id)}
+            list={content.map((x) => ({ id: x.id, displayName: x.name }))}
+            selectFilter={(id) => scrollTo(id)}
             activeTag={activeSection}
           />
         </Navbar>
         <Hero
           posterSrc={`/static/img/services/${hero.posterSrc}`}
           key={`${w}services`}
-          heroHeight={`100rvh`}>
+          heroHeight={`100rvh`}
+        >
           {{
             content: (
               <React.Fragment>

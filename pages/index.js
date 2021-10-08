@@ -1,20 +1,20 @@
-import React, { Fragment, useRef } from 'react';
-import Header from '../components/Header';
+import React, { Fragment, useRef } from "react";
+import Header from "../components/Header";
 
-import { DataContext } from './_app';
-import Router from 'next/router';
+import { DataContext } from "./_app";
+import Router from "next/router";
 
-import Navbar from '../components/Navbar';
-import Hero from '../components/Hero';
-import Grid from '../components/Grid';
-import Footer from '../components/Footer';
-import HeroFooterLogotypes from '../components/HeroFooterLogotypes';
-import Button from '../components/Button';
-import IntroText from '../components/IntroText';
-import ClientLogotypes from '../components/ClientLogotypes';
-import ModalPlayer from '../components/ModalPlayer';
-import { useViewportSize } from '../hooks/useViewportSize';
-import { logEvent } from '../lib/ga';
+import Navbar from "../components/Navbar";
+import Hero from "../components/Hero";
+import Grid from "../components/Grid";
+import Footer from "../components/Footer";
+import HeroFooterLogotypes from "../components/HeroFooterLogotypes";
+import Button from "../components/Button";
+import IntroText from "../components/IntroText";
+import ClientLogotypes from "../components/ClientLogotypes";
+import ModalPlayer from "../components/ModalPlayer";
+import { useViewportSize } from "../hooks/useViewportSize";
+import { logEvent } from "../lib/ga";
 
 const Homepage = (...props) => {
   const playerRef = useRef(null);
@@ -52,7 +52,7 @@ const Homepage = (...props) => {
         />
       )}
 
-      <div className='homepage container-fluid'>
+      <div className="homepage container-fluid">
         <Navbar />
 
         <Hero
@@ -65,11 +65,11 @@ const Homepage = (...props) => {
             content: (
               <Fragment>
                 <div className={`homepage__hero__content__tags`}>
-                  {hero.tags.map(tag => (
+                  {hero.tags.map((tag) => (
                     <span key={tag}>{tag}</span>
                   ))}
                 </div>
-                <h1 className='homepage__hero__content__header'>
+                <h1 className="homepage__hero__content__header">
                   {hero.header}
                 </h1>
                 <Button
@@ -77,7 +77,7 @@ const Homepage = (...props) => {
                   playIcon
                   className={`btn--filled`}
                   handleClick={() => {
-                    toggleModal(showModal => !showModal);
+                    toggleModal((showModal) => !showModal);
                     playerRef.current.pause();
                     logEvent({
                       category: `navigation`,
@@ -95,37 +95,38 @@ const Homepage = (...props) => {
           perex={intro.perex}
           tags={transformServicesContent}
           numbered={true}
-          handleClick={id => {
-            Router.push({ pathname: '/services', query: { section: id } });
+          handleClick={(id) => {
+            Router.push({ pathname: "/services", query: { section: id } });
           }}
         >
           <Button
             label={components.button.howCanWeHelp}
             handleClick={async () => {
-              await Router.push({ pathname: '/services' });
+              await Router.push({ pathname: "/services" });
               window.scrollTo(0, 0);
             }}
           />
         </IntroText>
 
         <Grid grid={transformedGridData} folder={`/project`} />
+
         <Button
           label={components.button.allProjects}
           handleClick={async () => {
-            await Router.push({ pathname: '/projects' });
+            await Router.push({ pathname: "/projects" });
             window.scrollTo(0, 0);
           }}
-          style={{ margin: 'auto' }}
+          style={{ margin: "auto" }}
         />
 
         <ClientLogotypes />
-        <div className='homepage__about'>
+        <div className="homepage__about">
           <p>{about.paragraph}</p>
           <Button
             label={components.button.aboutStudio}
             className={`btn--filled`}
             handleClick={async () => {
-              await Router.push({ pathname: '/about' });
+              await Router.push({ pathname: "/about" });
               window.scrollTo(0, 0);
             }}
           />
@@ -141,7 +142,7 @@ export default Homepage;
 
 export const transformGridReferencesIntoGrid = (gridRef, projects) => {
   const findData = ({ id, type }) => {
-    const fullProject = projects.find(project => project.id === id);
+    const fullProject = projects.find((project) => project.id === id);
     if (type === `project`) {
       return {
         img: `${id}/${fullProject.intro.img}`,
@@ -169,9 +170,9 @@ export const transformGridReferencesIntoGrid = (gridRef, projects) => {
     }
   };
 
-  const handleRow = row =>
+  const handleRow = (row) =>
     row.map(({ id, type }) => findData({ id: id, type: type }));
 
-  const grid = gridRef.map(row => handleRow(row));
+  const grid = gridRef.map((row) => handleRow(row));
   return grid;
 };

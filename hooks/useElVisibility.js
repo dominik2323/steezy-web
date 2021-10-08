@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 export const useElVisibility = ({
   rootMargin = `-10px 0px`,
@@ -10,12 +10,13 @@ export const useElVisibility = ({
   const ref = React.useRef();
 
   React.useEffect(() => {
+    const instance = ref.current;
     if (!disable) {
       const observer = new IntersectionObserver(
         ([entry], observer) => {
           setVisibility(entry.isIntersecting);
           if (entry.isIntersecting && runOnce) {
-            observer.unobserve(ref.current);
+            observer.unobserve(instance);
           }
         },
         {
@@ -24,10 +25,10 @@ export const useElVisibility = ({
         }
       );
 
-      observer.observe(ref.current);
+      observer.observe(instance);
 
       return () => {
-        observer.unobserve(ref.current);
+        observer.unobserve(instance);
       };
     }
   }, []);

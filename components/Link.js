@@ -1,9 +1,11 @@
-import React from 'react';
-import A from 'next/link';
+import React from "react";
+import A from "next/link";
+import { useRouter } from "next/router";
 
-const Link = ({ path = '', children, className = '' }) => {
+const Link = ({ path = "", children, className = "" }) => {
+  const router = useRouter();
   return (
-    <A href={path}>
+    <A href={`/${router.locale}${path}`}>
       <a className={className}>{children}</a>
     </A>
   );

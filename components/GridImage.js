@@ -1,8 +1,8 @@
-import React from 'react';
-import GridImageHover from './GridImageHover';
-import { useViewportSize } from '../hooks/useViewportSize';
-import Img from './Img';
-import WithAnim from './WithAnim';
+import React from "react";
+import GridImageHover from "./GridImageHover";
+import { useViewportSize } from "../hooks/useViewportSize";
+import Img from "./Img";
+import WithAnim from "./WithAnim";
 
 const ProjectGridImage = (
   { img, name, client, tags, alt, folder = ``, id, disableAnim },
@@ -19,11 +19,12 @@ const ProjectGridImage = (
 
   React.useEffect(() => {
     handleResize();
-    imgRef.current.addEventListener('load', handleResize);
-    window.addEventListener('resize', handleResize);
+    const instance = imgRef.current;
+    instance.addEventListener("load", handleResize);
+    window.addEventListener("resize", handleResize);
     return () => {
-      window.removeEventListener('resize', handleResize);
-      imgRef.current.removeEventListener('load', handleResize);
+      window.removeEventListener("resize", handleResize);
+      instance.removeEventListener("load", handleResize);
     };
   }, []);
 
@@ -37,7 +38,8 @@ const ProjectGridImage = (
           ${hasHover ? `grid__row__item--has-hover` : ``} 
           `}
       style={{ flexBasis: aspect }}
-      ref={ref}>
+      ref={ref}
+    >
       {/* <WithAnim disable={disableAnim} style={{ height: `100%` }}> */}
       {hasHover && (
         <GridImageHover

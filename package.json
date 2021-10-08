@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@babel/core": "^7.15.8",
     "@firebase/storage": "^0.3.14",
     "@vimeo/player": "^2.10.0",
     "@zeit/next-css": "^1.0.1",
@@ -21,13 +22,13 @@
     "firebase": "^7.2.0",
     "intersection-observer": "^0.7.0",
     "lottie-web": "^5.5.9",
-    "next": "^9.0.3",
+    "next": "^11.1.2",
     "next-videos": "^1.1.0",
     "node-sass": "^4.12.0",
     "nyan-cat-festival": "^1.0.3",
-    "react": "^16.8.6",
+    "react": "^17.0.2",
     "react-div-100vh": "^0.3.8",
-    "react-dom": "^16.8.6",
+    "react-dom": "^17.0.2",
     "react-ga": "^2.7.0",
     "react-intersection-observer": "^8.25.2",
     "react-nyan": "0.0.3",
@@ -43,6 +44,7 @@
     "video-react": "^0.14.1"
   },
   "devDependencies": {
-    "@babel/plugin-proposal-optional-chaining": "^7.7.5"
+    "@babel/plugin-proposal-optional-chaining": "^7.7.5",
+    "unflatten": "^1.0.4"
   }
 }
